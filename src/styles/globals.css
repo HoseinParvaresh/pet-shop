@@ -1,10 +1,42 @@
 @import "tailwindcss";
 
-
-@theme {
-  --color-primary : #F69946
+@layer base {
+  @font-face {
+    font-family: "Dana";
+    font-display: swap;
+    src: url("/public/fonts/DanaFaNum-Regular.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Dana Bold";
+    font-display: swap;
+    src: url("/public/fonts/DanaFaNum-Bold.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Morabba";
+    font-display: swap;
+    src: url("/public/fonts/Morabba-Regular.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Morabba Bold";
+    font-display: swap;
+    src: url("/public/fonts/Morabba-Bold.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Morabba Heavy";
+    font-display: swap;
+    src: url("/public/fonts/Morabba-Heavy.woff2") format("woff2");
+  }
 }
+@theme {
+  --color-primary : #F69946;
+  --color-secondary : #FCF9F4;
+  --color-dark-primary : #564741;
+  --color-dark-secondary : #616161;
 
+  --font-dana : "Dana";
+  --font-danaBold : "Dana Bold";
+  --font-Morabba : "Morabba";
+}
 /* @layer components {
 
 } */
