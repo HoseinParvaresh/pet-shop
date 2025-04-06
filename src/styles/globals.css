@@ -4,29 +4,33 @@
   @font-face {
     font-family: "Dana";
     font-display: swap;
-    src: url("/public/fonts/DanaFaNum-Regular.woff2") format("woff2");
+    src: url("/fonts/DanaFaNum-Regular.woff2") format("woff2");
   }
   @font-face {
     font-family: "Dana Bold";
     font-display: swap;
-    src: url("/public/fonts/DanaFaNum-Bold.woff2") format("woff2");
+    src: url("/fonts/DanaFaNum-Bold.woff2") format("woff2");
   }
   @font-face {
     font-family: "Morabba";
     font-display: swap;
-    src: url("/public/fonts/Morabba-Regular.woff2") format("woff2");
+    src: url("/fonts/Morabba-Regular.woff2") format("woff2");
   }
   @font-face {
     font-family: "Morabba Bold";
     font-display: swap;
-    src: url("/public/fonts/Morabba-Bold.woff2") format("woff2");
+    src: url("/fonts/Morabba-Bold.woff2") format("woff2");
   }
   @font-face {
     font-family: "Morabba Heavy";
     font-display: swap;
-    src: url("/public/fonts/Morabba-Heavy.woff2") format("woff2");
+    src: url("/fonts/Morabba-Heavy.woff2") format("woff2");
   }
 }
+@utility container {
+  @apply px-27.5 mx-auto
+}
+
 @theme {
   --color-primary : #F69946;
   --color-secondary : #FCF9F4;
@@ -39,10 +43,12 @@
   --font-MorabbaBold : "Morabba Bold";
   --font-MorabbaHeavy : "Morabba Heavy";
 
-
-
 }
+
 @layer components {
+  body {
+    direction: rtl;
+  }
   .flex-center {
     display: flex;
     align-items: center;
