@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-export default function Menu() {
+export default function DesktopMenu() {
 
     const [widthElm,setWidthElm] = useState(0)
     const [transformElm,setTransformElm] = useState(0)
