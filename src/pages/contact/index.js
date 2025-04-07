@@ -1,7 +1,7 @@
 export default function index() {
     return (
         <div>
-            auth
+            contact
         </div>
     );
 }
