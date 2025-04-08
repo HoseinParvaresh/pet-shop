@@ -53,10 +53,10 @@
     @apply flex items-center justify-center
   }
   .head-title {
-    @apply font-danaBold px-3 py-1 bg-white text-primary rounded-lg shadow
+    @apply font-danaBold px-3 py-1 bg-white text-primary rounded-lg shadow w-max
   }
   .btn {
-    @apply px-6 py-2 text-white rounded-lg cursor-pointer transition-colors duration-300 flex items-center justify-center gap-3
+    @apply px-6 py-2 text-white rounded-lg cursor-pointer transition-colors duration-300 flex items-center justify-center gap-3 w-max
   }
   .btn-xl {
     @apply px-6.5 py-3.5 
@@ -66,6 +66,12 @@
   }
   .btn-secondary {
     @apply bg-dark-primary hover:bg-primary
+  }
+  .top-image__vector--2 {
+    --animate-duration: 20s;
+  }
+  .top-image__vector--3 {
+    --animate-duration: 20s;
   }
 
 
