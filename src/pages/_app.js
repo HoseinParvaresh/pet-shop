@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
       <>
         <Svg/>
         <Header/>
-        <div className="container">
+        <div className="container font-dana">
           <Component {...pageProps} />
         </div>
       </>

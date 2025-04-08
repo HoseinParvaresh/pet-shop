@@ -1,10 +1,18 @@
-export default function Buttons() {
+export default function HeaderButtons() {
+
+  const color = "#F69946"
   return (
     <div className="flex items-center justify-between gap-4">
       {/* search button */}
       <a href="/">
         <svg className="size-7.5 cursor-pointer text-dark-primary hover:text-dark-primary/60 transition-colors duration-300">
           <use href="#magnifying-glass-circle"></use>
+        </svg>
+      </a>
+      {/* favorite button */}
+      <a href="/">
+        <svg className="size-7 cursor-pointer text-dark-primary hover:text-dark-primary/60 transition-colors duration-300">
+          <use href="#heart"></use>
         </svg>
       </a>
       {/* user button */}
@@ -19,14 +27,8 @@ export default function Buttons() {
           <use href="#shopping-bag"></use>
         </svg>
       </a>
-      {/* favorite button */}
-      <a href="/">
-        <svg className="size-7 cursor-pointer text-dark-primary hover:text-dark-primary/60 transition-colors duration-300">
-          <use href="#heart"></use>
-        </svg>
-      </a>
       {/* phone number */}
-      <button className="flex-center gap-3 bg-dark-primary px-6 py-2 rounded-lg relative cursor-pointer hover:bg-primary transition-colors duration-300 group">
+      <button className="btn btn-secondary group relative">
         <svg className="size-5 text-primary group-hover:text-white duration-300">
           <use href="#phone"></use>
         </svg>

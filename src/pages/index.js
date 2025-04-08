@@ -1,6 +1,9 @@
+import TopImage from "@/components/templates/Home/TopImage/TopImage";
 
 export default function Home() {
   return (
-      <div className="w-full text-3xl bg-primary"></div>
+      <div className="">
+        <TopImage/>
+      </div>
   );
 }
