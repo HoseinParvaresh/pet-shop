@@ -83,8 +83,8 @@
   .top-image__vector--3 {
     --animate-duration: 10s;
   }
-.title {
-    @apply font-MorabbaBold text-4xl/14 text-dark-primary max-w-100
-}
+  .title {
+      @apply font-MorabbaBold text-4xl/14 text-dark-primary max-w-100
+  }
 
 }
