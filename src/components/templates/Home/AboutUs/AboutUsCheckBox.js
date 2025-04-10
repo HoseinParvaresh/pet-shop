@@ -6,7 +6,7 @@ export default function AboutUsCheckBox({title}) {
           <use href="#check"></use>
         </svg>
       </div>
-      <p className="font-MorabbaBold text-lg text-dark-primary">
+      <p className="font-MorabbaBold text-sm 2xs:text-lg text-dark-primary">
         {title}
       </p>
     </div>

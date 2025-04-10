@@ -84,7 +84,7 @@
     --animate-duration: 10s;
   }
   .title {
-      @apply font-MorabbaBold text-4xl/14 text-dark-primary max-w-100
+      @apply font-MorabbaBold text-2xl/10 2xs:text-4xl/14 text-dark-primary max-w-100
   }
 
 }
