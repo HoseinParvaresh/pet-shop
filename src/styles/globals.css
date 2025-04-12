@@ -43,7 +43,7 @@
   --font-MorabbaBold : "Morabba Bold";
   --font-MorabbaHeavy : "Morabba Heavy";
 
-
+  --breakpoint-4xs: 350px;
   --breakpoint-3xs: 400px;
   --breakpoint-2xs: 480px;
   --breakpoint-xs: 530px;
@@ -84,7 +84,10 @@
     --animate-duration: 10s;
   }
   .title {
-      @apply font-MorabbaBold text-2xl/10 2xs:text-4xl/14 text-dark-primary max-w-100
+      @apply font-MorabbaBold text-2xl/10 2xs:text-4xl/14 text-dark-primary max-w-[427px]
+  }
+  .title-desc {
+    @apply text-dark-secondary max-w-[620px] text-sm/6 2xs:text-base/8
   }
 
 }
