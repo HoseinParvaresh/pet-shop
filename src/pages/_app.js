@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
       <ParallaxProvider>
         <Svg/>
         <Header/>
-        <div className="container font-dana">
+        <div className="font-dana">
           <Component {...pageProps} />
         </div>
       </ParallaxProvider>

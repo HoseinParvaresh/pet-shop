@@ -5,9 +5,11 @@ import OurServices from "@/components/templates/Home/OurServices/OurServices";
 export default function Home() {
   return (
       <div className="mb-200">
-        <TopImage/>
-        <AboutUs/>
-        {/* <OurServices/> */}
+        <div className="container">
+          <TopImage/>
+          <AboutUs/>
+        </div>
+        <OurServices/>
       </div>
   );
 }
