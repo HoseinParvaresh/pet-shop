@@ -23,23 +23,17 @@ export default function TopImage() {
                         </div>
                     ),
                 },
-            ]
-}  
+            ]}  
                 className="h-135 my-10 rounded-2xl px-5 lg:px-7 flex flex-col">
                 {/* title */}
                 {/* <p className="head-title animate__animated animate__fadeInRight mt-40 mb-3 text-sm xs:text-base"> به پیلیسوک خوش آمدید </p> */}
-                {/* type writer */}
-                {/* <div className="text-white text-3xl xs:text-4xl/14 md:text-5xl/16 mt-3 md:mt-auto font-MorabbaBold max-w-170 animate__animated animate__slideInRight *:block *:h-[90px]">
-                    <Typewriter
-                    words={['بهترین ها برای کوچولوهای دوست داشتنی شما']}
-                    typeSpeed={120} />
-                    
-                </div> */}
+
                 {/* button */}
                 {/* <Link href={'/'} className='btn btn-primary mt-15 xs:mt-15 animate__animated animate__fadeInUp'> 
                     <span>درباره پیلیسوک</span>
                     <img className="size-5" src="/images/pawprint-svgrepo-com.png" alt="image" />
                 </Link> */}
+
                 {/* svg (vectors) */}
                 <div className='w-full h-full relative'>
                     <img className='top-image__vector--1 hidden 2xs:block absolute left-20 bottom-20  animate__animated animate__pulse animate__infinite' src="/images/slider-img-vector-1.png" alt="1" />
