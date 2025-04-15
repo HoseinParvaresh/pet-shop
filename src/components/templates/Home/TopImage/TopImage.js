@@ -1,6 +1,5 @@
 import { ParallaxBanner } from 'react-scroll-parallax';
 import { Typewriter } from 'react-simple-typewriter'
-import Link from 'next/link';
 import TopImageCard from './TopImageCard';
 
 
@@ -15,7 +14,7 @@ export default function TopImage() {
                     speed: -15,
                     children:(
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <p className="text-white text-3xl xs:text-4xl/14 md:text-5xl/16 font-MorabbaBold max-w-160 text-center">
+                            <p className="animate__animated animate__fadeInUp text-white text-3xl xs:text-4xl/14 md:text-5xl/16 font-MorabbaBold max-w-160 text-center px-2">
                             <Typewriter
                                 words={['بهترین ها برای کوچولوهای دوست داشتنی شما']}
                                 typeSpeed={120} />
@@ -42,7 +41,7 @@ export default function TopImage() {
                 </div>
                 {/* cards */}
             </ParallaxBanner>
-            <div className='flex flex-col md:flex-row absolute w-full md:w-auto items-center gap-7 top-full md:top-[87%] px-5'>
+            <div className='flex flex-col md:flex-row absolute w-full md:w-auto items-center gap-4 md:gap-7 top-full md:top-[87%] px-5'>
                 <TopImageCard title={"خانه حیوانات"} desc={"فروش انواع خانه و باکس نگهداری حیوانات با بالاترین کیفیت"} src={"/images/pet-home.png"}/>
                 <TopImageCard title={"سلامت حیوانات"} desc={"فروش انواع لوازم و ادوات سلامت و رشد و ایمنی حیوانات"} src={"/images/pet-h.png"}/>
                 <TopImageCard title={"مراقبت حیوانات"} desc={"فروش انواع وسایل آرایش و آراستن و مراقبتی حیوانات"} src={"/images/pet-s.png"}/>
