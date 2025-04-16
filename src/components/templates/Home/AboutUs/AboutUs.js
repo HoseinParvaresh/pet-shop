@@ -17,7 +17,7 @@ export default function AboutUs() {
                 </div>
             </div>
             {/* left side backGround Image image */}
-            <div data-aos="fade-right" className="bg-[url(/images/main-page-pic-3.png)] bg-cover">
+            <div data-aos="fade-up" className="bg-[url(/images/main-page-pic-3.png)] bg-cover">
                 <div className="bg-[url(/images/main-page-pic-2.png)] bg-bottom bg-cover relative">
                     <img src="/images/main-page-pic-1-1.png" alt="main-page-pic-1-1" />
                     <img className="heart-img absolute top-0 animate__animated animate__heartBeat animate__slow animate__infinite" src="/images/secend-con-element.png" alt="secend-con-element" />
