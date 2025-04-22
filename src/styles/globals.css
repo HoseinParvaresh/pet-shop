@@ -103,6 +103,9 @@
   .btn-secondary {
     @apply bg-dark-primary hover:bg-primary
   }
+  .btn-primary--light {
+    @apply bg-white hover:text-white hover:bg-primary text-dark-primary
+  }
 
   /* css library */
   .top-image__vector--2 {
