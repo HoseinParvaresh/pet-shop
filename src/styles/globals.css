@@ -56,15 +56,41 @@
 }
 
 @layer components {
+
+  /* background images */
+  .bg__about-us--first {
+    background-image: url("/images/main-page-pic-3.png");
+    background-size: cover;
+  }
+  .bg__about-us--second {
+    background-image: url("/images/main-page-pic-2.png");
+    background-size: cover;
+    background-position: bottom;
+  }
+  .bg-trustUs {
+    background-image: url("/images/main-page-pic-4.jpg");
+    background-size: cover;
+  }
+  /* global */
   body {
     direction: rtl;
   }
+  /* helper class */
   .flex-center {
     @apply flex items-center justify-center
+  }
+  
+  /* component */
+  .title {
+    @apply font-MorabbaBold text-2xl/10 2xs:text-4xl/14 text-dark-primary max-w-[427px]
+  }
+  .title-desc {
+    @apply text-dark-secondary max-w-[620px] text-sm/6 2xs:text-base/8
   }
   .head-title {
     @apply font-danaBold px-3 py-1 bg-white text-primary rounded-lg  w-max shadow-md
   }
+
   .btn {
     @apply px-6 py-2 text-white rounded-lg cursor-pointer transition-colors duration-300 flex items-center justify-center gap-3 w-max
   }
@@ -77,50 +103,14 @@
   .btn-secondary {
     @apply bg-dark-primary hover:bg-primary
   }
+
+  /* css library */
   .top-image__vector--2 {
     --animate-duration: 10s;
   }
   .top-image__vector--3 {
     --animate-duration: 10s;
   }
-  .title {
-    @apply font-MorabbaBold text-2xl/10 2xs:text-4xl/14 text-dark-primary max-w-[427px]
-  }
-  .title-desc {
-    @apply text-dark-secondary max-w-[620px] text-sm/6 2xs:text-base/8
-  }
 
-
-
-
-.hamburger {
-  cursor: pointer;
-}
-.hamburger input {
-  display: none;
-}
-.hamburger svg {
-  height: 3em;
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.line {
-  fill: none;
-  stroke: white;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.line-top-bottom {
-  stroke-dasharray: 12 63;
-}
-.hamburger input:checked + svg {
-  transform: rotate(-45deg);
-}
-.hamburger input:checked + svg .line-top-bottom {
-  stroke-dasharray: 20 300;
-  stroke-dashoffset: -32.42;
-}
 
 }
