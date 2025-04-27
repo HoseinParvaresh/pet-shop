@@ -32,6 +32,7 @@
 }
 
 @theme {
+
   --color-primary : #F69946;
   --color-secondary : #FCF9F4;
   --color-dark-primary : #564741;
@@ -61,15 +62,21 @@
   .bg__about-us--first {
     background-image: url("/images/main-page-pic-3.png");
     background-size: cover;
+    background-repeat: no-repeat;
   }
   .bg__about-us--second {
     background-image: url("/images/main-page-pic-2.png");
     background-size: cover;
     background-position: bottom;
+    background-repeat: no-repeat;
+
   }
   .bg-trustUs {
     background-image: url("/images/main-page-pic-4.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
   }
   /* global */
   body {
@@ -108,7 +115,7 @@
   }
 
   .trust-us__cart {
-    @apply bg-white/15 flex items-center justify-center flex-col size-full rounded-xl text-white
+    @apply bg-white/15 flex items-center justify-center flex-col size-full rounded-xl text-white py-6 md:py-0
   }
 
   /* css library */
