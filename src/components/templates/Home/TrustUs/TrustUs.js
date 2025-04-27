@@ -18,20 +18,20 @@ export default function TrustUs() {
                 {/* left */}
                 <div data-aos="fade-up" className="grid grid-cols-2 gap-5">
                     <div className="trust-us__cart">
-                        <span className="font-danaBold text-3xl md:text-4xl xl:text-5xl">250<span className="text-3xl">+</span></span>
-                        <span className="font-Morabba text-base md:text-xl xl:text-2xl">مشتری راضی</span>
+                        <span className="trust-us__cart--num">250<span className="text-3xl">+</span></span>
+                        <span className="trust-us__cart--title">مشتری راضی</span>
                     </div>
                     <div className="trust-us__cart">
-                        <span className="font-danaBold text-3xl md:text-4xl xl:text-5xl">10<span className="text-3xl">+</span></span>
-                        <span className="font-Morabba text-base md:text-xl xl:text-2xl">سال سابقه</span>
+                        <span className="trust-us__cart--num">10<span className="text-3xl">+</span></span>
+                        <span className="trust-us__cart--title">سال سابقه</span>
                     </div>
                     <div className="trust-us__cart">
-                        <span className="font-danaBold text-3xl md:text-4xl xl:text-5xl">40<span className="text-3xl">+</span></span>
-                        <span className="font-Morabba text-base md:text-xl xl:text-2xl">اعضای تیم</span>
+                        <span className="trust-us__cart--num">40<span className="text-3xl">+</span></span>
+                        <span className="trust-us__cart--title">اعضای تیم</span>
                     </div>
                     <div className="trust-us__cart">
-                        <span className="font-danaBold text-3xl md:text-4xl xl:text-5xl">250<span className="text-3xl">+</span></span>
-                        <span className="font-Morabba text-base md:text-xl xl:text-2xl">حیوان خوشحال</span>
+                        <span className="trust-us__cart--num">250<span className="text-3xl">+</span></span>
+                        <span className="trust-us__cart--title">حیوان خوشحال</span>
                     </div>
                 </div>
             </div>

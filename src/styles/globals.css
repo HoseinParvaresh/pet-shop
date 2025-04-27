@@ -58,7 +58,7 @@
 
 @layer components {
 
-  /* background images */
+  /* { -- background images -- } */
   .bg__about-us--first {
     background-image: url("/images/main-page-pic-3.png");
     background-size: cover;
@@ -78,16 +78,19 @@
     background-position: center;
 
   }
-  /* global */
+  /* { -- global -- } */
   body {
     direction: rtl;
   }
-  /* helper class */
+  
+  /* { -- helper class -- } */
   .flex-center {
     @apply flex items-center justify-center
   }
   
-  /* component */
+  /*{ -- component -- }*/
+
+  /* title */
   .title {
     @apply font-MorabbaBold text-2xl/10 2xs:text-4xl/14 text-dark-primary max-w-[427px]
   }
@@ -97,7 +100,7 @@
   .head-title {
     @apply font-danaBold px-3 py-1 bg-white text-primary rounded-lg  w-max shadow-md
   }
-
+  /* buttons */
   .btn {
     @apply px-6 py-2 text-white rounded-lg cursor-pointer transition-colors duration-300 flex items-center justify-center gap-3 w-max
   }
@@ -113,18 +116,22 @@
   .btn-primary--light {
     @apply bg-white hover:text-white hover:bg-primary text-dark-primary
   }
-
+  /* trust us cart */
   .trust-us__cart {
     @apply bg-white/15 flex items-center justify-center flex-col size-full rounded-xl text-white py-6 md:py-0
   }
+  .trust-us__cart--num {
+    @apply font-danaBold text-3xl md:text-4xl xl:text-5xl
+  }
+  .trust-us__cart--title {
+    @apply font-Morabba text-base md:text-xl xl:text-2xl
+  }
 
-  /* css library */
+  /* { -- css library -- } */
   .top-image__vector--2 {
     --animate-duration: 10s;
   }
   .top-image__vector--3 {
     --animate-duration: 10s;
   }
-
-
 }
