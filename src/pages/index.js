@@ -5,9 +5,10 @@ import TrustUs from "@/components/templates/Home/TrustUs/TrustUs";
 
 export default function Home() {
 
+
+
   return (
-      <div className="mb-200">
-        <div></div>
+      <div className="mb-200" >
         <div className="container">
           <TopImage/>
           <AboutUs/>

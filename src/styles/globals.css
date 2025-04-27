@@ -107,6 +107,10 @@
     @apply bg-white hover:text-white hover:bg-primary text-dark-primary
   }
 
+  .trust-us__cart {
+    @apply bg-white/15 flex items-center justify-center flex-col size-full rounded-xl text-white
+  }
+
   /* css library */
   .top-image__vector--2 {
     --animate-duration: 10s;
