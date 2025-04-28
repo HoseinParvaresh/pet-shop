@@ -82,7 +82,7 @@
   body {
     direction: rtl;
   }
-  
+
   /* { -- helper class -- } */
   .flex-center {
     @apply flex items-center justify-center
@@ -118,7 +118,7 @@
   }
   /* trust us cart */
   .trust-us__cart {
-    @apply bg-white/15 flex items-center justify-center flex-col size-full rounded-xl text-white py-6 md:py-0
+    @apply bg-white/15 flex items-center justify-center flex-col size-full rounded-xl text-white py-6
   }
   .trust-us__cart--num {
     @apply font-danaBold text-3xl md:text-4xl xl:text-5xl
