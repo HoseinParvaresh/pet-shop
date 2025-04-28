@@ -4,45 +4,47 @@ import { ParallaxBanner } from "react-scroll-parallax";
 export default function TrustUs() {
     return (
         <ParallaxBanner layers={[
-            { image: '/images/main-page-pic-4.jpg', speed: -20 },
+            { image:'/images/bg-trustUs.png', speed: -20 },
             {
                 speed: -15,
                 children: (
-                    <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 absolute inset-0 items-center justify-center">
-                        {/* right */}
-                        <div>
-                            <p className="title text-white max-w-full">دلایـلی کـه میـتوانیـد به مجموعه ما اعتـماد کنیـد</p>
-                            <p className="title-desc text-white max-w-full md:max-w-[450px] mt-3 md:mt-5 line-clamp-2 md:line-clamp-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید سادگی است.</p>
-                            {/* button */}
-                            <Link href={'/'} className='btn btn-primary--light mt-5'>
-                                <span>درباره پیلیسوک</span>
-                                <MdOutlinePets className="size-4" />
-                            </Link>
-                        </div>
+                  
+                        <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 absolute inset-0 items-center justify-center">
+                            {/* right */}
+                            <div className="self-end md:self-auto">
+                                <p className="title text-white max-w-full md:max-w-[427px]">دلایـلی کـه میـتوانیـد به مجموعه ما اعتـماد کنیـد</p>
+                                <p className="title-desc text-white max-w-full md:max-w-[450px] mt-3 md:mt-5 line-clamp-2 md:line-clamp-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید سادگی است.</p>
+                                {/* button */}
+                                <Link href={'/'} className='btn btn-primary--light mt-5'>
+                                    <span>درباره پیلیسوک</span>
+                                    <MdOutlinePets className="size-4" />
+                                </Link>
+                            </div>
 
-                        {/* left */}
-                        <div className="grid grid-cols-2 gap-5">
-                            <div className="trust-us__cart">
-                                <span className="trust-us__cart--num">250<span className="text-3xl">+</span></span>
-                                <span className="trust-us__cart--title">مشتری راضی</span>
-                            </div>
-                            <div className="trust-us__cart">
-                                <span className="trust-us__cart--num">10<span className="text-3xl">+</span></span>
-                                <span className="trust-us__cart--title">سال سابقه</span>
-                            </div>
-                            <div className="trust-us__cart">
-                                <span className="trust-us__cart--num">40<span className="text-3xl">+</span></span>
-                                <span className="trust-us__cart--title">اعضای تیم</span>
-                            </div>
-                            <div className="trust-us__cart">
-                                <span className="trust-us__cart--num">250<span className="text-3xl">+</span></span>
-                                <span className="trust-us__cart--title">حیوان خوشحال</span>
+                            {/* left */}
+                            <div className="grid grid-cols-2 gap-5 self-start md:self-auto">
+                                <div className="trust-us__cart">
+                                    <span className="trust-us__cart--num">250<span className="text-3xl">+</span></span>
+                                    <span className="trust-us__cart--title">مشتری راضی</span>
+                                </div>
+                                <div className="trust-us__cart">
+                                    <span className="trust-us__cart--num">10<span className="text-3xl">+</span></span>
+                                    <span className="trust-us__cart--title">سال سابقه</span>
+                                </div>
+                                <div className="trust-us__cart">
+                                    <span className="trust-us__cart--num">40<span className="text-3xl">+</span></span>
+                                    <span className="trust-us__cart--title">اعضای تیم</span>
+                                </div>
+                                <div className="trust-us__cart">
+                                    <span className="trust-us__cart--num">250<span className="text-3xl">+</span></span>
+                                    <span className="trust-us__cart--title">حیوان خوشحال</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+    
                 ),
             },
-        ]} className="pt-10 md:pt-16 pb-25 h-130">
+        ]} className="pt-10 md:pt-16 pb-25 h-150 md:h-130">
         </ParallaxBanner>
     );
 }

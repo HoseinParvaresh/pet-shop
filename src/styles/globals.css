@@ -71,13 +71,6 @@
     background-repeat: no-repeat;
 
   }
-  .bg-trustUs {
-    background-image: url("/images/main-page-pic-4.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-  }
   /* { -- global -- } */
   body {
     direction: rtl;
