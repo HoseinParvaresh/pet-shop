@@ -16,19 +16,16 @@ export default function CustomerComments() {
                 </p>
             </div>
             {/* bottom => comments */}
-            <div className="flex gap-15">
+            <div data-aos="fade-up" className="flex gap-15">
                 <Swiper
                     loop={true}
                     slidesPerView={1}
-                    className="!py-10 !px-5"
-                    spaceBetween={45}
+                    className="!py-10 !px-2 md:!px-5"
+                    spaceBetween={40}
                     breakpoints={{
-                        630: {
+                        1024: {
                             slidesPerView: 2
-                        },
-                        1037: {
-                            slidesPerView: 2,
-                        },
+                        }
                     }}
                 >
                     <SwiperSlide>
