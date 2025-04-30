@@ -16,15 +16,11 @@ export default function Home() {
   return (
       <div className="mb-200" >
         <img id="cat-scroll" className="fixed z-50 -right-20 top-0 w-20 hidden xl:block" src="/images/cat-1.png" alt="cat-scroll"/>
-        <div className="container">
-          <TopImage/>
-          <AboutUs/>
-        </div>
+        <TopImage/>
+        <AboutUs/>
         <OurServices/>
         <TrustUs/>
-        <div className="container">
-          <CustomerComments/>
-        </div>
+        <CustomerComments/>
       </div>
   );
 }

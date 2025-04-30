@@ -2,7 +2,7 @@ import AboutUsCheckBox from "./AboutUsCheckBox";
 
 export default function AboutUs() {
     return (
-        <div className="mt-90 2xs:mt-80 md:mt-30 lg:mt-50 grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div className="container mt-90 2xs:mt-80 md:mt-30 lg:mt-50 grid grid-cols-1 lg:grid-cols-2 gap-5">
             {/* right side => head title - title - desc check box */}
             <div data-aos="fade-left" className="flex flex-col gap-5">
                 <p className="head-title">درباره ما بدانیـد</p>

@@ -7,7 +7,7 @@ export default function TopImage() {
 
 
     return (
-        <div className=' relative flex flex-col items-center'>
+        <div className='container relative flex flex-col items-center'>
             <ParallaxBanner layers={[
                 { image: '/images/cat.png', speed: -20 },
                 {
