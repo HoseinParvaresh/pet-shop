@@ -44,7 +44,7 @@ export default function TrustUs() {
     
                 ),
             },
-        ]} className="pt-10 md:pt-16 pb-25 h-150 md:h-130">
+        ]} className="h-150 md:h-120">
         </ParallaxBanner>
     );
 }

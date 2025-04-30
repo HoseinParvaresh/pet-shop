@@ -4,6 +4,7 @@ import OurServices from "@/components/templates/Home/OurServices/OurServices";
 import TrustUs from "@/components/templates/Home/TrustUs/TrustUs";
 import { useEffect } from "react";
 import { customScroll } from "@/Utility/UtilityFunction";
+import CustomerComments from "@/components/templates/Home/CustomerComments/CustomerComments";
 
 export default function Home() {
   useEffect(() => {
@@ -21,6 +22,9 @@ export default function Home() {
         </div>
         <OurServices/>
         <TrustUs/>
+        <div className="container">
+          <CustomerComments/>
+        </div>
       </div>
   );
 }
