@@ -6,7 +6,7 @@ import "swiper/css";
 export default function LastArticles() {
     return (
         <div className="bg-secondary mt-10">
-            <div className="container pt-10 pb-20">
+            <div className="container py-10">
                 {/* top => head title / title / desc */}
                 <div data-aos="fade-down" className="flex-center flex-col text-center gap-3">
                     <p className="head-title"> آخـرین مقالات</p>
@@ -17,42 +17,44 @@ export default function LastArticles() {
                     </p>
                 </div>
                 {/* bottom => article item */}
-                <Swiper
-                    slidesPerView={1}
-                    className="!py-10  !justify-center"
-                    spaceBetween={20}
-                    breakpoints={{
-                        768: {
-                            slidesPerView: 2
-                        },
-                        1024: {
-                            slidesPerView: 3
-                        },
-                        1280: {
-                            slidesPerView: 4,
-                        },
-                    }}
-                >
-                    <SwiperSlide>
-                        <LastArticle />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <LastArticle />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <LastArticle />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <LastArticle />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <LastArticle />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <LastArticle />
-                    </SwiperSlide>
+                <div data-aos="fade-up">
+                    <Swiper
+                        slidesPerView={1}
+                        className="!py-10  !justify-center"
+                        spaceBetween={20}
+                        breakpoints={{
+                            768: {
+                                slidesPerView: 2
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            },
+                            1280: {
+                                slidesPerView: 4,
+                            },
+                        }}
+                    >
+                        <SwiperSlide>
+                            <LastArticle />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <LastArticle />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <LastArticle />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <LastArticle />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <LastArticle />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <LastArticle />
+                        </SwiperSlide>
 
-                </Swiper>
+                    </Swiper>
+                </div>
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import { MdOutlinePets } from "react-icons/md";
 
 export default function LastArticle({}) {
     return (
-        <div className="w-full  md:max-w-78 bg-white group rounded-lg overflow-hidden hover:shadow-xl transition-all duration-400">
+        <div className="w-full md:max-w-78 bg-white group rounded-lg overflow-hidden hover:shadow-xl transition-all duration-400">
             {/* top => image */}
             <div className="relative h-50">
                 <img className=" object-cover w-full h-full" src="/images/post-5.jpg" alt="post-5" />
