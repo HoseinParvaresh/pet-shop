@@ -16,7 +16,7 @@ export default function Home() {
   }, [])
 
   return (
-      <div className="mb-200" >
+      <div>
         <img id="cat-scroll" className="fixed z-50 -right-20 top-0 w-20 hidden xl:block" src="/images/cat-1.png" alt="cat-scroll"/>
         <TopImage/>
         <AboutUs/>

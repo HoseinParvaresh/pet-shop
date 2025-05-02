@@ -6,6 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import Footer from "@/components/modules/Footer/Footer";
 
 export default function App({ Component, pageProps }) {
 
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
           <div className="font-dana">
             <Component {...pageProps} />
           </div>
+          <Footer/>
         </ParallaxProvider>
       </div>
   );

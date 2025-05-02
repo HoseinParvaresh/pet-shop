@@ -37,6 +37,7 @@
   --color-secondary : #FCF9F4;
   --color-dark-primary : #564741;
   --color-dark-secondary : #616161;
+  --color-footer : #3A3330;
 
   --font-dana : "Dana";
   --font-danaBold : "Dana Bold";
@@ -69,7 +70,12 @@
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-
+  }
+  .bg__footer {
+    background-image: url("/images/about-img11.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
   }
   /* { -- global -- } */
   body {
@@ -110,14 +116,21 @@
     @apply bg-white hover:text-white hover:bg-primary text-dark-primary
   }
   /* trust us cart */
-  .trust-us__cart {
+  .trust-us__box {
     @apply bg-white/15 flex items-center justify-center flex-col size-full rounded-xl text-white py-6
   }
-  .trust-us__cart--num {
+  .trust-us__box--num {
     @apply font-danaBold text-3xl md:text-4xl xl:text-5xl
   }
-  .trust-us__cart--title {
+  .trust-us__box--title {
     @apply font-Morabba text-base md:text-xl xl:text-2xl
+  }
+
+  .footer__box {
+    @apply flex flex-col md:flex-row items-center justify-center text-center gap-1 md:gap-3 w-32 sm:w-50
+  }
+  .footer__box--title {
+    @apply font-MorabbaBold mb-1 text-sm md:text-base
   }
 
   /* { -- css library -- } */
