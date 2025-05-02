@@ -15,13 +15,11 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   return (
-      <div>
+      <div className="font-dana">
         <ParallaxProvider>
           <Svg/>
           <Header/>
-          <div className="font-dana">
             <Component {...pageProps} />
-          </div>
           <Footer/>
         </ParallaxProvider>
       </div>

@@ -68,30 +68,46 @@ export default function BottomFooter() {
                     </ul>
                     {/* left links */}
                     <ul className="text-white flex flex-col gap-3">
-                            <li>
-                                <Link href={"/"}>قوانین و مقررات </Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>سوالات متداول</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>سبد خرید</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>فروش ویژه</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>نظرات مشتریان</Link>
-                            </li>
-                        </ul>
+                        <li>
+                            <Link href={"/"}>قوانین و مقررات </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>سوالات متداول</Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>سبد خرید</Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>فروش ویژه</Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>نظرات مشتریان</Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
             {/* left => left (working hours) / right (Site permissions) */}
-            <div>
+            <div className="flex">
                 {/* working hours */}
-                <div></div>
+                <div>
+                    <p className="font-MorabbaBold text-2xl text-white w-62 mb-5">ساعت های کاری </p>
+                    <div className="bg-dark-secondary w-full rounded-lg py-5 px-7 flex items-center gap-7 justify-between text-white">
+                        <div className="flex flex-col gap-5">
+                            <p>شنبه - چهارشنبه:</p>
+                            <p>پنجشنبه:</p>
+                            <p>جمعه:</p>
+                        </div>
+                        <div className="flex flex-col gap-5 items-end">
+                            <p>8:00 - 15:00</p>
+                            <p>8:00 - 13:00</p>
+                            <p>تعطیل</p>
+                        </div>
+                    </div>
+                </div>
                 {/* Site permissions */}
-                <div></div>
+                <div>
+                    <p className="font-MorabbaBold text-2xl text-white w-62 mb-5"> مجوز های سایت </p>
+                </div>
             </div>
         </div>
     );
