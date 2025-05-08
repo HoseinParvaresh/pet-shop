@@ -133,7 +133,7 @@
     @apply font-MorabbaBold mb-1 text-sm md:text-base
   }
   .footer__box--sub_title {
-    @apply text-xs md:text-sm font-danaBold opacity-80 text-start
+    @apply text-xs md:text-sm font-danaBold opacity-80 text-center md:text-start
   }
 
   /* { -- css library -- } */

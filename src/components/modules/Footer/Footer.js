@@ -4,7 +4,7 @@ import BottomFooter from "./BottomFooter";
 
 export default function Footer() {
     return (
-        <div className="bg-footer pb-10">
+        <div className="bg-footer">
             <TopFooter />
             <BottomFooter />
         </div>

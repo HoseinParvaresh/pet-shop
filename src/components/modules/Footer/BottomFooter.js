@@ -6,10 +6,10 @@ import Link from "next/link";
 
 export default function BottomFooter() {
     return (
-        <div className="h-100 container">
-            <div className=" py-15 px-10 flex justify-between border-b border-dark-secondary">
-                {/* right => logo / phone number / address / social media */}
-                <div className="flex flex-col items-start gap-6 w-62">
+        <div className="container">
+            <div className="py-15 md:px-10 flex flex-wrap justify-center gap-15 xl:gap-5 xl:justify-between border-b border-dark-secondary">
+                {/* right => logo / phone number / address / social media icons */}
+                <div className="flex flex-col items-center sm:items-start gap-6 w-full sm:w-62">
                     {/* logo */}
                     <Link href={"/"} className="text-primary font-MorabbaHeavy text-3xl self-center"><span className="text-white ml-1">سایت</span> پــیـلـیـسـوک</Link>
                     {/* phone number */}
@@ -22,33 +22,33 @@ export default function BottomFooter() {
                             <p className="text-xs font-danaBold">سوالی دارید؟ باما تماس بگیرید</p>
                         </div>
                     </div>
-                    {/*  address */}
+                    {/* address */}
                     <div className="text-white">
                         <p className="font-MorabbaBold text-2xl mb-2">آدرس ما</p>
-                        <p className="text-xs font-danaBold"> بوشهر-جم-میدان امام حسین-ساختمان روبروی اداره پست </p>
+                        <p className="text-xs font-danaBold line-clamp-2"> بوشهر-جم-میدان امام حسین-ساختمان روبروی اداره پست </p>
                     </div>
-                    {/* social media */}
+                    {/* social media icons */}
                     <div className="flex gap-3 items-center">
-                        <Link href={"/"}>
+                        <Link href={"https://www.instagram.com/_hoseinparvaresh/"} target="blank">
                             <FaInstagram className="p-1.5 size-8 border border-white/60 text-white rounded-full" />
                         </Link>
-                        <Link href={"/"}>
+                        <Link href={"https://telegram.me/hosein2681/"} target="blank">
                             <FaTelegram className="p-1.5 size-8 border border-white/60 text-white rounded-full" />
                         </Link>
-                        <Link href={"/"}>
+                        <Link href={""} target="blank">
                             <FaYoutube className="p-1.5 size-8 border border-white/60 text-white rounded-full" />
                         </Link>
-                        <Link href={"/"}>
+                        <Link href={"https://wa.me/989176437156"} target="blank">
                             <FaWhatsapp className="p-1.5 size-8 border border-white/60 text-white rounded-full" />
                         </Link>
                     </div>
                 </div>
                 {/* middle => title / links */}
-                <div>
+                <div className="w-full sm:w-62">
                     {/* title */}
-                    <p className="font-MorabbaBold text-xl text-white w-62 mb-6">لینک های مفید</p>
+                    <p className="font-MorabbaBold text-xl text-white mb-6 text-center sm:text-start">لینک های مفید</p>
                     {/* links */}
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-evenly sm:justify-between">
                         {/* right links */}
                         <ul className="text-white flex flex-col gap-3">
                             <li>
@@ -88,13 +88,13 @@ export default function BottomFooter() {
                     </div>
                 </div>
                 {/* left => left (working hours) / right (Site permissions) */}
-                <div className="flex gap-10">
+                <div className="flex flex-col sm:flex-row gap-10">
                     {/* working hours => title / box */}
                     <div>
                         {/* title */}
                         <p className="font-MorabbaBold text-xl text-white w-62 mb-6">ساعت های کاری </p>
                         {/* box */}
-                        <div className="bg-[#595351] w-full rounded-lg py-5 px-7 flex items-center gap-7 justify-between text-white">
+                        <div className="bg-[#595351] w-full rounded-lg py-5 px-7 flex items-center gap-7 justify-between text-white text-sm md:text-base">
                             <div className="flex flex-col gap-4">
                                 <p>شنبه - چهارشنبه:</p>
                                 <p>پنجشنبه:</p>
@@ -117,7 +117,7 @@ export default function BottomFooter() {
                     </div>
                 </div>
             </div>
-            <p className="text-white text-center text-sm mt-5">تمامی حقوق برای وبسایت فروشگاهی پیلیسوک محفوظ می باشد</p>
+            <p className="text-white text-center text-sm py-5">تمامی حقوق برای وبسایت فروشگاهی پیلیسوک محفوظ می باشد</p>
         </div>
     );
 }
