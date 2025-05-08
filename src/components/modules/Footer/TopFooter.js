@@ -11,28 +11,28 @@ export default function TopFooter() {
                     <LuPackageCheck className="text-dark-primary size-6 md:size-8" />
                     <div className="text-white">
                         <p className="footer__box--title">ضمانت کیفیت کالا</p>
-                        <p className="text-xs font-danaBold opacity-80">کیفیت را تجربه کنید</p>
+                        <p className="footer__box--sub_title">کیفیت را تجربه کنید</p>
                     </div>
                 </div>
                 <div className="footer__box">
                     <BiSupport className="text-dark-primary size-6 md:size-8" />
                     <div className="text-white">
                         <p className="footer__box--title"> پشتیبانی سریع سایت</p>
-                        <p className="text-xs font-danaBold opacity-80">پشتیبانی سریع 24/7 </p>
+                        <p className="footer__box--sub_title">پشتیبانی سریع 24/7 </p>
                     </div>
                 </div>
                 <div className="footer__box">
                     <FaBox className="text-dark-primary size-6 md:size-8" />
                     <div className="text-white">
                         <p className="footer__box--title"> 7 روز ضمانت بازگشت</p>
-                        <p className="text-xs font-danaBold opacity-80"> حتی تعویض کالا !</p>
+                        <p className="footer__box--sub_title"> حتی تعویض کالا !</p>
                     </div>
                 </div>
                 <div className="footer__box">
                     <FaTruckFast className="text-dark-primary size-6 md:size-8" />
                     <div className="text-white">
                         <p className="footer__box--title"> تحویل سریع کالا</p>
-                        <p className="text-xs font-danaBold opacity-80"> تحویل به موقع کالا</p>
+                        <p className="footer__box--sub_title"> تحویل به موقع کالا</p>
                     </div>
                 </div>
             </div>

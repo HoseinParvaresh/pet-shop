@@ -11,7 +11,7 @@ export default function BottomFooter() {
                 {/* right => logo / phone number / address / social media */}
                 <div className="flex flex-col items-start gap-6 w-62">
                     {/* logo */}
-                    <a href="/" className="text-primary font-MorabbaHeavy text-3xl self-center"><span className="text-white ml-1">سایت</span> پــیـلـیـسـوک</a>
+                    <Link href={"/"} className="text-primary font-MorabbaHeavy text-3xl self-center"><span className="text-white ml-1">سایت</span> پــیـلـیـسـوک</Link>
                     {/* phone number */}
                     <div className="flex items-center gap-3">
                         <svg className="size-12 text-primary rotate-270">
