@@ -28,22 +28,21 @@
   }
 }
 @utility container {
-  @apply px-5 xl:px-27.5 mx-auto
+  @apply px-5 xl:px-27.5 mx-auto;
 }
 
 @theme {
+  --color-primary: #f69946;
+  --color-secondary: #fcf9f4;
+  --color-dark-primary: #564741;
+  --color-dark-secondary: #616161;
+  --color-footer: #3a3330;
 
-  --color-primary : #F69946;
-  --color-secondary : #FCF9F4;
-  --color-dark-primary : #564741;
-  --color-dark-secondary : #616161;
-  --color-footer : #3A3330;
-
-  --font-dana : "Dana";
-  --font-danaBold : "Dana Bold";
-  --font-Morabba : "Morabba";
-  --font-MorabbaBold : "Morabba Bold";
-  --font-MorabbaHeavy : "Morabba Heavy";
+  --font-dana: "Dana";
+  --font-danaBold: "Dana Bold";
+  --font-Morabba: "Morabba";
+  --font-MorabbaBold: "Morabba Bold";
+  --font-MorabbaHeavy: "Morabba Heavy";
 
   --breakpoint-4xs: 350px;
   --breakpoint-3xs: 400px;
@@ -54,11 +53,9 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
-
 }
 
 @layer components {
-
   /* { -- background images -- } */
   .bg__about-us--first {
     background-image: url("/images/main-page-pic-3.png");
@@ -84,56 +81,130 @@
 
   /* { -- helper class -- } */
   .flex-center {
-    @apply flex items-center justify-center
+    @apply flex items-center justify-center;
   }
-  
+
   /*{ -- component -- }*/
 
   /* title */
   .title {
-    @apply font-MorabbaBold text-2xl/10 2xs:text-4xl/14 text-dark-primary max-w-[427px]
+    @apply font-MorabbaBold text-2xl/10 2xs:text-4xl/14 text-dark-primary max-w-[427px];
   }
   .title-desc {
-    @apply text-dark-secondary max-w-[620px] text-sm/6 2xs:text-base/8 line-clamp-3
+    @apply text-dark-secondary max-w-[620px] text-sm/6 2xs:text-base/8 line-clamp-3;
   }
   .head-title {
-    @apply font-danaBold px-3 py-1 bg-white text-primary rounded-lg  w-max shadow-md
+    @apply font-danaBold px-3 py-1 bg-white text-primary rounded-lg  w-max shadow-md;
   }
   /* buttons */
   .btn {
-    @apply px-6 py-2 text-white rounded-lg cursor-pointer transition-colors duration-300 flex items-center justify-center gap-3 w-max
+    @apply px-6 py-2 text-white rounded-lg cursor-pointer transition-colors duration-300 flex items-center justify-center gap-3 w-max;
   }
   .btn-xl {
-    @apply px-6.5 py-3.5 
+    @apply px-6.5 py-3.5;
   }
   .btn-primary {
-    @apply bg-primary hover:bg-dark-primary 
+    @apply bg-primary hover:bg-dark-primary;
   }
   .btn-secondary {
-    @apply bg-dark-primary hover:bg-primary
+    @apply bg-dark-primary hover:bg-primary;
   }
   .btn-primary--light {
-    @apply bg-white hover:text-white hover:bg-primary text-dark-primary
+    @apply bg-white hover:text-white hover:bg-primary text-dark-primary;
   }
   /* trust us cart */
   .trust-us__box {
-    @apply bg-white/15 flex items-center justify-center flex-col size-full rounded-xl text-white py-6
+    @apply bg-white/15 flex items-center justify-center flex-col size-full rounded-xl text-white py-6;
   }
   .trust-us__box--num {
-    @apply font-danaBold text-3xl md:text-4xl xl:text-5xl
+    @apply font-danaBold text-3xl md:text-4xl xl:text-5xl;
   }
   .trust-us__box--title {
-    @apply font-Morabba text-base md:text-xl xl:text-2xl
+    @apply font-Morabba text-base md:text-xl xl:text-2xl;
   }
 
   .footer__box {
-    @apply flex flex-col md:flex-row items-center justify-center text-center gap-1 md:gap-3 w-32 sm:w-50
+    @apply flex flex-col md:flex-row items-center justify-center text-center gap-1 md:gap-3 w-32 sm:w-50;
   }
   .footer__box--title {
-    @apply font-MorabbaBold mb-1 text-sm md:text-base
+    @apply font-MorabbaBold mb-1 text-sm md:text-base;
   }
   .footer__box--sub_title {
-    @apply text-xs md:text-sm font-danaBold opacity-80 text-center md:text-start
+    @apply text-xs md:text-sm font-danaBold opacity-80 text-center md:text-start;
+  }
+
+  /* ------ { ... Toggle ... } ------ */
+  .toggle {
+    @apply relative cursor-pointer select-none;
+  }
+  .toggle__marker {
+    @apply relative block h-6 w-11.5 rounded-full bg-[#e5e7eb] transition-colors;
+  }
+  .toggle__marker:after {
+    @apply absolute top-0 bottom-0 right-1 my-auto h-4 w-4 rounded-full bg-white transition-all content-[""];
+  }
+  .toggle__input {
+    @apply absolute h-0 w-0 opacity-0;
+  }
+  /* ------ { ... Check Box ... } ------ */
+  .checkbox__input::after {
+    @apply relative block w-2.75 h-2.75 border border-[#808080] content-[""] bg-white;
+  }
+  .checkbox__input::before {
+    @apply relative block left-0.5 -top-2.75 w-1.75 h-1.75 border border-y-[#b3b3b3] border-x-[#dcddde] content-[""]
+            bg-linear-[135deg] from-[#b1b6be] to-white bg-no-repeat bg-center;
+  }
+  .checkbox {
+    @apply relative flex cursor-pointer items-center select-none gap-x-2;
+  }
+  .checkbox__marker {
+    @apply block size-4 shrink-0 bg-gray-200 rounded-sm transition-colors;
+  }
+  .checkbox__input:checked ~ .checkbox__marker {
+    @apply bg-blue-500;
+  }
+  /* ------ { ... Sort ... } ------ */
+  .sort-btn {
+    @apply inline-block border-y-2 border-transparent font-dana text-sm leading-[64px] transition-all;
+  }
+  .sort-btn--active {
+    @apply border-blue-500 text-blue-500;
+  }
+  /* ------ { ... Common ... } ------ */
+  .toggle__input,
+  .checkbox__input {
+    @apply absolute size-0 opacity-0;
+  }
+  .toggle__input:checked ~ .toggle__marker {
+    @apply bg-blue-500;
+  }
+  .toggle__input:checked ~ .toggle__marker:after {
+    @apply right-[26px];
+  }
+  /* ------ { ... Filter ... } ------ */
+  .filter {
+    @apply invisible fixed inset-0 z-50 flex h-full w-full flex-col overflow-y-auto bg-white opacity-0 transition-colors;
+  }
+  .filter__header {
+    @apply flex h-16 shrink-0 items-center justify-between bg-[#f3f4f6] px-5;
+  }
+  .filter__clean-btn,
+  .filter__head-title {
+    @apply flex items-center;
+  }
+  .filter__head-title {
+    @apply gap-x-2;
+    -moz-column-gap: 0.5rem;
+  }
+  .filter__clean-btn {
+    @apply gap-x-1.5 text-[#db2e34];
+    -moz-column-gap: 0.375rem;
+  }
+  .filter__footer {
+    @apply flex h-full items-end mt-6 pb-8 px-5;
+  }
+  .filter--open {
+    @apply visible opacity-100;
   }
 
   /* { -- css library -- } */

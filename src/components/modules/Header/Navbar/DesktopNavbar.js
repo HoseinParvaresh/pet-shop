@@ -22,8 +22,8 @@ export default function DesktopNavbar() {
 
     return (
         <div>
-            <ul onMouseLeave={mouseLeaveHandler}  className="flex items-center justify-center gap-7 font-MorabbaBold text-[18px] text-dark-primary">
-            <div className="absolute top-[67px] left-0 h-[2.5px] bg-primary bottom-0 transition-all duration-300" style={styles}></div>
+            <ul onMouseLeave={mouseLeaveHandler} className="flex items-center justify-center gap-10 font-MorabbaBold text-[18px] text-dark-primary">
+                <div className="absolute top-[67px] left-0 h-[2.5px] bg-primary bottom-0 transition-all duration-300" style={styles}></div>
                 <li className="cursor-pointer hover:text-primary transition-colors" onMouseEnter={mouseEnterHandler}><Link href="/">صفحه اصلی</Link></li>
                 <li className="cursor-pointer hover:text-primary transition-colors" onMouseEnter={mouseEnterHandler}><Link href="/store">فروشگاه</Link></li>
                 <li className="cursor-pointer hover:text-primary transition-colors" onMouseEnter={mouseEnterHandler}><Link href="/article">وبلاگ</Link></li>

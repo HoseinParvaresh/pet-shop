@@ -7,6 +7,7 @@ import { customScroll } from "@/Utility/UtilityFunction";
 import CustomerComments from "@/components/templates/Home/CustomerComments/CustomerComments";
 import LastArticles from "@/components/templates/Home/LastArticles/LastArticles";
 import JoinNewsletter from "@/components/templates/Home/JoinNewsletter/JoinNewsletter";
+import Image from "next/image";
 
 export default function Home() {
   useEffect(() => {
@@ -16,8 +17,8 @@ export default function Home() {
   }, [])
 
   return (
-      <div>
-        <img id="cat-scroll" className="fixed z-50 -right-20 top-0 w-20 hidden xl:block" src="/images/cat-1.png" alt="cat-scroll"/>
+      <>
+        <Image width={160} height={10} id="cat-scroll" className="fixed z-50 -right-50 top-0 hidden xl:block" src="/images/cat-2.png" alt="cat-scroll"/>
         <TopImage/>
         <AboutUs/>
         <OurServices/>
@@ -25,6 +26,6 @@ export default function Home() {
         <CustomerComments/>
         <LastArticles/>
         <JoinNewsletter/>
-      </div>
+      </>
   );
 }
