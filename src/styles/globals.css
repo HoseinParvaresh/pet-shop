@@ -161,14 +161,14 @@
     @apply block size-4 shrink-0 bg-gray-200 rounded-sm transition-colors;
   }
   .checkbox__input:checked ~ .checkbox__marker {
-    @apply bg-blue-500;
+    @apply bg-primary;
   }
   /* ------ { ... Sort ... } ------ */
   .sort-btn {
     @apply inline-block border-y-2 border-transparent font-dana text-sm leading-[64px] transition-all;
   }
   .sort-btn--active {
-    @apply border-blue-500 text-blue-500;
+    @apply border-primary text-primary;
   }
   /* ------ { ... Common ... } ------ */
   .toggle__input,
@@ -176,7 +176,7 @@
     @apply absolute size-0 opacity-0;
   }
   .toggle__input:checked ~ .toggle__marker {
-    @apply bg-blue-500;
+    @apply bg-primary;
   }
   .toggle__input:checked ~ .toggle__marker:after {
     @apply right-[26px];

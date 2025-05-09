@@ -20,11 +20,11 @@ export default function Sidebar() {
         { id: 8, name: 'تاریخ' }
     ])
     return (
-        <aside className="col-span-full lg:col-span-4 xl:col-span-3 lg:sticky top-6 space-y-6">
+        <aside className="col-span-full lg:col-span-4 xl:col-span-3 lg:sticky top-6 space-y-6 mb-20">
             {/* SearchBox & Toggle Box Container & Category Filter */}
             <form className="space-y-6">
                 <SearchBox />
-                <ToggleBox items={toggleList} />
+                {/* <ToggleBox items={toggleList} /> */}
                 <Category items={categoryList} />
             </form>
         </aside>

@@ -5,7 +5,7 @@ import Content from "@/components/templates/Store/Content/Content";
 export default function index() {
 
     return (
-        <div className="container mt-10 bg-gray-100">
+        <div className="container mt-10">
             <SectionName/>
             <section className="grid grid-cols-12 gap-y-5 md:gap-x-7">
                 <Sidebar/>

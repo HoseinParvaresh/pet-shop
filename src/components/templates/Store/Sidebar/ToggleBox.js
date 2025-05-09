@@ -3,7 +3,7 @@ export default function ToggleBox(Props) {
     <div className='hidden md:block space-y-6'>
       {
         Props.items.map((item) => (
-          <div key={item.id} className="h-17 bg-white rounded-xl p-5">
+          <div key={item.id} className="h-17 bg-primary/10 rounded-xl p-5 text-dark-primary">
             <div className="flex items-center justify-between">
               <span className="font-danaBold"> {item.title} </span>
               <label className="toggle">

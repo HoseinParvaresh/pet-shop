@@ -16,7 +16,7 @@ export default function Category(Props) {
     }
 
     return (
-        <div className={`bg-white rounded-xl p-5 hidden md:block overflow-hidden ${categoryFilterBox}`} id="category-collapse">
+        <div className={`bg-white shadow-md rounded-xl p-5 hidden md:block overflow-hidden ${categoryFilterBox}`} id="category-collapse">
             {/* title & button */}
             <div onClick={categoryFilterHandler} className="flex items-center justify-between mb-5 pb-5 border-b border-b-neutral-200/60 cursor-pointer">
                 {/* title */}
