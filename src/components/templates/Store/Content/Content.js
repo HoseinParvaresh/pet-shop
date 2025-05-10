@@ -29,7 +29,7 @@ export default function Content() {
                     <span className="font-dana">مرتب سازی بر اساس :</span>
                 </div>
                 {/* sort */}
-                <div className="flex gap-x-5 lg:gap-x-8 h-full *:text-dark-primary">
+                <div className="flex gap-x-5 lg:gap-x-8 h-full ">
                     <a onClick={sortButtonHandler} href={"#"} data-id="default" className="sort-btn sort-btn--active" role="button"> همه محصولات </a>
                     <a onClick={sortButtonHandler} href={"#"} data-id="cheapest" className="sort-btn" role="button"> ارزان ترین</a>
                     <a onClick={sortButtonHandler} href={"#"} data-id="most-expensive" className="sort-btn" role="button"> گران ترین </a>
@@ -38,10 +38,12 @@ export default function Content() {
             </div>
             {/* <!-- product List --> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-7">
-                {/*  */}
+                <Product/>
+                <Product/>
+                <Product/>
             </div>
             {/* <!-- Show more Button --> */}
-            <button type="button" className="show-more button-xl button-primary w-full sm:w-auto mt-10 mx-auto ">
+            <button type="button" className="show-more btn btn-xl btn-primary w-full sm:w-auto mt-10 mx-auto">
                 مشاهده بیشتر
                 <svg className="show-more__icon w-6 h-6">
                     <use href="#chevron-down"></use>

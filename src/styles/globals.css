@@ -171,7 +171,7 @@
   }
   /* ------ { ... Sort ... } ------ */
   .sort-btn {
-    @apply inline-block border-y-2 border-transparent font-dana text-sm leading-[64px] transition-all;
+    @apply inline-block border-y-2 border-transparent font-danaBold text-sm leading-[64px] transition-all text-dark-primary;
   }
   .sort-btn--active {
     @apply border-primary text-primary;
