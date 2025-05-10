@@ -83,6 +83,12 @@
   .flex-center {
     @apply flex items-center justify-center;
   }
+  .dir-rtl {
+    direction: rtl;
+  }
+  .dir-ltr {
+    direction: ltr;
+  }
 
   /*{ -- component -- }*/
 
