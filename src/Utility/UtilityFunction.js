@@ -6,7 +6,8 @@ function formatNumber (num) {
     return new Intl.NumberFormat('en-US', {style : "decimal" }).format(num);
 }
 function calcDiscountPrice (price,discount) {
-    return price - (price * (discount / 100))
+    
+    return Math.round(price - (price * (discount / 100)))
 }
 
 export { customScroll,formatNumber,calcDiscountPrice }

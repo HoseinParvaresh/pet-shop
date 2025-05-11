@@ -10,9 +10,9 @@ export default function Content() {
             <ProductSort/>
             {/* <!-- product List --> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-7">
-                <Product/>
-                <Product/>
-                <Product/>
+                <Product price={30000} discount={false}/>
+                <Product price={400000} discount={30}/>
+                <Product price={3123123} discount={10}/>
             </div>
             {/* <!-- Show more Button --> */}
             <ShowMoreButton/>
