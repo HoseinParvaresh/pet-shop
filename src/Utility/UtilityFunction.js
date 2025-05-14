@@ -9,5 +9,9 @@ function calcDiscountPrice (price,discount) {
     
     return Math.round(price - (price * (discount / 100)))
 }
+function toggleMobileNavbar () {
+    document.querySelector('.navigation').classList.toggle('menu-active')
+    document.querySelector('.mobile-overlay').classList.toggle('show')
+}
 
-export { customScroll,formatNumber,calcDiscountPrice }
+export { customScroll,formatNumber,calcDiscountPrice,toggleMobileNavbar }

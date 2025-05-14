@@ -89,6 +89,12 @@
   .dir-ltr {
     direction: ltr;
   }
+  .hide {
+    @apply invisible opacity-0;
+  }
+  .show {
+    @apply !visible !opacity-100;
+  }
 
   /*{ -- component -- }*/
 
@@ -131,10 +137,6 @@
   /* overlay */
   .mobile-overlay {
     @apply z-20 fixed w-full h-screen bg-black/50 inset-0 invisible opacity-0;
-  }
-  /* only icon */
-  .only-icon {
-    @apply aspect-square px-0;
   }
 
   .footer__box {
@@ -224,12 +226,15 @@
   .navigation::-webkit-scrollbar {
     width: 5px;
   }
-  /* ------ { ...  Mobile Menu  ... } ------ */
+  .menu-active {
+    @apply !right-0;
+  }
+  /* menu */
   .mobile-menu {
-    @apply flex w-full flex-col gap-y-1
+    @apply flex w-full flex-col gap-y-1;
   }
   .mobile-menu__item {
-    @apply py-1 text-sm/6
+    @apply py-1 text-sm/6;
   }
   .mobile-menu__wrapper {
     @apply flex select-none items-center justify-between;
