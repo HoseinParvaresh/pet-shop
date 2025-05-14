@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
+import { menuList } from "@/Utility/Constants";
+
 export default function DesktopNavbar() {
 
     const [widthElm, setWidthElm] = useState(0)
@@ -21,15 +23,13 @@ export default function DesktopNavbar() {
     };
 
     return (
-        <div>
-            <ul onMouseLeave={mouseLeaveHandler} className="flex items-center justify-center gap-5 xl:gap-10 font-MorabbaBold text-[18px] text-dark-primary">
-                <div className="absolute top-[67px] left-0 h-[2.5px] bg-primary bottom-0 transition-all duration-300" style={styles}></div>
-                <li className="cursor-pointer hover:text-primary transition-colors" onMouseEnter={mouseEnterHandler}><Link href="/">صفحه اصلی</Link></li>
-                <li className="cursor-pointer hover:text-primary transition-colors" onMouseEnter={mouseEnterHandler}><Link href="/store">فروشگاه</Link></li>
-                <li className="cursor-pointer hover:text-primary transition-colors" onMouseEnter={mouseEnterHandler}><Link href="/article">وبلاگ</Link></li>
-                <li className="cursor-pointer hover:text-primary transition-colors" onMouseEnter={mouseEnterHandler}><Link href="/about">درباره ما</Link></li>
-                <li className="cursor-pointer hover:text-primary transition-colors" onMouseEnter={mouseEnterHandler}><Link href="/contact">تماس با ما</Link></li>
-            </ul>
-        </div>
+        <ul onMouseLeave={mouseLeaveHandler} className="flex items-center justify-center gap-5 xl:gap-10 font-MorabbaBold text-[18px] text-dark-primary">
+            <div className="absolute top-[67px] left-0 h-[2.5px] bg-primary bottom-0 transition-all duration-300" style={styles}></div>
+            {
+                menuList.map((item) => (
+                    <li key={item.id} className="cursor-pointer hover:text-primary transition-colors" onMouseEnter={mouseEnterHandler}><Link href={item.link}>{item.title}</Link></li>
+                ))
+            }
+        </ul>
     );
 }

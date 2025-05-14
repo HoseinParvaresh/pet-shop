@@ -128,6 +128,14 @@
   .trust-us__box--title {
     @apply font-Morabba text-base md:text-xl xl:text-2xl;
   }
+  /* overlay */
+  .mobile-overlay {
+    @apply z-20 fixed w-full h-screen bg-black/50 inset-0 invisible opacity-0;
+  }
+  /* only icon */
+  .only-icon {
+    @apply aspect-square px-0;
+  }
 
   .footer__box {
     @apply flex flex-col md:flex-row items-center justify-center text-center gap-1 md:gap-3 w-32 sm:w-50;
@@ -211,6 +219,22 @@
   }
   .filter--open {
     @apply visible opacity-100;
+  }
+  /* ------ { ... Mobile Navbar ... } ------ */
+  .navigation::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* ------ { ...  Mobile Menu  ... } ------ */
+  .mobile-menu {
+    @apply flex w-full flex-col gap-y-1
+  }
+  .mobile-menu__item {
+    @apply py-1 text-sm/6
+  }
+  .mobile-menu__wrapper {
+    @apply flex select-none items-center justify-between;
+    -webkit-user-select: none;
+    -moz-user-select: none;
   }
 
   /* { -- css library -- } */

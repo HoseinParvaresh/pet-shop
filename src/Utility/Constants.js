@@ -10,8 +10,15 @@ const categoryList = [
     { id: 3, name: 'پرندگان' },
     { id: 4, name: 'ماهی' },
 ]
+const menuList = [
+    { id: 1, title: "صفحه اصلی ", link: "/" },
+    { id: 2, title: "فروشگاه", link: "/store" },
+    { id: 3, title: "وبلاگ", link: "#" },
+    { id: 4, title: "درباره ما", link: "#" },
+    { id: 5, title: "تماس با ما ", link: "#" },
+]
 
 
 
 
-export { url,toggleList,categoryList}
+export { url, toggleList, categoryList, menuList }

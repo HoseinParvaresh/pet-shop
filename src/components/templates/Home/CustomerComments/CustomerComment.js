@@ -21,11 +21,11 @@ export default function CustomerComment({ userProfileSrc, petProfileSrc, name, p
                 <p className="text-dark-secondary text-xs/5 md:text-sm/7 line-clamp-4">” {desc} “</p>
                 {/* rate */}
                 <div className="*:size-3 md:*:size-4 flex">
-                    {Array(rate).fill(undefined).map(() => (
-                        <svg className="text-yellow-500"><use href="#star-fill"></use></svg>
+                    {Array(rate).fill(undefined).map((item,index) => (
+                        <svg key={index} className="text-yellow-500"><use href="#star-fill"></use></svg>
                     ))}
-                    {Array(5 - rate).fill(undefined).map(() => (
-                        <svg className="text-gray-400"><use href="#star-fill"></use></svg>
+                    {Array(5 - rate).fill(undefined).map((item,index) => (
+                        <svg key={index} className="text-gray-400"><use href="#star-fill"></use></svg>
                     ))}
 
                 </div>

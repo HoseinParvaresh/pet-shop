@@ -1,7 +1,7 @@
 import Logo from "./Common/Logo";
 import DesktopNavbar from "./Navbar/DesktopNavbar";
 import HeaderButtons from "./Common/HeaderButtons";
-import MobileNavbar from "./Navbar/MobileNavbar";
+import MobileNavbar from "./Navbar/MobileNavbar/MobileNavbar";
 
 export default function Header() {
   return (
