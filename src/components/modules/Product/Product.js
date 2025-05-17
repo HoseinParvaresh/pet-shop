@@ -16,20 +16,20 @@ export default function Product({ price, discount, status }) {
             </div>
             {/* top => image / title / price */}
             <div className="absolute flex flex-col justify-between xl:justify-around 2xl:justify-between bg-secondary border border-black/10 rounded-xl 
-            md:rounded-2xl h-4/5 w-[calc(100%-20px)] right-[10px] top-3 2xs:top-9 xs:top-2 sm:top-4 xl:top-2 2xl:top-4 group-hover:shadow-2xl transition-all duration-400 
-                            pt-7 pb-3 px-5 3xs:px-10 xs:px-1 xs:py-4 sm:pb-6 sm:pt-8 sm:px-6 md:py-5 md:px-10 lg:p-6">
+                md:rounded-2xl h-4/5 w-[calc(100%-20px)] right-[10px] top-3 2xs:top-9 xs:top-2 sm:top-4 xl:top-2 2xl:top-4 
+                group-hover:shadow-2xl transition-all duration-400 pt-7 pb-3 px-5 3xs:px-10 xs:px-1 xs:py-4 sm:pb-6 sm:pt-8 sm:px-6 md:py-5 md:px-10 lg:p-6">
                 {/* discount */}
                 <p className={`${discount ? 'flex-center' : 'hidden'} rounded-full size-10 bg-primary absolute font-danaBold text-sm text-white left-3 top-3`}>{discount}%</p>
                 {/* image */}
-                <Link href={"#"} className="3xs:p-2 xs:p-0 sm:p-0 group-hover:scale-105 group-hover:rotate-6 transition-all duration-400">
+                <Link href={"/product/2"} className="3xs:p-2 xs:p-0 sm:p-0 group-hover:scale-105 group-hover:rotate-6 transition-all duration-400">
                     <div className="bg-gray-200 rounded-full border-10 border-white">
-                        <img className="" src="/images/p-1.png" alt="p-1" />
+                        <img src="/images/p-1.png" alt="p-1" />
                     </div>
                 </Link>
                 {/* title / price */}
                 <div className="text-center flex flex-col gap-2">
                     {/* title */}
-                    <Link href={"#"} className="text-dark-primary font-danaBold line-clamp-1 text-base xs:text-sm sm:text-base">ظرف غذا مخصوص پرندگان</Link>
+                    <Link href={"/product/2"} className="text-dark-primary font-danaBold line-clamp-1 text-base xs:text-sm sm:text-base">ظرف غذا مخصوص پرندگان</Link>
                     {/* price */}
                     <div className="flex-center gap-1">
                         <p className={` ${discount && status ? 'block' : 'hidden'} text-xs text-gray-400 line-through`}>{formatNumber(price)}</p>
