@@ -241,6 +241,29 @@
     -webkit-user-select: none;
     -moz-user-select: none;
   }
+  /* ------ { ... Breadcrumb ... } ------ */
+  .breadcrumb {
+    @apply hidden h-13 items-center overflow-x-auto overflow-y-hidden border border-secondary text-dark-primary rounded-xl bg-secondary xs:flex;
+  }
+  .breadcrumb__item {
+    @apply relative flex h-full shrink-0 items-center pl-2 pr-[38px];
+  }
+  .breadcrumb__item::before,
+  .breadcrumb__item::after {
+    @apply absolute left-0 h-10 w-[5px] bg-white content-[""];
+  }
+  .breadcrumb__item::before {
+    @apply bottom-[-6px] rotate-[-35deg] origin-bottom;
+  }
+  .breadcrumb__item::after {
+    @apply top-[-6px] rotate-[35deg] origin-top;
+  }
+  .breadcrumb__item:first-child {
+    @apply pr-4 pl-2;
+  }
+  .breadcrumb__link {
+    @apply whitespace-nowrap
+}
 
   /* { -- css library -- } */
   .top-image__vector--2 {
