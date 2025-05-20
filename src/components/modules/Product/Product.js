@@ -2,12 +2,17 @@ import { calcDiscountPrice, formatNumber } from "@/Utility/UtilityFunction";
 import Link from "next/link";
 
 export default function Product({ price, discount, status }) {
+
+    function addToBasket() {
+        
+        
+    }
     return (
         <div className="relative w-full h-110 2xs:h-140 xs:h-100 sm:h-115 xl:h-100 2xl:h-115 group">
             {/* bottom => button */}
             <div className="absolute bg__footer bg-primary h-4/5 w-full bottom-0 rounded-xl md:rounded-2xl flex justify-center items-end pb-5">
                 {/* button */}
-                <button className="btn btn-secondary text-xs rounded-full py-3 bottom-0 hover:bg-gray-800">
+                <button onClick={addToBasket} className="btn btn-secondary text-xs rounded-full py-3 bottom-0 hover:bg-gray-800">
                     <span>افزودن به سبدخرید</span>
                     <svg class="size-4 text-white">
                         <use href="#shopping-cart-solid"></use>

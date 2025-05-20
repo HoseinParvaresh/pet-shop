@@ -1,7 +1,4 @@
-export default function index() {
-    return (
-        <div>
-            product
-        </div>
-    );
+import NotFound from "../404";
+export default function Product() {
+  return <NotFound/>
 }
