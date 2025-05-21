@@ -1,11 +1,7 @@
 import { useState } from 'react';
 import Breadcrumb from './Breadcrumb';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Zoom, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/zoom';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import ProductBanner from './ProductBanner';
+import ProductInfo from './ProductInfo';
 // import Summary from '../Common/Summary';
 // import RelatedProduct from './RelatedProduct'
 // import Comments from './Comment/Comments';
@@ -44,87 +40,13 @@ export default function Main(Props) {
 
             <div className='container'>
                 {/* Breadcrumb */}
-                <Breadcrumb
-                    items={[
-                        { href: "#", title: 'فروشگاه' },
-                        { href: `#`, title: 'دسته بندی' },
-                    ]} 
-                    
-                    />
-
-                {/* product Info & product Btn & Price */}
-                <section className="grid grid-cols-1 lg:grid-cols-2 gap-y-4.5 gap-x-6 sm:gap-x-7 lg:items-center xl:items-stretch mt-8 sm:mt-10 rounded-2xl p-4.5 lg:p-0 bg-white lg:!bg-transparent border border-neutral-100 lg:border-none">
-                    {/* <!-- product Info --> */}
-                    <div className="flex flex-col justify-between order-2 lg:order-1">
-                        {/* product Name & Description */}
-                        <div>
-                            {/* Name */}
-                            <h1 className="font-DanaBold text-[1.375rem]/8 sm:text-[1.625rem]/10 mb-5">ظرف غذا مخصوص پرندگان</h1>
-                            {/* Description */}
-                            <p className="sm:text-lg line-clamp-4 sm:line-clamp-3">غذا عالی برای پرندگان</p>
-                        </div>
-                        {/* product Btn & Price & Discount Price */}
-                        <div className="space-y-4 lg:space-y-8 mt-4 lg:mt-4">
-                            {/* Discount */}
-                            {/* <div className={`${(Props.available && Props.discount) ? '' : 'hidden '} flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-y-4 gap-x-5 flex-wrap justify-between text-center sm:text-right p-4 bg-gray-100 lg:bg-primary-light dark:bg-gray-900 lg:dark:bg-primary-dark rounded-xl`}>
-						<span className="font-DanaBold sm:text-xl lg:text-center xl:text-right text-red-500"><span>{Props.discount}</span>% تخفیف شگفت انگیز</span>
-					</div> */}
-                            {/* product Btn & Price */}
-                            <div className={`flex justify-center xl:items-center lg:justify-between flex-wrap-reverse gap-y-4 gap-x-6`}>
-                                {/* Button */}
-                                <button className="button-primary button-2xl w-full flex-center gap-2 sm:w-auto">
-                                    <svg className="w-6 h-6">
-                                        <use href="#academic-cap"></use>
-                                    </svg>
-                                    افزودن به سبد خرید
-                                </button>
-                                {/* <!-- Price --> */}
-                                <div className="flex items-end gap-x-2.5">
-                                    <span className="text-slate-500 dark:text-white/70 text-xl line-through">600000</span>
-                                    <span className="text-2xl font-DanaBold flex items-center justify-center gap-2">
-                                        {/*  */}
-                                        <svg className="w-6 h-6"><use href="#toman">
-                                        </use>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                            {/* <div className={`${Props.available ? 'hidden' : ''} bg-primary-light dark:bg-primary-dark p-4 rounded-xl`}>
-						<p className='font-DanaBold sm:text-xl lg:text-2xl lg:text-center xl:text-right text-red-500'> فعلا موجود نیست </p>
-					</div> */}
-                        </div>
-                    </div>
-                    {/* <!-- product Banner --> */}
-                    <div className="order-1 w-full xl:h-[360px]">
-                        <Swiper
-                            style={{
-                                '--swiper-pagination-color': '#16a34a',
-                                '--swiper-pagination-bullet-inactive-color': 'gray',
-                                '--swiper-pagination-bullet-inactive-opacity': '0.4'
-                            }}
-                            zoom={true}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[Zoom, Pagination]}
-                            className="mySwiper h-full"
-                        >
-                            <SwiperSlide>
-                                <div className="swiper-zoom-container child:rounded-2xl">
-                                    <img src='/images/p-1.png' alt='img' loading='lazy' />
-                                </div>
-                            </SwiperSlide>
-                            {/* <SwiperSlide>
-					<div className="swiper-zoom-container child:rounded-2xl">
-						<img src={Props.image2} alt='img' loading='lazy'/>
-					</div>
-				</SwiperSlide> */}
-
-                        </Swiper>
-
-                    </div>
+                <Breadcrumb/>
+                {/* product Info / & product Btn & Price */}
+                <section className="grid grid-cols-1 lg:grid-cols-2 gap-y-4.5 gap-x-6 sm:gap-x-7 lg:items-center xl:items-stretch mt-8 sm:mt-10 rounded-2xl p-4.5 lg:p-0 bg-secondary lg:!bg-transparent border border-neutral-100 lg:border-none">
+                    <ProductInfo/>
+                    <ProductBanner/>
                 </section>
-                {/* Summary & Description & Related products & Comments & product Teacher & Rating */}
+                {/* Summary & Description & Related products & Comments / product Teacher & Rating */}
                 <section className="grid grid-cols-12 gap-6 sm:gap-7 mt-7 lg:mt-20">
                     {/* product Box Info(Summary) & Description & Related products & Comments */}
                     <div className="col-span-12 lg:col-span-8">
@@ -142,7 +64,6 @@ export default function Main(Props) {
 					}/>
 				</div> */}
                         {/* Description */}
-
                         <div className="bg-primary-light dark:bg-primary-dark rounded-2xl p-4.5 sm:p-5 mt-8">
                             {/* title */}
                             <div className="flex items-center gap-x-2 mb-5 sm:mb-6 relative">

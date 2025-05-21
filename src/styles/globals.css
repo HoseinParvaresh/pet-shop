@@ -33,7 +33,7 @@
 
 @theme {
   --color-primary: #f69946;
-  --color-secondary: #fcf9f4;
+  --color-secondary: #fcf9f3;
   --color-dark-primary: #564741;
   --color-dark-secondary: #616161;
   --color-footer: #3a3330;
@@ -243,7 +243,10 @@
   }
   /* ------ { ... Breadcrumb ... } ------ */
   .breadcrumb {
-    @apply hidden h-13 items-center overflow-x-auto overflow-y-hidden border border-secondary text-dark-primary rounded-xl bg-secondary xs:flex;
+    @apply h-13 items-center overflow-x-auto overflow-y-hidden border border-secondary text-dark-primary rounded-xl bg-secondary flex;
+  }
+  .breadcrumb::-webkit-scrollbar { 
+    @apply hidden
   }
   .breadcrumb__item {
     @apply relative flex h-full shrink-0 items-center pl-2 pr-[38px];
@@ -260,6 +263,13 @@
   }
   .breadcrumb__item:first-child {
     @apply pr-4 pl-2;
+  }
+  .breadcrumb__item:last-child::after,
+  .breadcrumb__item:last-child::before {
+    @apply hidden
+  }
+  .breadcrumb__item:last-child {
+    @apply font-danaBold
   }
   .breadcrumb__link {
     @apply whitespace-nowrap
