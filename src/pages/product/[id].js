@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Breadcrumb from './Breadcrumb';
 import ProductBanner from './ProductBanner';
 import ProductInfo from './ProductInfo';
+import Summary from './Summary';
 // import Summary from '../Common/Summary';
 // import RelatedProduct from './RelatedProduct'
 // import Comments from './Comment/Comments';
@@ -37,32 +38,19 @@ export default function Main(Props) {
 
     return (
         <main className='max-w-[1920px] m-h mx-auto overflow-x-hidden mt-8 sm:mt-10'>
-
             <div className='container'>
                 {/* Breadcrumb */}
-                <Breadcrumb/>
+                <Breadcrumb />
                 {/* product Info / & product Btn & Price */}
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-y-4.5 gap-x-6 sm:gap-x-7 lg:items-center xl:items-stretch mt-8 sm:mt-10 rounded-2xl p-4.5 lg:p-0 bg-secondary lg:!bg-transparent border border-neutral-100 lg:border-none">
-                    <ProductInfo/>
-                    <ProductBanner/>
+                    <ProductInfo />
+                    <ProductBanner />
                 </section>
                 {/* Summary & Description & Related products & Comments / product Teacher & Rating */}
                 <section className="grid grid-cols-12 gap-6 sm:gap-7 mt-7 lg:mt-20">
                     {/* product Box Info(Summary) & Description & Related products & Comments */}
                     <div className="col-span-12 lg:col-span-8">
-                        {/* <!-- product Box Info | Summary --> */}
-                        {/* <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-					<Summary items={
-						[
-							{title:"وضعیت کتاب",desc:Props.status,icon:"#hashtag"},
-							{title:"دسته بندی",desc:Props.category,icon:"#tag"},
-							{title:"تعداد صفحات",desc:Props.pages,icon:"#numbered-list"},
-							{title:"تاریخ انتشار",desc:Props.release,icon:"#calendar-days"},
-							{title:"ناشر",desc:Props.publisher,icon:"#book-open"},
-							{title:"مترجم",desc:Props.translator,icon:"#language"},
-						]
-					}/>
-				</div> */}
+                            <Summary />
                         {/* Description */}
                         <div className="bg-primary-light dark:bg-primary-dark rounded-2xl p-4.5 sm:p-5 mt-8">
                             {/* title */}
@@ -153,7 +141,7 @@ export default function Main(Props) {
                         </div>
                         {/* <!-- product user --> */}
                         <div className="bg-primary-light dark:bg-primary-dark rounded-2xl pt-6 px-4.5 pb-4.5 md:py-6 md:px-5 text-center">
-                            <img className="block mb-4 mx-auto object-cover rounded-full" width="90" height="90" src='' alt='image' loading='lazy' />
+                            <img className="block mb-4 mx-auto object-cover rounded-full" width="90" height="90" src='#' alt='image' loading='lazy' />
                             <span className="font-DanaBold text-lg mb-2"> ممد | نویسنده </span>
                             <p className="mt-2"></p>
                             <div className="button-primary button-outline button-lg mx-auto mt-4"> مشاهده کتاب های بیشتر </div>

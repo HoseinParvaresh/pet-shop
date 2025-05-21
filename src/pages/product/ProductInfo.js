@@ -6,7 +6,7 @@ export default function ProductInfo() {
                 {/* Name */}
                 <h1 className="text-[1.375rem]/8 sm:text-[1.625rem]/10 mb-5 font-MorabbaBold text-dark-primary">ظرف غذا مخصوص پرندگان</h1>
                 {/* Description */}
-                <p className="sm:text-lg line-clamp-4 sm:line-clamp-3">غذا عالی برای پرندگان</p>
+                <p className="sm:text-lg line-clamp-4 sm:line-clamp-3 text-dark-secondary">غذا عالی برای پرندگان</p>
             </div>
             {/* product Btn & Price & Discount Price */}
             <div className="space-y-4 lg:space-y-8 mt-4 lg:mt-4">
@@ -34,9 +34,9 @@ export default function ProductInfo() {
                         </span>
                     </div>
                 </div>
-                <div className={` bg-primary-light dark:bg-primary-dark p-4 rounded-xl`}>
+                {/* <div className={` bg-primary-light dark:bg-primary-dark p-4 rounded-xl`}>
                     <p className='font-danaBold sm:text-xl lg:text-2xl lg:text-center xl:text-right text-red-500'> فعلا موجود نیست </p>
-                </div>
+                </div> */}
             </div>
         </div>
     );
