@@ -12,8 +12,8 @@ export default function ProductInfo() {
             <div className="space-y-4 lg:space-y-8 mt-4 lg:mt-4">
                 {/* Discount */}
                 <div className={` flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-y-4 gap-x-5 flex-wrap justify-between text-center sm:text-right p-4 bg-white lg:bg-secondary rounded-xl`}>
-						<span className="font-danaBold sm:text-xl lg:text-center xl:text-right text-red-700/80"><span>20</span>% تخفیف شگفت انگیز</span>
-					</div>
+                    <span className="font-danaBold sm:text-xl lg:text-center xl:text-right text-red-700/80"><span>20</span>% تخفیف شگفت انگیز</span>
+                </div>
                 {/* product Btn & Price */}
                 <div className={`flex justify-center xl:items-center lg:justify-between flex-wrap-reverse gap-y-4 gap-x-6`}>
                     {/* Button */}
@@ -24,12 +24,13 @@ export default function ProductInfo() {
                         افزودن به سبد خرید
                     </button>
                     {/* <!-- Price --> */}
-                    <div className="flex items-end gap-x-2.5">
-                        <span className="text-slate-500 text-xl line-through">600000</span>
+                    <div className="flex items-end gap-x-2.5 text-primary">
+                        <span className="text-gray-400 text-xl line-through">600000</span>
                         <span className="text-2xl font-danaBold flex items-center justify-center gap-2">
                             120000
-                            <svg className="w-6 h-6"><use href="#toman">
-                            </use>
+                            <svg className="w-6 h-6">
+                                <use href="#toman">
+                                </use>
                             </svg>
                         </span>
                     </div>

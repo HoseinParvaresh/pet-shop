@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 
 export default function ProductBanner() {
     return (
-        <div className="order-1 w-full xl:h-[360px] bg-secondary rounded-xl">
+        <div className="order-1 w-full xl:h-[360px] rounded-xl">
             <Swiper
                 style={{
                     '--swiper-pagination-color': '#16a34a',
