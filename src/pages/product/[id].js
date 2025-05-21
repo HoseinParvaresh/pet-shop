@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Breadcrumb from '@/components/templates/Product/Breadcrumb';
 import ProductBanner from '../../components/templates/Product/ProductBanner';
 import ProductInfo from '../../components/templates/Product/ProductInfo';
@@ -6,11 +5,6 @@ import Summary from '../../components/templates/Product/Summary';
 import Description from '@/components/templates/Product/Description';
 import RelatedProducts from '@/components/templates/Product/RelatedProducts';
 import Comments from '@/components/templates/Product/Comments';
-// import Summary from '../Common/Summary';
-// import RelatedProduct from './RelatedProduct'
-// import Comments from './Comment/Comments';
-// import Description from './Description';
-// import { FormatNumber,calcDiscountPrice } from './../../../Utils/helperFunction';
 
 
 export default function Main(Props) {
@@ -31,7 +25,6 @@ export default function Main(Props) {
                     <div className="col-span-12 lg:col-span-8">
                         <Summary />
                         <Description />
-                        <RelatedProducts />
                         <Comments />
                         {/* Comments */}
                         {/* <Comments comment={Props.comments}/> */}
@@ -61,6 +54,7 @@ export default function Main(Props) {
                                 </div>
                             </div>
                         </div>
+                        <RelatedProducts />
                     </aside>
                 </section>
             </div>

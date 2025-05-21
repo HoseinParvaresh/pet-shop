@@ -13,7 +13,7 @@ export default function Summary() {
         <div className="grid grid-cols-2 sm:grid-cols-3 rounded-xl overflow-hidden">
             {
                 items.map((item, index) => (
-                    <div key={index} className="flex flex-col text-dark-primary md:flex-row text-center md:text-right items-center justify-center sm:justify-start gap-x-3 gap-y-2.5 bg-secondary pt-4 pb-3.5 sm:py-3 px-4.5">
+                    <div key={index} className="flex flex-col text-dark-primary md:flex-row text-center md:text-right items-center justify-center sm:justify-start gap-x-3 gap-y-2.5 bg-secondary pt-4 pb-3.5 sm:py-6 px-4.5">
                         <div className="*:size-10 *:text-primary">
                             {item.icon}
                         </div>
