@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/zoom';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Product from '@/components/modules/Product/Product';
@@ -18,8 +17,9 @@ export default function RelatedProducts() {
             </div>
             {/* products */}
             <Swiper
-                modules={Pagination}
-                className='!px-8'
+                pagination={true} 
+                modules={[Pagination]}
+                className='!px-8 !pb-9'
                 slidesPerView={1}
                 spaceBetween={35}
             >
