@@ -19,9 +19,9 @@ export default function RelatedProducts() {
             {/* products */}
             <Swiper
                 modules={Pagination}
-                className='!p-4'
+                className='!px-8'
                 slidesPerView={1}
-                spaceBetween={20}
+                spaceBetween={35}
             >
                 <SwiperSlide>
                     <Product price={30000} discount={false} status={true}/>
