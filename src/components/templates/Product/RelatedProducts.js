@@ -3,6 +3,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { MdOutlinePets } from "react-icons/md";
 import Product from '@/components/modules/Product/Product';
 
 export default function RelatedProducts() {
@@ -13,10 +14,10 @@ export default function RelatedProducts() {
                 <svg className="hidden md:inline-block text-amber-400 w-9 h-9">
                     <use href="#sparkles"></use>
                 </svg>
-                <div className="font-MorabbaBold text-xl md:text-2xl"> محصولات مرتبط </div>
+                <div className="font-MorabbaBold text-xl md:text-2xl"> ویژگی های محصول </div>
             </div>
             {/* products */}
-            <Swiper
+            {/* <Swiper
                 pagination={true} 
                 modules={[Pagination]}
                 className='!px-8 !pb-9'
@@ -30,7 +31,28 @@ export default function RelatedProducts() {
                     <Product price={30000} discount={false} status={true}/>
                 </SwiperSlide>
 
-            </Swiper>
+            </Swiper> */}
+
+
+            <ul class="text-sm md:text-[15px] text-dark-primary rounded-lg">
+                <li class="flex items-center gap-2 px-4 py-2">
+                    <MdOutlinePets className='size-4 text-primary'/>
+                    <span>محکم و با دوام</span>
+                </li>
+                <li class="flex items-center gap-2 px-4 py-2">
+                    <MdOutlinePets className='size-4 text-primary'/>
+                    <span>محکم و با دوام</span>
+                </li>
+                <li class="flex items-center gap-2 px-4 py-2">
+                    <MdOutlinePets className='size-4 text-primary'/>
+                    <span>محکم و با دوام</span>
+                </li>
+                <li class="flex items-center gap-2 px-4 py-2">
+                    <MdOutlinePets className='size-4 text-primary'/>
+                    <span>محکم و با دوام</span>
+                </li>
+            </ul>
+
         </div>
     );
 }

@@ -11,11 +11,15 @@ export default function ProductInfo() {
             {/* product Btn & Price & Discount Price */}
             <div className="space-y-4 lg:space-y-8 mt-4 lg:mt-4">
                 {/* Discount */}
-                <div className={` flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-y-4 gap-x-5 flex-wrap justify-between text-center sm:text-right p-4 bg-white lg:bg-secondary rounded-xl`}>
-                    <span className="font-danaBold sm:text-xl lg:text-center xl:text-right text-red-700/80"><span>20</span>% تخفیف شگفت انگیز</span>
+                <div className="text-center sm:text-right p-4 bg-white lg:bg-secondary rounded-xl">
+                    <span className="font-danaBold sm:text-xl text-red-700/80"><span>20</span>% تخفیف شگفت انگیز</span>
                 </div>
-                {/* product Btn & Price */}
+                {/* product Btn (add to basket) / Price  / warning */}
                 <div className={`flex justify-center xl:items-center lg:justify-between flex-wrap-reverse gap-y-4 gap-x-6`}>
+                    {/* warning */}
+                    <div className="text-center sm:text-right py-2 px-3 rounded-md">
+                        <span className="font-danaBold text-xs text-dark-secondary/60"> امکان برگشت کالا با دلیل انصراف از خرید تنها در صورتی مورد قبول است که پلمب کالا باز نشده باشد. </span>
+                    </div>
                     {/* Button */}
                     <button className="btn btn-primary btn-xl w-full flex-center gap-2 sm:w-auto">
                         <svg className="w-6 h-6">
@@ -35,6 +39,7 @@ export default function ProductInfo() {
                         </span>
                     </div>
                 </div>
+
                 {/* <div className={` bg-primary-light dark:bg-primary-dark p-4 rounded-xl`}>
                     <p className='font-danaBold sm:text-xl lg:text-2xl lg:text-center xl:text-right text-red-500'> فعلا موجود نیست </p>
                 </div> */}

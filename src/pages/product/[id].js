@@ -20,7 +20,7 @@ export default function Main(Props) {
                     <ProductBanner />
                 </section>
                 {/* Summary & Description & Related products & Comments / product Teacher & Rating */}
-                <section className="grid grid-cols-12 gap-6 sm:gap-7 mt-7 lg:mt-20">
+                <section className="grid grid-cols-12 gap-6 sm:gap-7 mt-7 lg:mt-15">
                     {/* product Box Info(Summary) & Description & Related products & Comments */}
                     <div className="col-span-12 lg:col-span-8">
                         <Summary />
@@ -29,7 +29,7 @@ export default function Main(Props) {
                         {/* Comments */}
                         {/* <Comments comment={Props.comments}/> */}
                     </div>
-                    {/* Rating */}
+                    {/* Rating / Related Products */}
                     <aside className="col-span-12 lg:col-span-4 space-y-8">
                         {/* Rating */}
                         <div className="bg-secondary rounded-2xl p-4.5 sm:p-5">
