@@ -5,6 +5,8 @@ import Summary from '../../components/templates/Product/Summary';
 import Description from '@/components/templates/Product/Description';
 import RelatedProducts from '@/components/templates/Product/RelatedProducts';
 import Comments from '@/components/templates/Product/Comments';
+import ProductFeatures from '@/components/templates/Product/ProductFeatures';
+import { LiaClipboardListSolid } from "react-icons/lia";
 
 
 export default function Main(Props) {
@@ -29,21 +31,21 @@ export default function Main(Props) {
                         {/* Comments */}
                         {/* <Comments comment={Props.comments}/> */}
                     </div>
-                    {/* Rating / Related Products */}
+                    {/* Rating /  stock / ProductFeatures /  */}
                     <aside className="col-span-12 lg:col-span-4 space-y-8">
-                        {/* Rating */}
+                        {/*  stock / Rating */}
                         <div className="bg-secondary rounded-2xl p-4.5 sm:p-5">
                             <div className="flex gap-x-4">
-                                <div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-gray-100 dark:bg-primary-darker rounded-xl">
-                                    <svg className="w-10 h-10 md:w-11 md:h-11 text-primary">
-                                        <use href="#user-group-mini"></use>
-                                    </svg>
+                                {/* stock */}
+                                <div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-dark-primary/10 rounded-xl">
+                                    <LiaClipboardListSolid className='size-10 text-primary'/>
                                     <div>
                                         <span className="block font-bold text-sm md:text-base">123</span>
                                         <span className="block text-sm opacity-70">موجود در انبار</span>
                                     </div>
                                 </div>
-                                <div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-gray-100 dark:bg-primary-darker rounded-xl">
+                                {/* Rating */}
+                                <div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-dark-primary/10 rounded-xl">
                                     <svg className="w-10 h-10 md:w-11 md:h-11 text-amber-500">
                                         <use href="#star-mini"></use>
                                     </svg>
@@ -54,7 +56,8 @@ export default function Main(Props) {
                                 </div>
                             </div>
                         </div>
-                        <RelatedProducts />
+                        <ProductFeatures/>
+                        {/* <RelatedProducts /> */}
                     </aside>
                 </section>
             </div>

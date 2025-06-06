@@ -1,3 +1,4 @@
+import { PiWarningCircle } from "react-icons/pi";
 export default function ProductInfo() {
     return (
         <div className="flex flex-col justify-between order-2 lg:order-1">
@@ -17,8 +18,9 @@ export default function ProductInfo() {
                 {/* product Btn (add to basket) / Price  / warning */}
                 <div className={`flex justify-center xl:items-center lg:justify-between flex-wrap-reverse gap-y-4 gap-x-6`}>
                     {/* warning */}
-                    <div className="text-center sm:text-right py-2 px-3 rounded-md">
-                        <span className="font-danaBold text-xs text-dark-secondary/60"> امکان برگشت کالا با دلیل انصراف از خرید تنها در صورتی مورد قبول است که پلمب کالا باز نشده باشد. </span>
+                    <div className="flex items-center gap-1 text-center sm:text-right">
+                        <PiWarningCircle className="text-primary shrink-0"/>
+                        <span className="text-xs text-dark-secondary/80 mt-1"> امکان برگشت کالا با دلیل انصراف از خرید تنها در صورتی مورد قبول است که پلمب کالا باز نشده باشد. </span>
                     </div>
                     {/* Button */}
                     <button className="btn btn-primary btn-xl w-full flex-center gap-2 sm:w-auto">
