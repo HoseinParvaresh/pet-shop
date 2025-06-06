@@ -60,7 +60,7 @@ export default function Description() {
                 <div className={`${productContentShadow} absolute bottom-0 right-0 left-0 h-[160px] bg-gradient-to-t from-secondary from-0% via-secondary/[55%] via-70% to-secondary/0 to-100%`}></div>
             </div>
             {/* btn */}
-            <button type="button" className="btn btn-primary px-4 py-2.5 w-full sm:w-auto mx-auto mt-5" onClick={showFullContent}>
+            <button type="button" className="btn btn-outline btn-sm w-full sm:w-auto mx-auto mt-5" onClick={showFullContent}>
                 <span className="text-sm"> {btnContent} </span>
                 <svg className={`${btnRotate} size-5`}>
                     <use href="#chevron-down"></use>
