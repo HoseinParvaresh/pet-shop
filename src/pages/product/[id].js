@@ -10,7 +10,7 @@ import StockAndRating from '@/components/templates/Product/StockAndRating';
 export default function Main(Props) {
 
     return (
-        <main className='max-w-[1920px] m-h mx-auto overflow-x-hidden mt-8 sm:mt-10'>
+        <main className='max-w-[1920px] m-h mx-auto overflow-x-hidden mt-8 sm:mt-10 mb-10'>
             <div className='container'>
                 <Breadcrumb />
                 {/* product Info / ProductBanner */}
@@ -25,7 +25,6 @@ export default function Main(Props) {
                         <Summary />
                         <Description />
                         <Comments />
-                        {/* <Comments comment={Props.comments}/> */}
                     </div>
                     {/* Rating And stock / ProductFeatures  */}
                     <aside className="col-span-12 lg:col-span-4 space-y-8">
