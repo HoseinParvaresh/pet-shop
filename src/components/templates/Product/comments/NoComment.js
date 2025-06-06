@@ -3,8 +3,8 @@ import React from 'react'
 export default function NoComment() {
     return (
         <div>
-            <div className="no_comment w-full bg-secondary-light dark:bg-primary-darker flex-center flex-col p-5 rounded-xl">
-                <svg id='no-comment' width="112" height="100" viewBox="0 0 112 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="w-full flex-center flex-col p-5 rounded-xl">
+                <svg width="112" height="100" viewBox="0 0 112 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M56.4673 95.4392C81.407 95.4392 101.625 75.1677 101.625 50.1616C101.625 25.1555 81.407 4.88403 56.4673 4.88403C31.5276 4.88403 11.3099 25.1555 11.3099 50.1616C11.3099 75.1677 31.5276 95.4392 56.4673 95.4392Z" fill="#EAEEF9"></path>
                     <g filter="url(#filter0_d_2116_9611)">
                         <path d="M30.9357 38.9429H80.8178C82.7259 38.9429 84.3614 40.4916 84.3614 42.4958V74.0171C84.3614 75.9302 82.8168 77.57 80.8178 77.57H30.9357C29.0277 77.57 27.3922 76.0213 27.3922 74.0171V42.4958C27.3922 40.5827 29.0277 38.9429 30.9357 38.9429Z" fill="#CED7E2"></path>
