@@ -24,13 +24,15 @@ export default function Main(Props) {
                     <div className="col-span-12 lg:col-span-8">
                         <Summary />
                         <Description />
-                        <Comments />
                     </div>
                     {/* Rating And stock / ProductFeatures  */}
                     <aside className="col-span-12 lg:col-span-4 space-y-8">
                         <StockAndRating />
                         <ProductFeatures />
                     </aside>
+                    <div className='col-span-12 lg:col-span-8'>
+                        <Comments />
+                    </div>
                 </section>
             </div>
         </main>

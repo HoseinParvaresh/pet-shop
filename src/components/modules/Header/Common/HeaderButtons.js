@@ -9,14 +9,8 @@ export default function HeaderButtons() {
           <use href="#magnifying-glass-circle"></use>
         </svg>
       </Link>
-      {/* favorite button */}
-      <Link href="/" className="hidden lg:inline">
-        <svg className="size-7 cursor-pointer text-white lg:text-dark-primary lg:hover:text-dark-primary/60 hover:text-white/60 transition-colors duration-300">
-          <use href="#heart"></use>
-        </svg>
-      </Link>
       {/* user button */}
-      <Link href="/">
+      <Link href="/signup">
         <svg className="size-7.5 cursor-pointer text-white lg:text-dark-primary lg:hover:text-dark-primary/60 hover:text-white/60 transition-colors duration-300">
           <use href="#user-circle"></use>
         </svg>

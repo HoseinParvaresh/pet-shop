@@ -4,7 +4,7 @@ import CommentHead from './CommentHead'
 export default function Comment(Props) {
 
     return (
-        <div className="bg-secondary rounded-2xl p-4.5 sm:p-5 mt-8">
+        <div className="bg-secondary rounded-2xl p-4.5 sm:p-5">
             <CommentHead />
             {/* <!-- Comment List Container --> */}
             <div className="space-y-4.5 sm:space-y-5">

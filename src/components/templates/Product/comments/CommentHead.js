@@ -21,7 +21,7 @@ export default function CommentHead() {
                     <div className="font-MorabbaBold text-xl md:text-2xl">نظرات</div>
                 </div>
                 {/* New Comment Button */}
-                <button className="btn btn-primary btn-sm" onClick={newComment} type="button">
+                <button className="btn btn-primary btn-xs 3xs:px-4 3xs:py-2.5 3xs:text-sm" onClick={newComment} type="button">
                     ایجاد نظر جدید
                     <svg className="size-5">
                         <use href="#chat-bubble-bottom-center-text"></use>

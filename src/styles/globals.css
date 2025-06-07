@@ -115,6 +115,9 @@
   .btn-sm {
     @apply px-4 py-2.5 text-sm
   }
+  .btn-xs {
+    @apply text-xs px-2.5 py-1.5 rounded-md
+  }
   .btn-xl {
     @apply px-6.5 py-3.5;
   }
