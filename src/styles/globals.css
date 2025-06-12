@@ -113,10 +113,10 @@
     @apply px-6 py-2 text-white rounded-lg cursor-pointer transition-colors duration-300 flex items-center justify-center gap-3 w-max;
   }
   .btn-sm {
-    @apply px-4 py-2.5 text-sm
+    @apply px-4 py-2.5 text-sm;
   }
   .btn-xs {
-    @apply text-xs px-2.5 py-1.5 rounded-md
+    @apply text-xs px-2.5 py-1.5 rounded-md;
   }
   .btn-xl {
     @apply px-6.5 py-3.5;
@@ -131,7 +131,7 @@
     @apply bg-white hover:text-white hover:bg-primary text-dark-primary;
   }
   .btn-outline {
-    @apply bg-transparent border border-primary hover:bg-primary/10 text-primary
+    @apply bg-transparent border border-primary hover:bg-primary/10 text-primary;
   }
   /* trust us cart */
   .trust-us__box {
@@ -254,8 +254,8 @@
   .breadcrumb {
     @apply h-13 items-center overflow-x-auto overflow-y-hidden border border-secondary text-dark-primary rounded-xl bg-secondary flex;
   }
-  .breadcrumb::-webkit-scrollbar { 
-    @apply hidden
+  .breadcrumb::-webkit-scrollbar {
+    @apply hidden;
   }
   .breadcrumb__item {
     @apply relative flex h-full shrink-0 items-center pl-2 pr-[38px];
@@ -275,14 +275,28 @@
   }
   .breadcrumb__item:last-child::after,
   .breadcrumb__item:last-child::before {
-    @apply hidden
+    @apply hidden;
   }
   .breadcrumb__item:last-child {
-    @apply font-danaBold
+    @apply font-danaBold;
   }
   .breadcrumb__link {
-    @apply whitespace-nowrap
-}
+    @apply whitespace-nowrap;
+  }
+  /* otp  */
+  .form-input.has-icon {
+    padding-left: 2.375rem;
+    padding-right: 0.875rem;
+  }
+  .form-input {
+    @apply h-13 w-full rounded-[10px] bg-gray-100 px-3.5 text-sm leading-6 text-slate-500 transition-all outline-none;
+  }
+  .form-input + svg {
+    @apply absolute inset-y-0 my-auto size-5 text-slate-500 transition-all;
+  }
+  .otp__form input {
+    @apply size-13 p-0 text-center font-danaBold text-xl leading-[2.125rem];
+  }
 
   /* { -- css library -- } */
   .top-image__vector--2 {

@@ -22,10 +22,6 @@ export default function App({ Component, pageProps }) {
 
   return (
     <div className="font-dana">
-      <div>
-        <Toaster
-          position="top-right" />
-      </div>
       <ParallaxProvider>
         <Svg />
         <Header />
