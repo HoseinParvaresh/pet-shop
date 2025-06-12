@@ -6,12 +6,16 @@ function formatNumber (num) {
     return new Intl.NumberFormat('en-US', {style : "decimal" }).format(num);
 }
 function calcDiscountPrice (price,discount) {
-    
     return Math.round(price - (price * (discount / 100)))
 }
 function toggleMobileNavbar () {
     document.querySelector('.navigation').classList.toggle('menu-active')
     document.querySelector('.mobile-overlay').classList.toggle('show')
 }
+function isValidEmail(email) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+}
 
-export { customScroll,formatNumber,calcDiscountPrice,toggleMobileNavbar }
+
+export { customScroll,formatNumber,calcDiscountPrice,toggleMobileNavbar,isValidEmail }
