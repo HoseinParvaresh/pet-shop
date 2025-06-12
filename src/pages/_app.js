@@ -4,7 +4,6 @@ import Svg from "@/Utility/Svg";
 import 'animate.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import AOS from 'aos';
-import { Toaster } from "react-hot-toast";
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import Footer from "@/components/modules/Footer/Footer";
