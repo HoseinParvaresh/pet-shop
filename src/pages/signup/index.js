@@ -1,80 +1,24 @@
 import React, { useState } from 'react';
-import apiRequests from '@/Services/Axios/Configs/Configs';
-import { v4 as uuidv4 } from 'uuid';
-import { isValidEmail } from '@/Utility/UtilityFunction';
-import Alert from '@/Utility/Alert';
 import { useRouter } from 'next/router'
 import { Toaster } from 'react-hot-toast';
+import { signup } from '@/Services/Axios/Requests/Auth/Signup';
+import { verify } from '@/Services/Axios/Requests/Auth/Signup';
 
 export default function Signup() {
 
     const router = useRouter()
-
     const [email, setEmail] = useState("")
     const [code, setCode] = useState("")
     const [stepRegister, setStepRegister] = useState(['', 'hidden'])
 
-    const signup = async () => {
-
-        const username = uuidv4()
-        const password = Math.random().toString(36).slice(2, 12)
-
-        if (!isValidEmail(email)) {
-            Alert("error", "آدرس ایمیل وارد شده اشتباه است")
-            return false
-        }
-
-        const data = {
-            username: `user-${username}`,
-            email,
-            password,
-            confirm_password: password
-        }
-
-        apiRequests.post('/users/register/', data)
-            .then(res => {
-                if (res.status === 201) {
-                    setStepRegister(['hidden', ''])
-                    return Alert("successful", "کد تأیید به ایمیل شما ارسال شد")
-                }
-            }).catch(error => {
-                if (error.status === 400) {
-                    return Alert("error", "آدرس ایمیل وارد شده قبلا استفاده شده است")
-                }
-                if (error.status === 500) {
-                    return Alert("error", "از سمت سرور مشکلی پیش اومده")
-                }
-            });
-
-    }
-    const verify = () => {
-
-        const data = {
-            email,
-            code
-        }
-        apiRequests.post("/users/verify/", data)
-            .then(res => {
-                if (res.status === 200) {
-                    Alert("successful", "با موفقیت ثبت نام شدید")
-                    setTimeout(()=> {
-                        router.push('/')
-                    }, 1500)
-                }
-            })
-            .catch(error => {
-                if (error.status === 400) {
-                    return Alert("error", "کد وارد شده اشتباهه")
-                }
-                if (error.status === 500) {
-                    return Alert("error", "از سمت سرور مشکلی پیش اومده")
-                }
-            })
-    }
+    const s = async () => {
+        const result = await signup(email);
+        console.log(result); // true یا false
+    };
 
     return (
         <div className="h-150 flex justify-center flex-col">
-            <Toaster/> 
+            <Toaster />
             <img className='absolute size-20 top-27 -right-9' src="/images/cat1.png" alt="cat1" loading='lazy' />
             <div className="relative py-3 sm:max-w-xl sm:mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-primary shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
@@ -86,7 +30,7 @@ export default function Signup() {
                     <div className="max-w-md mx-auto">
                         {/* title */}
                         <div>
-                            <h1 className="text-2xl mb-1 font-MorabbaBold text-center">عضویت در پیلیسوک</h1>
+                            <h2 className="text-2xl mb-1 font-MorabbaBold text-center">عضویت در پیلیسوک</h2>
                         </div>
                         {/* step 1 => enter email */}
                         <div className={`divide-y divide-gray-200 ${stepRegister[0]}`}>
@@ -96,7 +40,7 @@ export default function Signup() {
                                     <label htmlFor="email" className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-md peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-xs">آدرس ایمیل</label>
                                 </div>
                                 <div className="relative">
-                                    <button onClick={signup} className="btn btn-primary py-1.5 w-full">ادامه</button>
+                                    <button onClick={s} className="btn btn-primary py-1.5 w-full">ادامه</button>
                                 </div>
                             </div>
                         </div>
