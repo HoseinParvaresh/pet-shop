@@ -4,9 +4,9 @@ import Alert from '@/Utility/Alert';
 import apiRequests from '@/Services/Axios/Configs/Configs';
 
 
-async function signup(email) {
+async function signup(email,password) {
+    
     const username = uuidv4();
-    const password = Math.random().toString(36).slice(2, 12);
 
     if (!isValidEmail(email)) {
         Alert("error", "آدرس ایمیل وارد شده اشتباه است");
