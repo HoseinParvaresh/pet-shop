@@ -71,10 +71,10 @@ async function verify(email, code) {
 async function resendCode(email) {
 
     try {
-        const res = await apiRequests.post('/users/register/', { email });
+        const res = await apiRequests.post('/users/resend-verification-email/', { email });
 
         if (res.status === 202) {
-            Alert("successful", "کد تأیید به ایمیل شما ارسال شد");
+            Alert("successful", "کد تأیید دوباره به ایمیل شما ارسال شد");
             return true;
         }
     } catch (error) {
