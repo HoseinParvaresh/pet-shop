@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router'
 import { Toaster } from 'react-hot-toast';
-import { signup } from '@/Services/Axios/Requests/Auth/Signup';
-import { verify } from '@/Services/Axios/Requests/Auth/Signup';
+import { signup,verify,resendCode } from '@/Services/Axios/Requests/Auth/Signup';
 
 export default function Signup() {
 
-    const router = useRouter()
     const [email, setEmail] = useState("")
     const [code, setCode] = useState("")
     const [stepRegister, setStepRegister] = useState(['', 'hidden'])
-
-    const s = async () => {
-        const result = await signup(email);
-        console.log(result); // true یا false
-    };
 
     return (
         <div className="h-150 flex justify-center flex-col">
@@ -40,7 +32,7 @@ export default function Signup() {
                                     <label htmlFor="email" className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-md peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-xs">آدرس ایمیل</label>
                                 </div>
                                 <div className="relative">
-                                    <button onClick={s} className="btn btn-primary py-1.5 w-full">ادامه</button>
+                                    <button onClick={async () => await signup(email) && setStepRegister(['hidden', ''])} className="btn btn-primary py-1.5 w-full">ادامه</button>
                                 </div>
                             </div>
                         </div>
@@ -53,13 +45,13 @@ export default function Signup() {
                                 <div className="flex justify-center gap-x-1" dir="ltr">
                                     <input value={code} onChange={e => setCode(e.target.value)} autoComplete="off" autoFocus id="code" name="code" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="کد تایید" />
                                 </div>
-                                <div onClick={verify} className="btn btn-primary py-1.5 w-full mt-5">تایید</div>
+                                <div onClick={()=> verify(email,code)} className="btn btn-primary py-1.5 w-full mt-5">تایید</div>
                             </form>
                             {/* Resend OTP */}
                             <div className="flex items-center justify-end font-dana text-sm text-slate-500 mt-5">
-                                <button type="button" className="user-otp__resend">
+                                <div onClick={()=> resendCode(email)}>
                                     <span className='cursor-pointer'> ارسال دوباره </span>
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>

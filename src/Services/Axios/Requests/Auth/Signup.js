@@ -29,41 +29,63 @@ async function signup(email) {
         }
     } catch (error) {
         if (error.response?.status === 400) {
-            Alert("error", "آدرس ایمیل وارد شده قبلا استفاده شده است");
+            return Alert("error", "آدرس ایمیل وارد شده قبلا استفاده شده است");
         } else if (error.response?.status === 500) {
-            Alert("error", "از سمت سرور مشکلی پیش اومده");
+            return Alert("error", "از سمت سرور مشکلی پیش اومده");
         } else {
-            Alert("error", "خطای ناشناخته");
+            return Alert("error", "خطای ناشناخته");
         }
-        return false;
     }
 }
 
-async function verify () {
+async function verify(email,code) {
 
     const data = {
         email,
         code
     }
-    apiRequests.post("/users/verify/", data)
-        .then(res => {
-            if (res.status === 200) {
-                Alert("successful", "با موفقیت ثبت نام شدید")
-                console.log(res);
-                setTimeout(()=> {
-                    router.push('/')
-                }, 1500)
-            }
-        })
-        .catch(error => {
-            if (error.status === 400) {
-                return Alert("error", "کد وارد شده اشتباهه")
-            }
-            if (error.status === 500) {
-                return Alert("error", "از سمت سرور مشکلی پیش اومده")
-            }
-        })
+    console.log(data);
+    
+
+    try {
+        const res = await apiRequests.post("/users/verify/", data);
+
+        if (res.status === 200) {
+            Alert("successful", "با موفقیت ثبت نام شدید")
+            setTimeout(() => {
+                window.location.replace("/")
+            }, 1500)
+        }
+    } catch (error) {
+        if (error.response?.status === 400) {
+            return Alert("error", "کد وارد شده اشتباهه")
+        } else if (error.response?.status === 500) {
+            return Alert("error", "از سمت سرور مشکلی پیش اومده")
+        } else {
+            return Alert("error", "خطای ناشناخته");
+        }
+    }
+}
+
+async function resendCode(email) {
+
+    try {
+        const res = await apiRequests.post('/users/register/', { email });
+
+        if (res.status === 202) {
+            Alert("successful", "کد تأیید به ایمیل شما ارسال شد");
+            return true;
+        }
+    } catch (error) {
+        if (error.response?.status === 400) {
+            return Alert("error", "آدرس ایمیل وارد شده قبلا استفاده شده است");
+        } else if (error.response?.status === 500) {
+            return Alert("error", "از سمت سرور مشکلی پیش اومده");
+        } else {
+            return Alert("error", "خطای ناشناخته");
+        }
+    }
 }
 
 
-export {signup,verify}
+export { signup, verify , resendCode}
