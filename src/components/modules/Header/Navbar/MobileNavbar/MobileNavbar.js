@@ -14,7 +14,7 @@ export default function MobileNavbar() {
         </svg>
       </div>
       {/* <!-- navbar --> */}
-      <div className="navigation -right-67 md:hidden bg-white w-64 overflow-y-auto pb-5 fixed top-0 bottom-0 z-50 transition-all">
+      <div className="navigation -right-67 lg:hidden bg-white w-64 overflow-y-auto pb-5 fixed top-0 bottom-0 z-50 transition-all">
         {/* logo / close menu button  */}
         <TopNavbar />
         {/* search input / search drop down / menu list */}

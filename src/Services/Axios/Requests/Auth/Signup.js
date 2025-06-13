@@ -29,23 +29,24 @@ async function signup(email) {
         }
     } catch (error) {
         if (error.response?.status === 400) {
-            return Alert("error", "آدرس ایمیل وارد شده قبلا استفاده شده است");
+            Alert("error", "آدرس ایمیل وارد شده قبلا استفاده شده است");
+            return false
         } else if (error.response?.status === 500) {
-            return Alert("error", "از سمت سرور مشکلی پیش اومده");
+            Alert("error", "از سمت سرور مشکلی پیش اومده");
+            return false
         } else {
-            return Alert("error", "خطای ناشناخته");
+            Alert("error", "خطای ناشناخته");
+            return false
         }
     }
 }
 
-async function verify(email,code) {
+async function verify(email, code) {
 
     const data = {
         email,
         code
     }
-    console.log(data);
-    
 
     try {
         const res = await apiRequests.post("/users/verify/", data);
@@ -88,4 +89,4 @@ async function resendCode(email) {
 }
 
 
-export { signup, verify , resendCode}
+export { signup, verify, resendCode }
