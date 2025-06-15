@@ -1,5 +1,4 @@
 const url = "/"
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MTEzNDgxMSwiaWF0IjoxNzQ5ODM4ODExLCJqdGkiOiI3ZWZjN2M2YzgwNWI0OThiYWMxMmRmNWZjYjM5YjAxMyIsInVzZXJfaWQiOjF9.D2w9uP5k72DzOqkykC089UoTL9ia2eYNwgX8uF9wqmI"
 
 const toggleList = [
     { id: 1, title: 'محصولات تخفیف دار', inputName: 'only_offer' },
@@ -22,4 +21,4 @@ const menuList = [
 
 
 
-export { url, toggleList, categoryList, menuList,token }
+export { url, toggleList, categoryList, menuList }

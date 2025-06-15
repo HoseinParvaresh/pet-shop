@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
-import { signup, verify, resendCode,register } from '@/Services/Axios/Requests/Auth/Signup';
+import { signup, verify, resendCode } from '@/Services/Axios/Requests/Auth/Signup';
 
 export default function Signup() {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [code, setCode] = useState("")
-    const [stepRegister, setStepRegister] = useState(['', 'hidden'])
-
+    const [stepRegister, setStepRegister] = useState(['', 'hidden'])    
 
     return (
         <div className="h-150 flex justify-center flex-col">
@@ -28,11 +27,11 @@ export default function Signup() {
                         </div>
                         {/* step 1 => enter email */}
                         <div className={`divide-y divide-gray-200 ${stepRegister[0]}`}>
-                            <div className="py-8  leading-6 space-y-4 text-gray-700 sm:leading-7">
+                            <div className="py-8  leading-6 space-y-4 text-gray-700 sm:leading-7 dir-ltr">
                                 <input value={email} onChange={e => setEmail(e.target.value)} autoComplete="off" autoFocus id="email" name="email" type="text" className="h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="آدرس ایمیل" />
                                 <input value={password} onChange={e => setPassword(e.target.value)} autoComplete="off" autoFocus id="pass" name="pass" type="text" className="h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="رمز عبور" />
                                 <div className="relative">
-                                    <button onClick={register} className="btn btn-primary py-1.5 w-full">ادامه</button>
+                                    <button onClick={()=> signup(email,password).then(res => res && setStepRegister(['hidden', '']))} className="btn btn-primary py-1.5 w-full">ادامه</button>
                                 </div>
                             </div>
                         </div>

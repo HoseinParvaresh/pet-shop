@@ -17,7 +17,7 @@ export default function Alert(order, text) {
           <p className="text-sm font-danaBold text-gray-900">
             {order === 'error' ? 'خطا' : 'موفق'}
           </p>
-          <p className="mt-1 text-xs text-gray-700">
+          <p className="mt-1 text-[13px] text-gray-700">
             {text}
           </p>
         </div>

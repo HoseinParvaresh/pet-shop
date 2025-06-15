@@ -1,17 +1,15 @@
 import apiRequests from "../Configs/Configs";
 
-async function token() {
-
+export default async function getAuthorizeToken() {
     const data = {
-        email : "parvaresh.dev@gmail.com",
-        password : "hosein2681"
+        email: "parvaresh.dev@gmail.com",
+        password: "hosein2681"
     }
-    
     try {
         const res = await apiRequests.post('/users/login/', data);
 
         if (res.status === 200) {
-            console.log(res);
+            return res
         }
     } catch (error) {
         if (error.response?.status === (500 || 400)) {
@@ -19,5 +17,3 @@ async function token() {
         }
     }
 }
-
-export default token

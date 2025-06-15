@@ -2,19 +2,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { isValidEmail } from '@/Utility/UtilityFunction';
 import Alert from '@/Utility/Alert';
 import apiRequests from '@/Services/Axios/Configs/Configs';
-import { token } from '@/Utility/Constants';
-
-
-async function register(email,password) {
-    const res = await apiRequests.get('/users/',{
-        headers: {
-            Authorization : token
-        }
-    });
-
-    console.log(res);
-    
-}
 
 async function login(email, password) {
 
@@ -22,7 +9,6 @@ async function login(email, password) {
         email,
         password
     }
-
 
     try {
         const res = await apiRequests.post('/users/login/', data);
@@ -32,19 +18,20 @@ async function login(email, password) {
             // local storage / token
         }
     } catch (error) {
-        if (error.response?.status === 400) {
-            Alert("error", "آدرس ایمیل وارد شده قبلا استفاده شده است");
+        if (error.response?.status === 401) {
+            Alert("error", "آدرس ایمیل قبلا استفاده شده و یا رمزعبور نادرست است");
             return false
         } else if (error.response?.status === 500) {
             Alert("error", "از سمت سرور مشکلی پیش اومده");
             return false
         } else {
             Alert("error", "خطای ناشناخته");
+            console.log(error);
+            
             return false
         }
     }
 }
-
 
 async function signup(email, password) {
 
@@ -71,7 +58,7 @@ async function signup(email, password) {
         }
     } catch (error) {
         if (error.response?.status === 400) {
-            Alert("error", "آدرس ایمیل وارد شده قبلا استفاده شده است");
+            login(email,password)
             return false
         } else if (error.response?.status === 500) {
             Alert("error", "از سمت سرور مشکلی پیش اومده");
@@ -131,4 +118,4 @@ async function resendCode(email) {
 }
 
 
-export { signup, verify, resendCode,register }
+export { signup, verify, resendCode }
