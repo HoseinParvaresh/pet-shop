@@ -10,7 +10,7 @@ export default function HeaderButtons() {
         </svg>
       </Link>
       {/* user button */}
-      <Link href="/signup">
+      <Link href="/auth">
         <svg className="size-7.5 cursor-pointer text-white lg:text-dark-primary lg:hover:text-dark-primary/60 hover:text-white/60 transition-colors duration-300">
           <use href="#user-circle"></use>
         </svg>

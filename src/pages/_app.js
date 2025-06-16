@@ -16,13 +16,15 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   return (
-    <div className="font-dana">
-      <ParallaxProvider>
-        <Svg />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </ParallaxProvider>
-    </div>
+    <AuthContext.Provider>
+      <div className="font-dana">
+        <ParallaxProvider>
+          <Svg />
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </ParallaxProvider>
+      </div>
+    </AuthContext.Provider>
   );
 }

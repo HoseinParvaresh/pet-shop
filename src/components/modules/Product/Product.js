@@ -38,7 +38,7 @@ export default function Product({ price, discount, status }) {
                 {/* button */}
                 <button onClick={addToBasket} className="btn btn-secondary text-xs rounded-full py-3 hover:bg-gray-800">
                     <span>افزودن به سبدخرید</span>
-                    <svg class="size-4 text-white">
+                    <svg className="size-4 text-white">
                         <use href="#shopping-cart-solid"></use>
                     </svg>
                 </button>

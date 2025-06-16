@@ -9,20 +9,20 @@ export default function ProductFeatures() {
                 <div className="font-MorabbaBold text-xl md:text-2xl"> ویژگی های محصول </div>
             </div>
 
-            <ul class="text-sm md:text-[15px] text-dark-primary rounded-lg">
-                <li class="flex items-center gap-2 px-4 py-2">
+            <ul className="text-sm md:text-[15px] text-dark-primary rounded-lg">
+                <li className="flex items-center gap-2 px-4 py-2">
                     <MdOutlinePets className='size-4 text-primary'/>
                     <span>محکم و با دوام</span>
                 </li>
-                <li class="flex items-center gap-2 px-4 py-2">
+                <li className="flex items-center gap-2 px-4 py-2">
                     <MdOutlinePets className='size-4 text-primary'/>
                     <span>محکم و با دوام</span>
                 </li>
-                <li class="flex items-center gap-2 px-4 py-2">
+                <li className="flex items-center gap-2 px-4 py-2">
                     <MdOutlinePets className='size-4 text-primary'/>
                     <span>محکم و با دوام</span>
                 </li>
-                <li class="flex items-center gap-2 px-4 py-2">
+                <li className="flex items-center gap-2 px-4 py-2">
                     <MdOutlinePets className='size-4 text-primary'/>
                     <span>محکم و با دوام</span>
                 </li>

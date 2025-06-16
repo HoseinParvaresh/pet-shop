@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 export default function NotFound() {
     return (
-        <div class="overflow-hidden flex items-center justify-center" >
-            <div class="h-screen w-screen bg-gray-100 flex items-center">
-                <div class="container flex flex-col md:flex-row items-center justify-center px-15 text-gray-700">
-                    <div class="max-w-lg">
+        <div className="overflow-hidden flex items-center justify-center" >
+            <div className="h-screen w-screen bg-gray-100 flex items-center">
+                <div className="container flex flex-col md:flex-row items-center justify-center px-15 text-gray-700">
+                    <div className="max-w-lg">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             id="Layer_1"
@@ -168,11 +168,11 @@ export default function NotFound() {
                             />
                         </svg>
                     </div>
-                    <div class="max-w-md">
-                        <div class="text-5xl font-dark font-bold">404</div>
-                        <p class="text-2xl md:text-3xl font-light leading-normal">متاسفانه صفحه مورد نظر شما پیدا نشد. </p>
+                    <div className="max-w-md">
+                        <div className="text-5xl font-dark font-bold">404</div>
+                        <p className="text-2xl md:text-3xl font-light leading-normal">متاسفانه صفحه مورد نظر شما پیدا نشد. </p>
                         <div className="mt-3">
-                            <Link href={"/"} class="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-600 active:bg-blue-600 hover:bg-blue-700"> برگشت به خانه </Link>
+                            <Link href={"/"} className="btn btn-primary"> برگشت به خانه </Link>
                         </div>
                     </div>
                 </div>

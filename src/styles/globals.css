@@ -79,7 +79,7 @@
     direction: rtl;
   }
 
-  /* { -- helper class -- } */
+  /* { -- helper className -- } */
   .flex-center {
     @apply flex items-center justify-center;
   }
