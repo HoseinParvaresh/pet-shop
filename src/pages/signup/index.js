@@ -23,7 +23,7 @@ export default function Signup() {
                     <div className="max-w-md mx-auto">
                         {/* title */}
                         <div>
-                            <h2 className="text-2xl mb-1 font-MorabbaBold text-center">عضویت در پیلیسوک</h2>
+                            <h2 className="text-2xl mb-1 font-MorabbaBold text-center">ورود یا عضویت در پیلیسوک</h2>
                         </div>
                         {/* step 1 => enter email */}
                         <div className={`divide-y divide-gray-200 ${stepRegister[0]}`}>

@@ -26,8 +26,6 @@ async function login(email, password) {
             return false
         } else {
             Alert("error", "خطای ناشناخته");
-            console.log(error);
-            
             return false
         }
     }
@@ -58,7 +56,7 @@ async function signup(email, password) {
         }
     } catch (error) {
         if (error.response?.status === 400) {
-            login(email,password)
+            login(email, password)
             return false
         } else if (error.response?.status === 500) {
             Alert("error", "از سمت سرور مشکلی پیش اومده");
@@ -83,7 +81,9 @@ async function verify(email, code) {
         if (res.status === 200) {
             Alert("successful", "با موفقیت ثبت نام شدید")
             setTimeout(() => {
-                window.location.replace("/")
+                // window.location.replace("/")
+                console.log(res);
+
             }, 1500)
         }
     } catch (error) {
@@ -115,6 +115,10 @@ async function resendCode(email) {
             return Alert("error", "خطای ناشناخته");
         }
     }
+}
+
+async function saveToken(email, password) {
+    
 }
 
 
