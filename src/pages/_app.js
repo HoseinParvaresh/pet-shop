@@ -5,10 +5,12 @@ import 'animate.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import Footer from "@/components/modules/Footer/Footer";
 import AuthContext from "@/context/authContext";
 import apiRequests from "@/Services/Axios/Configs/Configs";
+import { useCallback } from "react";
+
 
 export default function App({ Component, pageProps }) {
 
@@ -16,20 +18,18 @@ export default function App({ Component, pageProps }) {
   const [token, setToken] = useState(null)
   const [userInfos, setUserInfos] = useState(null)
 
-
-  const login = (userInfos, token) => {
+  const login = useCallback((userInfos, token) => {
     setToken(token)
     setIsLoggedIn(true)
     setUserInfos(userInfos)
     localStorage.setItem('user', JSON.stringify({ token }))
-  }
+  }, [])
 
-  const logout = () => {
+  const logout = useCallback(() => {
     setToken(null)
     setUserInfos({})
     localStorage.removeItem('user')
-  }
-
+  }, [])
 
   useEffect(() => {
     AOS.init();
@@ -43,8 +43,10 @@ export default function App({ Component, pageProps }) {
           Authorization: `Bearer ${localStorageData.token}`
         }
       }).then(res => {
+        console.log("app.js =>", res);
+        setToken(localStorageData.token)
         setIsLoggedIn(true)
-        setUserInfos(res)
+        setUserInfos(res.data.data)
       })
     }
   }, [login])

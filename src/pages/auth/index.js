@@ -16,7 +16,6 @@ export default function Signup() {
     const [stepRegister, setStepRegister] = useState(['', 'hidden'])
 
     const router = useRouter()
-
     const authContext = useContext(AuthContext)
 
     async function login() {

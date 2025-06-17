@@ -2,7 +2,7 @@ import SectionName from "@/components/templates/Store/SectionName/SectionName";
 import Sidebar from "@/components/templates/Store/Sidebar/Sidebar";
 import Content from "@/components/templates/Store/Content/Content";
 
-export default function index() {
+export default function Store() {
 
     return (
         <div className="container mt-10">
