@@ -1,13 +1,135 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Toaster } from 'react-hot-toast';
-import { signup, verify, resendCode } from '@/Services/Axios/Requests/Auth/Signup';
+import AuthContext from '@/context/authContext';
+import { v4 as uuidv4 } from 'uuid';
+import { isValidEmail, isValidPassword } from '@/Utility/UtilityFunction';
+import Alert from '@/Utility/Alert';
+import apiRequests from '@/Services/Axios/Configs/Configs';
+import { useRouter } from 'next/router';
+import { url } from '@/Utility/Constants';
 
 export default function Signup() {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [code, setCode] = useState("")
-    const [stepRegister, setStepRegister] = useState(['', 'hidden'])    
+    const [stepRegister, setStepRegister] = useState(['', 'hidden'])
+
+    const router = useRouter()
+
+    const authContext = useContext(AuthContext)
+
+    async function login() {
+
+        const data = {
+            email,
+            password
+        }
+
+        try {
+            const res = await apiRequests.post('/users/login/', data);
+
+            if (res.status === 200) {
+                Alert("successful", "با موفقیت وارد شدید");
+                authContext.login(res.data.user, res.data.access)
+                router.replace(url)
+            }
+        } catch (error) {
+            if (error.response?.status === 401) {
+                Alert("error", "آدرس ایمیل قبلا استفاده شده و یا رمزعبور نادرست است");
+                return false
+            } else if (error.response?.status === 500) {
+                Alert("error", "از سمت سرور مشکلی پیش اومده");
+                return false
+            } else {
+                Alert("error", "خطای ناشناخته");
+                return false
+            }
+        }
+    }
+
+    async function signup() {
+
+        if (!isValidEmail(email)) {
+            Alert("error", "آدرس ایمیل وارد شده اشتباه است");
+            return false;
+        }
+        if (!isValidPassword(password)) {
+            Alert("error", "رمز عبور ضعیف و یا نادرست است");
+            return false;
+        }
+
+        const data = {
+            username: `user-${uuidv4()}`,
+            email,
+            password,
+            confirm_password: password
+        };
+
+        try {
+            const res = await apiRequests.post('/users/register/', data);
+
+            if (res.status === 201) {
+                Alert("successful", "کد تأیید به ایمیل شما ارسال شد");
+                setStepRegister(['hidden', ''])
+            }
+        } catch (error) {
+            if (error.response?.status === 400) {
+                login(email, password)
+                return false
+            } else if (error.response?.status === 500) {
+                Alert("error", "از سمت سرور مشکلی پیش اومده");
+                return false
+            } else {
+                Alert("error", "خطای ناشناخته");
+                return false
+            }
+        }
+    }
+
+    async function verify() {
+
+        const data = {
+            email,
+            code
+        }
+
+        try {
+            const res = await apiRequests.post("/users/verify/", data);
+
+            if (res.status === 200) {
+                login(email, password)
+            }
+        } catch (error) {
+            if (error.response?.status === 400) {
+                return Alert("error", "کد وارد شده اشتباهه")
+            } else if (error.response?.status === 500) {
+                return Alert("error", "از سمت سرور مشکلی پیش اومده")
+            } else {
+                return Alert("error", "خطای ناشناخته");
+            }
+        }
+    }
+
+    async function resendCode() {
+
+        try {
+            const res = await apiRequests.post('/users/resend-verification-email/', { email });
+
+            if (res.status === 202) {
+                Alert("successful", "کد تأیید دوباره به ایمیل شما ارسال شد");
+                return true;
+            }
+        } catch (error) {
+            if (error.response?.status === 400) {
+                return Alert("error", "آدرس ایمیل وارد شده قبلا استفاده شده است");
+            } else if (error.response?.status === 500) {
+                return Alert("error", "از سمت سرور مشکلی پیش اومده");
+            } else {
+                return Alert("error", "خطای ناشناخته");
+            }
+        }
+    }
 
     return (
         <div className="h-150 flex justify-center flex-col">
@@ -25,13 +147,13 @@ export default function Signup() {
                         <div>
                             <h2 className="text-2xl mb-1 font-MorabbaBold text-center">ورود یا عضویت در پیلیسوک</h2>
                         </div>
-                        {/* step 1 => enter email */}
-                        <div className={`divide-y divide-gray-200 ${stepRegister[0]}`}>
-                            <div className="py-8  leading-6 space-y-4 text-gray-700 sm:leading-7 dir-ltr">
+                        {/* step 1 => enter email and password */}
+                        <div className={`divide-y divide-gray-200 font-sans ${stepRegister[0]}`}>
+                            <div className="py-8  leading-6 space-y-4 text-gray-700 sm:leading-7">
                                 <input value={email} onChange={e => setEmail(e.target.value)} autoComplete="off" autoFocus id="email" name="email" type="text" className="h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="آدرس ایمیل" />
                                 <input value={password} onChange={e => setPassword(e.target.value)} autoComplete="off" autoFocus id="pass" name="pass" type="text" className="h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="رمز عبور" />
                                 <div className="relative">
-                                    <button onClick={()=> signup(email,password).then(res => res && setStepRegister(['hidden', '']))} className="btn btn-primary py-1.5 w-full">ادامه</button>
+                                    <button onClick={() => signup(email, password)} className="btn btn-primary py-1.5 w-full">ادامه</button>
                                 </div>
                             </div>
                         </div>

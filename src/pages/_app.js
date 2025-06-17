@@ -8,20 +8,25 @@ import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
 import Footer from "@/components/modules/Footer/Footer";
 import AuthContext from "@/context/authContext";
+import apiRequests from "@/Services/Axios/Configs/Configs";
 
 export default function App({ Component, pageProps }) {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [token, setToken] = useState(null)
-  const [userInfo, setUserInfo] = useState(null)
+  const [userInfos, setUserInfos] = useState(null)
 
-  const login = (token) => {
+
+  const login = (userInfos, token) => {
     setToken(token)
+    setIsLoggedIn(true)
+    setUserInfos(userInfos)
     localStorage.setItem('user', JSON.stringify({ token }))
   }
+
   const logout = () => {
     setToken(null)
-    setUserInfo({})
+    setUserInfos({})
     localStorage.removeItem('user')
   }
 
@@ -30,11 +35,25 @@ export default function App({ Component, pageProps }) {
     AOS.init();
   }, [])
 
+  useEffect(() => {
+    const localStorageData = JSON.parse(localStorage.getItem("user"))
+    if (localStorageData) {
+      apiRequests.get("/users/profile/", {
+        headers: {
+          Authorization: `Bearer ${localStorageData.token}`
+        }
+      }).then(res => {
+        setIsLoggedIn(true)
+        setUserInfos(res)
+      })
+    }
+  }, [login])
+
   return (
     <AuthContext.Provider value={{
       isLoggedIn,
       token,
-      userInfo,
+      userInfos,
       login,
       logout
     }}>

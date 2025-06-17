@@ -1,4 +1,4 @@
-const url = "/"
+const url = "http://localhost:3000/"
 
 const toggleList = [
     { id: 1, title: 'محصولات تخفیف دار', inputName: 'only_offer' },
@@ -17,8 +17,5 @@ const menuList = [
     { id: 4, title: "درباره ما", link: "#" },
     { id: 5, title: "تماس با ما ", link: "#" },
 ]
-
-
-
 
 export { url, toggleList, categoryList, menuList }
