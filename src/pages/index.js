@@ -6,19 +6,22 @@ import CustomerComments from "@/components/templates/Home/CustomerComments/Custo
 import LastArticles from "@/components/templates/Home/LastArticles/LastArticles";
 import JoinNewsletter from "@/components/templates/Home/JoinNewsletter/JoinNewsletter";
 import IntroducingProducts from "@/components/templates/Home/IntroducingProducts/IntroducingProducts";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
 
   return (
-      <>
-        <TopImage/>
-        <AboutUs/>
-        <OurServices/>
-        <TrustUs/>
-        <CustomerComments/>
-        <LastArticles/>
-        <IntroducingProducts/>
-        <JoinNewsletter/>
-      </>
+    <>
+      <Toaster />
+
+      <TopImage />
+      <AboutUs />
+      <OurServices />
+      <TrustUs />
+      <CustomerComments />
+      <LastArticles />
+      <IntroducingProducts />
+      <JoinNewsletter />
+    </>
   );
 }

@@ -38,7 +38,8 @@
   --color-dark-secondary: #616161;
   --color-footer: #3a3330;
 
-  --shadow-primary : "0px 4px 40px -10px"
+  --shadow-primary : 0px 4px 40px -30px;
+
   --font-dana: "Dana";
   --font-danaBold: "Dana Bold";
   --font-Morabba: "Morabba";

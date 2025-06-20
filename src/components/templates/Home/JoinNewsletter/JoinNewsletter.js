@@ -1,8 +1,9 @@
 import { MdOutlinePets } from "react-icons/md";
+import Alert from "@/Utility/Alert";
 
 export default function JoinNewsletter() {
     return (
-        <div className="bg-secondary mt-30">
+        <div className="bg-secondary">
             <div className="container pb-5 grid grid-cols-1 md:grid-cols-2 items-center lg:items-start">
                 {/* left => title / input / button */}
                 <div data-aos="fade-down" className="flex flex-col pt-15 md:pt-25 gap-3 text-center md:text-right items-center md:items-start">
