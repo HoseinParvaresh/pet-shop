@@ -5,6 +5,7 @@ import TrustUs from "@/components/templates/Home/TrustUs/TrustUs";
 import CustomerComments from "@/components/templates/Home/CustomerComments/CustomerComments";
 import LastArticles from "@/components/templates/Home/LastArticles/LastArticles";
 import JoinNewsletter from "@/components/templates/Home/JoinNewsletter/JoinNewsletter";
+import IntroducingProducts from "@/components/templates/Home/IntroducingProducts/IntroducingProducts";
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
         <TrustUs/>
         <CustomerComments/>
         <LastArticles/>
+        <IntroducingProducts/>
         <JoinNewsletter/>
       </>
   );

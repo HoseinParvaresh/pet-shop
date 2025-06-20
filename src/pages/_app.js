@@ -35,21 +35,23 @@ export default function App({ Component, pageProps }) {
     AOS.init();
   }, [])
 
-  useEffect(() => {
-    const localStorageData = JSON.parse(localStorage.getItem("user"))
-    if (localStorageData) {
-      apiRequests.get("/users/profile/", {
-        headers: {
-          Authorization: `Bearer ${localStorageData.token}`
-        }
-      }).then(res => {
-        console.log("app.js =>", res);
-        setToken(localStorageData.token)
-        setIsLoggedIn(true)
-        setUserInfos(res.data.data)
-      })
-    }
-  }, [login])
+  // useEffect(() => {
+  //   const localStorageData = JSON.parse(localStorage.getItem("user"))
+  //   if (localStorageData) { 
+  //     console.log(localStorageData.token);
+           
+  //     apiRequests.get("/users/profile/", {
+  //       headers: {
+  //         Authorization: `Bearer ${localStorageData.token}`
+  //       }
+  //     }).then(res => {
+  //       console.log("app.js =>", res);
+  //       setToken(localStorageData.token)
+  //       setIsLoggedIn(true)
+  //       setUserInfos(res.data.data)
+  //     })
+  //   }
+  // }, [login])
 
   return (
     <AuthContext.Provider value={{
