@@ -38,7 +38,7 @@
   --color-dark-secondary: #616161;
   --color-footer: #3a3330;
 
-  --shadow-primary : 0px 5px 40px -20px;
+  --shadow-primary: 0px 5px 40px -20px;
 
   --font-dana: "Dana";
   --font-danaBold: "Dana Bold";
@@ -254,33 +254,19 @@
   }
   /* ------ { ... Breadcrumb ... } ------ */
   .breadcrumb {
-    @apply h-13 items-center overflow-x-auto overflow-y-hidden border border-secondary text-dark-primary rounded-xl bg-secondary flex;
+    @apply h-13 items-center overflow-x-auto overflow-y-hidden text-black rounded-xl flex;
   }
   .breadcrumb::-webkit-scrollbar {
     @apply hidden;
   }
   .breadcrumb__item {
-    @apply relative flex h-full shrink-0 items-center pl-2 pr-[38px];
+    @apply relative flex h-full shrink-0 items-center;
   }
-  .breadcrumb__item::before,
-  .breadcrumb__item::after {
-    @apply absolute left-0 h-10 w-[5px] bg-white content-[""];
+   .breadcrumb__item:last-child {
+    @apply text-primary;
   }
-  .breadcrumb__item::before {
-    @apply bottom-[-6px] rotate-[-35deg] origin-bottom;
-  }
-  .breadcrumb__item::after {
-    @apply top-[-6px] rotate-[35deg] origin-top;
-  }
-  .breadcrumb__item:first-child {
-    @apply pr-4 pl-2;
-  }
-  .breadcrumb__item:last-child::after,
-  .breadcrumb__item:last-child::before {
-    @apply hidden;
-  }
-  .breadcrumb__item:last-child {
-    @apply font-danaBold;
+  .breadcrumb__item:last-child .breadcrumb-icon {
+    @apply hidden
   }
   .breadcrumb__link {
     @apply whitespace-nowrap;

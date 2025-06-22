@@ -5,7 +5,6 @@ export default function Product({ price, discount, status }) {
 
     function addToBasket() {
 
-
     }
     return (
         <div className="w-full group">

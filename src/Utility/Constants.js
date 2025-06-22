@@ -13,9 +13,9 @@ const categoryList = [
 const menuList = [
     { id: 1, title: "صفحه اصلی ", link: "/" },
     { id: 2, title: "فروشگاه", link: "/store" },
-    { id: 3, title: "وبلاگ", link: "#" },
-    { id: 4, title: "درباره ما", link: "#" },
-    { id: 5, title: "تماس با ما ", link: "#" },
+    { id: 3, title: "رزرو خدمات", link: "/reservation" },
+    { id: 4, title: "مقالات", link: "/articles" },
+    { id: 5, title: "تماس با ما ", link: "/contact" },
 ]
 
 export { url, toggleList, categoryList, menuList }

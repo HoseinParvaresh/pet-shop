@@ -6,13 +6,17 @@ import Description from '@/components/templates/Product/Description';
 import Comments from '@/components/templates/Product/comments/Comments';
 import ProductFeatures from '@/components/templates/Product/ProductFeatures';
 import StockAndRating from '@/components/templates/Product/StockAndRating';
+import ProductActions from '@/components/templates/Product/ProductActions';
 
 export default function Main(Props) {
 
     return (
         <main className='max-w-[1920px] m-h mx-auto overflow-x-hidden mt-8 sm:mt-10 mb-10'>
             <div className='container'>
-                <Breadcrumb />
+                <div className='flex justify-between'>
+                    <Breadcrumb />
+                    <ProductActions/>
+                </div>
                 {/* product Info / ProductBanner */}
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-y-4.5 gap-x-6 sm:gap-x-7 lg:items-center xl:items-stretch mt-8 sm:mt-10 rounded-2xl p-4.5 lg:p-0 bg-secondary lg:!bg-transparent border border-neutral-100 lg:border-none">
                     <ProductInfo />
