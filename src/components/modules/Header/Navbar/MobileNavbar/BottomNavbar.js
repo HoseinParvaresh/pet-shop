@@ -7,7 +7,7 @@ export default function BottomNavbar() {
             <div className="text-sm space-y-1 mb-4 pb-4 border-b border-b-neutral-200">
                 <div className="flex items-center bg-gray-100 p-3 my-2 rounded-full justify-center">
                     <input type="text" className="text-slate-800 text-sm bg-transparent border-none outline-none" placeholder="جستجو بین محصولات" />
-                    <svg className="size-4">
+                    <svg className="size-3.5 shrink-0">
                         <use href="#magnifying-glass"></use>
                     </svg>
                 </div>

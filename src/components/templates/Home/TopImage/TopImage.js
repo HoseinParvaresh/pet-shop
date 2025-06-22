@@ -12,17 +12,17 @@ export default function TopImage() {
                 { image: '/images/cat.png', speed: -20 },
                 {
                     speed: -15,
-                    children:(
+                    children: (
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <p className="animate__animated animate__fadeInUp text-white text-3xl xs:text-4xl/14 md:text-5xl/16 font-MorabbaBold max-w-160 text-center px-2">
-                            <Typewriter
-                                words={['بهترین ها برای کوچولوهای دوست داشتنی شما']}
-                                typeSpeed={120} />
+                            <p className="animate__animated animate__fadeInUp text-white text-3xl/10 xs:text-4xl/14 md:text-5xl/16 font-MorabbaBold max-w-160 text-center px-2">
+                                <Typewriter
+                                    words={['بهترین ها برای کوچولوهای دوست داشتنی شما']}
+                                    typeSpeed={120} />
                             </p>
                         </div>
                     ),
                 },
-            ]}  
+            ]}
                 className="h-135 my-10 rounded-2xl px-5 lg:px-7 flex flex-col">
                 {/* title */}
                 {/* <p className="head-title animate__animated animate__fadeInRight mt-40 mb-3 text-sm xs:text-base"> به پیلیسوک خوش آمدید </p> */}
@@ -42,9 +42,9 @@ export default function TopImage() {
                 {/* cards */}
             </ParallaxBanner>
             <div className='flex flex-col md:flex-row absolute w-full md:w-auto items-center gap-4 md:gap-7 top-full md:top-[87%] px-5'>
-                <TopImageCard title={"خانه حیوانات"} desc={"فروش انواع خانه و باکس نگهداری حیوانات با بالاترین کیفیت"} src={"/images/pet-home.png"}/>
-                <TopImageCard title={"سلامت حیوانات"} desc={"فروش انواع لوازم و ادوات سلامت و رشد و ایمنی حیوانات"} src={"/images/pet-h.png"}/>
-                <TopImageCard title={"مراقبت حیوانات"} desc={"فروش انواع وسایل آرایش و آراستن و مراقبتی حیوانات"} src={"/images/pet-s.png"}/>
+                <TopImageCard title={"خانه حیوانات"} desc={"فروش انواع خانه و باکس نگهداری حیوانات با بالاترین کیفیت"} src={"/images/pet-home.png"} />
+                <TopImageCard title={"سلامت حیوانات"} desc={"فروش انواع لوازم و ادوات سلامت و رشد و ایمنی حیوانات"} src={"/images/pet-h.png"} />
+                <TopImageCard title={"مراقبت حیوانات"} desc={"فروش انواع وسایل آرایش و آراستن و مراقبتی حیوانات"} src={"/images/pet-s.png"} />
             </div>
         </div>
     );
