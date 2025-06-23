@@ -192,7 +192,7 @@
   }
   /* ------ { ... Sort ... } ------ */
   .sort-btn {
-    @apply inline-block border-y-2 border-transparent font-danaBold text-sm leading-[64px] transition-all text-dark-primary;
+    @apply inline-block border-y-2 border-transparent font-danaBold text-sm leading-[64px] transition-all text-dark-primary cursor-pointer;
   }
   .sort-btn--active {
     @apply border-primary text-primary;
@@ -264,6 +264,9 @@
   }
    .breadcrumb__item:last-child {
     @apply text-primary;
+  }
+  .breadcrumb-icon {
+    @apply size-4 mx-3 rotate-90 
   }
   .breadcrumb__item:last-child .breadcrumb-icon {
     @apply hidden

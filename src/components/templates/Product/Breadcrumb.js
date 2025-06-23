@@ -18,7 +18,7 @@ export default function Breadcrumb() {
             <use href="#home"></use>
           </svg>
         </Link>
-        <svg className="size-4 mx-3 rotate-90">
+        <svg className="breadcrumb-icon">
           <use href="#chevron-down"></use>
         </svg>
       </div>
@@ -29,7 +29,7 @@ export default function Breadcrumb() {
             <Link href={item.href} className="breadcrumb__link">
               {item.title}
             </Link>
-            <svg className="size-4 mx-3 rotate-90 breadcrumb-icon">
+            <svg className="breadcrumb-icon">
               <use href="#chevron-down"></use>
             </svg>
           </div>

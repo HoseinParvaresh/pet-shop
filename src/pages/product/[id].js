@@ -13,7 +13,7 @@ export default function Main(Props) {
     return (
         <main className='max-w-[1920px] m-h mx-auto overflow-x-hidden mt-8 sm:mt-10 mb-10'>
             <div className='container'>
-                <div className='flex justify-between'>
+                <div className='flex flex-col xs:flex-row items-center gap-y-3 justify-between'>
                     <Breadcrumb />
                     <ProductActions/>
                 </div>

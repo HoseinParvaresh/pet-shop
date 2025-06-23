@@ -1,5 +1,6 @@
 import { calcDiscountPrice, formatNumber } from "@/Utility/UtilityFunction";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Product({ price, discount, status }) {
 
@@ -16,10 +17,17 @@ export default function Product({ price, discount, status }) {
                     <p className={`${discount ? 'flex-center' : 'hidden'} rounded-full size-10 bg-primary absolute font-danaBold text-sm text-white left-3 top-3`}>{discount}%</p>
                     {/* image */}
                     <Link href={"/product/2"}>
-                        <div className="bg-gray-200 rounded-full border-10 border-white group-hover:scale-105 group-hover:rotate-6 transition-all duration-400">
-                            <img src="/images/p-1.png" alt="p-1" />
-                        </div>
+                        <motion.div
+                            whileHover={{ scale: 1.1, rotate: 2 }}
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            <div className="bg-gray-200 rounded-full border-10 border-white">
+                                <img src="/images/p-1.png" alt="p-1" />
+                            </div>
+                        </motion.div>
                     </Link>
+
                     {/* title / price */}
                     <div className="text-center flex flex-col gap-2 mt-5">
                         {/* title */}
@@ -35,7 +43,7 @@ export default function Product({ price, discount, status }) {
 
                 </div>
                 {/* button */}
-                <button onClick={addToBasket} className="btn btn-secondary text-xs rounded-full py-3 hover:bg-gray-800">
+                <button onClick={addToBasket} className="btn w-full btn-secondary text-xs rounded-xl py-3 hover:bg-gray-800">
                     <span>افزودن به سبدخرید</span>
                     <svg className="size-4 text-white">
                         <use href="#shopping-cart-solid"></use>
