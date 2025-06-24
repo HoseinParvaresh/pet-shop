@@ -4,7 +4,7 @@ import "swiper/css";
 
 export default function CustomerComments() {
     return (
-        <div className="container mt-10 2xs:mt-30">
+        <div className="container mt-10 2xs:mt-20">
             {/* top => head title / title / desc */}
             <div data-aos="fade-down" className="flex-center flex-col text-center gap-3">
                 <p className="head-title">نظـرات مشتـریان</p>

@@ -1,14 +1,14 @@
-import { DayPicker, getDateLib } from "react-day-picker/persian";
-import { useState } from "react";
-import { PersianCalendar } from "./PersianCalendar";
+import DatePicker from "react-multi-date-picker"
+import persian from "react-date-object/calendars/persian"
+import persian_fa from "react-date-object/locales/persian_fa"
+import "react-multi-date-picker/styles/layouts/mobile.css"
+
+const weekDays = ["ش", "ی", "د", "س", "چ", "پ", "ج"]
 
 export default function ReservationForm() {
 
-    const [selected, setSelected] = useState(new Date());
-    const dateLib = getDateLib();
-
     return (
-        <div className="container grid grid-cols-2 mb-30 gap-10">
+        <div className="container grid grid-cols-1 md:grid-cols-2 mb-30 gap-5 lg:gap-10">
             <form className='px-3 space-y-7 md:space-y-8 bg-gray-100 p-5 rounded-lg'>
                 <p className="font-MorabbaBold text-2xl">درخواست رزرو</p>
                 {/* first name and last name / number */}
@@ -49,16 +49,28 @@ export default function ReservationForm() {
                     <div>
                         <label className="inline-block font-danaBold text-sm mb-2 md:mb-3"> علت مراجعه  </label>
                         <select name="category" required="" className="w-full h-13 text-slate-500 bg-white text-sm p-3.5 border-l-[14px] border-l-transparent rounded outline-none">
-                            <option value={false}> چه کاری میخوای برات انجام بدیم؟ </option>
+                            <option value={false}> چیکار کنیم برات ؟</option>
                             <option value="واکسن"> واکسن </option>
                             <option value="اصلاح"> اصلاح </option>
                             <option value="پانسیون"> پانسیون </option>
-                            <option value="زندگی‌نامه">همستر</option>
-                            <option value="روان‌شناسی">ماهی</option>
                         </select>
                     </div>
                     {/* date */}
-                        <PersianCalendar/>
+                    {/* <PersianCalendar/> */}
+                    <div>
+                        <label className="inline-block font-danaBold text-sm mb-2 md:mb-3"> تاریخ </label>
+                        <div className="dir-rtl w-full h-13 placeholder:text-slate-500 text-gray-900 bg-white text-sm py-3.5 pr-3.5 pl-13 rounded outline-none">
+                            <DatePicker
+                                calendar={persian}
+                                locale={persian_fa}
+                                weekDays={weekDays}
+                                className="rmdp-mobile"
+                                calendarPosition="bottom-right"
+                                inputClass="outline-none"
+                                placeholder="کی ببینیمت؟"
+                            />
+                        </div>
+                    </div>
                 </div>
                 {/* description */}
                 <div>

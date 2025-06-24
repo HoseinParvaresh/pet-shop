@@ -1,26 +1,42 @@
 import Link from "next/link";
+import * as motion from "motion/react-client"
 
 export default function HeaderButtons() {
   return (
     <div className="flex items-center justify-between gap-4">
       {/* search button */}
-      <Link href="/" className="hidden lg:inline">
-        <svg className="size-7.5 cursor-pointer text-white lg:text-dark-primary hover:text-white/60 lg:hover:text-dark-primary/60 transition-colors duration-300">
-          <use href="#magnifying-glass-circle"></use>
-        </svg>
-      </Link>
+      <motion.div
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.8 }}
+      >
+        <Link href="/" className="hidden lg:inline">
+          <svg className="size-7.5 cursor-pointer text-white lg:text-dark-primary">
+            <use href="#magnifying-glass-circle"></use>
+          </svg>
+        </Link>
+      </motion.div>
       {/* user button */}
-      <Link href="/auth">
-        <svg className="size-7.5 cursor-pointer text-white lg:text-dark-primary lg:hover:text-dark-primary/60 hover:text-white/60 transition-colors duration-300">
-          <use href="#user-circle"></use>
-        </svg>
-      </Link>
+      <motion.div
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.8 }}
+      >
+        <Link href="/auth">
+          <svg className="size-7.5 cursor-pointer text-white lg:text-dark-primary">
+            <use href="#user-circle"></use>
+          </svg>
+        </Link>
+      </motion.div>
       {/* basket button */}
-      <Link href="/">
-        <svg className="size-7 cursor-pointer text-white lg:text-dark-primary lg:hover:text-dark-primary/60 hover:text-white/60 transition-colors duration-300">
-          <use href="#shopping-bag"></use>
-        </svg>
-      </Link>
+      <motion.div
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.8 }}
+      >
+        <Link href="/">
+          <svg className="size-7 cursor-pointer text-white lg:text-dark-primary">
+            <use href="#shopping-bag"></use>
+          </svg>
+        </Link>
+      </motion.div>
       {/* phone number */}
       <button className="btn btn-secondary group relative hidden xl:flex">
         <svg className="size-5 text-primary group-hover:text-white duration-300">

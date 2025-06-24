@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 export default function OurServices() {
   return (
     <>
-      <div className="mt-10 2xs:mt-30 relative bg-secondary py-15 pr-0 pl-4 2xs:px-10 lg:px-27.5 flex-center flex-col text-center gap-3">
+      <div className="mt-10 2xs:mt-20 relative bg-secondary py-15 pr-0 pl-4 2xs:px-10 lg:px-27.5 flex-center flex-col text-center gap-3">
         {/* top => head title / title / desc */}
         <div data-aos="fade-down" className="flex-center flex-col text-center gap-3">
           <p className="head-title">خـدمات ما</p>

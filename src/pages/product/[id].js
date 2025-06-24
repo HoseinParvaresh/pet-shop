@@ -8,7 +8,7 @@ import ProductFeatures from '@/components/templates/Product/ProductFeatures';
 import StockAndRating from '@/components/templates/Product/StockAndRating';
 import ProductActions from '@/components/templates/Product/ProductActions';
 
-export default function Main(Props) {
+export default function Main() {
 
     return (
         <main className='max-w-[1920px] m-h mx-auto overflow-x-hidden mt-8 sm:mt-10 mb-10'>
