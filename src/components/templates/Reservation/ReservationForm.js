@@ -1,4 +1,12 @@
+import { DayPicker, getDateLib } from "react-day-picker/persian";
+import { useState } from "react";
+import { PersianCalendar } from "./PersianCalendar";
+
 export default function ReservationForm() {
+
+    const [selected, setSelected] = useState(new Date());
+    const dateLib = getDateLib();
+
     return (
         <div className="container grid grid-cols-2 mb-30 gap-10">
             <form className='px-3 space-y-7 md:space-y-8 bg-gray-100 p-5 rounded-lg'>
@@ -50,22 +58,13 @@ export default function ReservationForm() {
                         </select>
                     </div>
                     {/* date */}
-                    <div>
-                        <label className="inline-block font-danaBold text-sm mb-2 md:mb-3"> تاریخ </label>
-                        <select name="category" required="" className="w-full h-13 text-slate-500 bg-white text-sm p-3.5 border-l-[14px] border-l-transparent rounded outline-none">
-                            <option value={false}> چه کاری میخوای برات انجام بدیم؟ </option>
-                            <option value="واکسن"> واکسن </option>
-                            <option value="اصلاح"> اصلاح </option>
-                            <option value="پانسیون"> پانسیون </option>
-                            <option value="زندگی‌نامه">همستر</option>
-                            <option value="روان‌شناسی">ماهی</option>
-                        </select>
-                    </div>
-
+                        <PersianCalendar/>
                 </div>
-                {/* Additional information */}
-                <label className="inline-block font-danaBold text-sm mb-2 md:mb-3"> توضیحات تکمیلی </label>
-                <textarea className="w-full min-h-30 placeholder:text-slate-500 text-gray-900 bg-white text-sm p-3.5 outline-none rounded" placeholder="سابقه درمانی ، موارد که بهشون حساسیت داره ، سابقه واکسن  و..." id="text" name="text" required=""></textarea>
+                {/* description */}
+                <div>
+                    <label className="inline-block font-danaBold text-sm mb-2 md:mb-3"> توضیحات تکمیلی </label>
+                    <textarea className="w-full min-h-30 placeholder:text-slate-500 text-gray-900 bg-white text-sm p-3.5 outline-none rounded" placeholder="سابقه درمانی ، موارد که بهشون حساسیت داره ، سابقه واکسن  و..." id="text" name="text" required=""></textarea>
+                </div>
                 {/* button */}
                 <button className="btn btn-primary w-full">  ارسال </button>
             </form>

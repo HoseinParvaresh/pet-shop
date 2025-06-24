@@ -1,7 +1,47 @@
 import Link from "next/link";
 import { MdOutlinePets } from "react-icons/md";
 import { ParallaxBanner } from "react-scroll-parallax";
+import { animate, motion, useMotionValue, useTransform, useScroll } from "motion/react"
+import { useEffect, useState } from "react"
+
 export default function TrustUs() {
+
+    const customerCount = useMotionValue(0)
+    const yearCount = useMotionValue(0)
+    const teamCount = useMotionValue(0)
+    const animalCount = useMotionValue(0)
+
+    const getCustomer = useTransform(() => Math.round(customerCount.get()))
+    const getYear = useTransform(() => Math.round(yearCount.get()))
+    const getTeam = useTransform(() => Math.round(teamCount.get()))
+    const getAnimal = useTransform(() => Math.round(animalCount.get()))
+
+    const cards = [
+        { id: 1, var: getCustomer, title: "مشتری راضی" },
+        { id: 2, var: getYear, title: "سال سابقه" },
+        { id: 3, var: getTeam, title: "اعضای تیم" },
+        { id: 4, var: getAnimal, title: "حیوان خوشحال" },
+    ]
+
+    const countUp = (count, num) => {
+        const controls = animate(count, num, { duration: 4 })
+        return () => {
+            controls.stop();
+        }
+    }
+    useEffect(() => {
+        let flag = true
+        window.addEventListener("scroll", () => {
+            if (window.scrollY >= 1530 && flag) {
+                flag = false
+                countUp(customerCount, 50)
+                countUp(yearCount, 3)
+                countUp(teamCount, 5)
+                countUp(animalCount, 250)
+            }
+        })
+    }, [])
+
     return (
         <ParallaxBanner layers={[
             { image: '/images/bg-trustUs.png', speed: -20 },
@@ -21,24 +61,19 @@ export default function TrustUs() {
                             </Link>
                         </div>
 
-                        {/* left */}
+                        {/* left => count card */}
                         <div className="grid grid-cols-2 gap-5 self-start md:self-auto">
-                            <div className="trust-us__box">
-                                <span className="trust-us__box--num">250<span className="text-3xl">+</span></span>
-                                <span className="trust-us__box--title">مشتری راضی</span>
-                            </div>
-                            <div className="trust-us__box">
-                                <span className="trust-us__box--num">10<span className="text-3xl">+</span></span>
-                                <span className="trust-us__box--title">سال سابقه</span>
-                            </div>
-                            <div className="trust-us__box">
-                                <span className="trust-us__box--num">40<span className="text-3xl">+</span></span>
-                                <span className="trust-us__box--title">اعضای تیم</span>
-                            </div>
-                            <div className="trust-us__box">
-                                <span className="trust-us__box--num">250<span className="text-3xl">+</span></span>
-                                <span className="trust-us__box--title">حیوان خوشحال</span>
-                            </div>
+                            {
+                                cards.map((card) => (
+                                    <div key={card.id} className="trust-us__box">
+                                        <div className="trust-us__box--num flex-center gap-0.5">
+                                            <motion.pre className="trust-us__box--num">{card.var}</motion.pre>
+                                            <span className="text-3xl">+</span>
+                                        </div>
+                                        <span className="trust-us__box--title">{card.title}</span>
+                                    </div>
+                                ))
+                            }
                         </div>
                     </div>
 

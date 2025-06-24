@@ -1,4 +1,5 @@
 import { PiWarningCircle } from "react-icons/pi";
+
 export default function ProductInfo() {
     return (
         <div className="flex flex-col justify-between order-2 lg:order-1">
@@ -12,7 +13,7 @@ export default function ProductInfo() {
             {/* product Btn & Price & Discount Price */}
             <div className="space-y-4 lg:space-y-8 mt-4 lg:mt-4">
                 {/* Discount */}
-                <div className="text-center sm:text-right p-4  rounded-xl">
+                <div className="text-center sm:text-right p-4 rounded-xl">
                     <span className="font-danaBold sm:text-xl text-red-700/80"><span>20</span>% تخفیف شگفت انگیز</span>
                 </div>
                 {/* product Btn (add to basket) / Price  / warning / quantity input */}
@@ -24,7 +25,7 @@ export default function ProductInfo() {
                     </div>
                     {/* add to basket button */}
                     <button className="btn btn-primary btn-xl w-full flex-center gap-2 sm:w-auto">
-                        <svg className="w-6 h-6">
+                        <svg className="size-6">
                             <use href="#shopping-cart-solid"></use>
                         </svg>
                         افزودن به سبد خرید

@@ -11,7 +11,6 @@ import AuthContext from "@/context/authContext";
 import apiRequests from "@/Services/Axios/Configs/Configs";
 import { useCallback } from "react";
 
-
 export default function App({ Component, pageProps }) {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -32,7 +31,9 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   }, [])
 
   // useEffect(() => {
