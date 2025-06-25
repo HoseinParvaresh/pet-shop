@@ -1,4 +1,4 @@
-export default function SelectInput(label,placeholder,selectItems) {
+export default function SelectInput({label,placeholder,selectItems}) {
     return (
         <div>
             <label className="inline-block font-danaBold text-sm mb-2 md:mb-3"> {label}  </label>
