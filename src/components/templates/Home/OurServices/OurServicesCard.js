@@ -2,12 +2,12 @@ import Link from "next/link";
 import { MdOutlinePets } from "react-icons/md";
 export default function OurServicesCard({title,src,icon,desc,link}) {
     return (
-        <div data-aos="fade-up" className="rounded-xl w-full md:max-w-91 shadow-xl bg-white group relative">
+        <div data-aos="fade-up" className="rounded-xl w-full shadow-xl bg-white group relative">
             {/* image */}
             <img className=" rounded-t-xl h-63 w-full object-cover" src={src} alt={title} />
             {/* title */}
             <div className="flex ml-5 overflow-hidden justify-between items-center absolute top-[53%] xl:top-1/2 right-5 px-6 xl:px-7 py-3 xl:py-4 bg-dark-primary group-hover:bg-primary transition-colors duration-300 w-full rounded-xl">
-                <Link href={link} className="font-MorabbaBold text-2xl xl:text-3xl text-white">{title}</Link>
+                <Link href={link} className="font-MorabbaBold text-2xl text-white">{title}</Link>
                 <img src={`/images/${icon}.png`} alt={title} className=" absolute left-5" />
             </div>
             {/* detail */}

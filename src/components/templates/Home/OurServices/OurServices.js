@@ -18,7 +18,7 @@ export default function OurServices() {
           </p>
         </div>
         {/* ous service card */}
-        <div className="block w-full">
+        <div className="container">
           <Swiper
             style={{
               "--swiper-pagination-color": "#F69946",
@@ -28,13 +28,13 @@ export default function OurServices() {
             modules={[Pagination]}
             pagination={true}
             slidesPerView={1}
-            className="!py-10 !px-5 !justify-center"
+            className="!py-10 !px-5"
             spaceBetween={45}
             breakpoints={{
-              630: {
+              768: {
                 slidesPerView: 2
               },
-              1037: {
+              1400: {
                 slidesPerView: 3,
               },
             }}
