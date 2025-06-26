@@ -76,6 +76,16 @@
     background-position: bottom;
     background-repeat: no-repeat;
   }
+  .bg__reservation {
+    background-image: url("/images/reservation-bg.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+  }
   /* { -- global -- } */
   body {
     direction: rtl;

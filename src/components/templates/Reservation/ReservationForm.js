@@ -33,7 +33,8 @@ export default function ReservationForm() {
     }
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 mb-30 gap-5 bg-gray-100 p-5 rounded-xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 mb-30 gap-5 bg-gray-100 p-5 rounded-xl relative z-10">
+            <span className="bg__reservation"></span>
             <form className='px-3 space-y-7 md:space-y-8'>
                 <p className="font-MorabbaBold text-2xl">درخواست نوبت دهی</p>
                 {/* first name and last name / number / National code */}
@@ -83,6 +84,9 @@ export default function ReservationForm() {
                             <option value="واکسن">واکسن</option>
                             <option value="اصلاح">اصلاح</option>
                             <option value="پانسیون">پانسیون</option>
+                            <option value="شست‌وشو">شست‌وشو</option>
+                            <option value="معاینه دامپزشکی">معاینه دامپزشکی</option>
+                            <option value="مشاوره تغذیه">مشاوره تغذیه </option>
                         </select>
                     </div>
                     {/* date picker */}
