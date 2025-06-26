@@ -1,9 +1,9 @@
-import ReservationHead from "@/components/templates/Reservation/ReservationHead";
-import ReservationForm from "@/components/templates/Reservation/ReservationForm/ReservationForm";
+import PageHead from "@/components/modules/PageHead/PageHead";
+import ReservationForm from "@/components/templates/Reservation/ReservationForm";
 export default function Reservation() {
     return (
         <>
-            <ReservationHead/>
+            <PageHead title="رزرو نوبت" image="cat-2.png"/>
             <ReservationForm/>
         </>
     );

@@ -29,7 +29,7 @@ export default function OurServices() {
             pagination={true}
             slidesPerView={1}
             className="!py-10 !px-5"
-            spaceBetween={45}
+            spaceBetween={35}
             breakpoints={{
               768: {
                 slidesPerView: 2
