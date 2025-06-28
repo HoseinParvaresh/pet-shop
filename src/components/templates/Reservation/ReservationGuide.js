@@ -2,7 +2,7 @@ export default function ReservationGuide() {
     return (
         <div className="mb-5">
             <p className="text-3xl font-MorabbaBold text-dark-primary mb-4">رزرو نوبت در پیلیسوک</p>
-            <div className="text-sm text-white bg-dark-primary p-6 rounded-xl space-y-3">
+            <div className="text-sm text-white bg-dark-primary p-4 md:p-6 rounded-lg md:rounded-xl space-y-3">
                 <p>برای ارائه خدماتی دقیق، با کیفیت و در زمان مناسب، پت شاپ پیلیسوک امکان رزرو نوبت آنلاین را فراهم کرده است. لطفاً قبل از ثبت نوبت، موارد زیر را با دقت مطالعه فرمایید تا فرآیند رزرو سریع و بدون مشکل انجام شود.</p>
                 <p className="font-danaBold">📅 راهنمای رزرو نوبت:</p>
                 <ul className="space-y-1.5 pr-5">
