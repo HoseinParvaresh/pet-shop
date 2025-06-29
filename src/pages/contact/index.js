@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 export default function Contact() {
 
 
-    const Map = dynamic(() => import('@/components/templates/Contact/Map'), {
+    const ContactMap = dynamic(() => import('@/components/templates/Contact/ContactMap'), {
         ssr: false,
     });
 
@@ -16,7 +16,7 @@ export default function Contact() {
             <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <ContactInfo />
                 <ContactForm />
-                <Map />
+                <ContactMap />
             </div>
         </div>
     );

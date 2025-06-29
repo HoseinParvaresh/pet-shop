@@ -15,7 +15,7 @@ export default function PageHead({ title, image }) {
                     dragElastic={0.2}
                     whileDrag={{ cursor: "grabbing" }}
                     src={`/images/${image}`}
-                    className="w-50 md:w-70"
+                    className="w-50 md:w-60"
                 />
             </div>
         </div>
