@@ -4,14 +4,14 @@ export default function AboutCard({petName,service,image}) {
     return (
         <div className="relative max-w-max">
             {/* top image */}
-            <img className="absolute -top-10 rotate-8" src="/images/about-img1.png" alt="about" />
+            <img className="absolute -top-13 rotate-8" src="/images/about-img1.png" alt="about" />
             {/* image */}
             {/* <img className="w-80 rounded-full border-4 border-gray-400 border-dashed p-2" src="/images/a1.jpg" alt="a1" /> */}
             <motion.img
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}
                 src={`/images/${image}`}
-                className="w-80 rounded-full border-4 border-gray-400 border-dashed p-2"
+                className="size-80 3xs:size-110 2xs:size-110 sm:size-80 object-cover rounded-full border-4 border-gray-400 border-dashed p-2"
             />
             {/* name */}
             <div className="text-center mt-7">
