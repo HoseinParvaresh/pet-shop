@@ -10,10 +10,10 @@ import { Toaster } from "react-hot-toast";
 import Swal from 'sweetalert2'
 export default function Home() {
 
-  Swal.fire({
-    text: "سایت هنوز در مرحله توسعه قرار داره و ممکنه ظاهرش یا فیچر هاش در ادامه تغییر کنه",
-    icon: "info"
-  });
+  // Swal.fire({
+  //   text: "سایت هنوز در مرحله توسعه قرار داره و ممکنه ظاهرش یا فیچر هاش در ادامه تغییر کنه",
+  //   icon: "info"
+  // });
 
   return (
     <>
