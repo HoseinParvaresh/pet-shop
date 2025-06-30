@@ -2,9 +2,9 @@ import * as motion from "motion/react-client"
 export default function PageHead({ title, image }) {
 
     return (
-        <div className="h-30 bg-primary flex items-center justify-around w-full relative mb-20 overflow-hidden bg__footer">
+        <div className="h-20 md:h-30 bg-primary flex items-center justify-around w-full relative mb-20 overflow-hidden bg__footer">
             <div className="z-10">
-                <p className="font-MorabbaBold text-3xl md:text-4xl text-dark-primary">{title} </p>
+                <p className="font-MorabbaBold text-2xl md:text-4xl text-dark-primary">{title} </p>
             </div>
             <div>
                 <motion.img
@@ -15,7 +15,7 @@ export default function PageHead({ title, image }) {
                     dragElastic={0.2}
                     whileDrag={{ cursor: "grabbing" }}
                     src={`/images/${image}`}
-                    className="w-50 md:w-60"
+                    className="w-40 md:w-60"
                 />
             </div>
         </div>

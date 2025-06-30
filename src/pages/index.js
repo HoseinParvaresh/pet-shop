@@ -7,7 +7,13 @@ import LastArticles from "@/components/templates/Home/LastArticles/LastArticles"
 import JoinNewsletter from "@/components/templates/Home/JoinNewsletter/JoinNewsletter";
 import IntroducingProducts from "@/components/templates/Home/IntroducingProducts/IntroducingProducts";
 import { Toaster } from "react-hot-toast";
+import Swal from 'sweetalert2'
 export default function Home() {
+
+  Swal.fire({
+    text: "سایت هنوز در مرحله توسعه قرار داره و ممکنه ظاهرش یا فیچر هاش در ادامه تغییر کنه",
+    icon: "info"
+  });
 
   return (
     <>

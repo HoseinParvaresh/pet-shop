@@ -7,10 +7,10 @@ import 'swiper/css/pagination';
 
 export default function ProductBanner() {
     return (
-        <div className="order-1 w-full xl:h-[360px] rounded-xl">
+        <div className="order-1 w-full xl:h-[360px] 2xl:w-150 rounded-2xl lg:shadow-xl">
             <Swiper
                 style={{
-                    '--swiper-pagination-color': '#16a34a',
+                    '--swiper-pagination-color': '#f69946',
                     '--swiper-pagination-bullet-inactive-color': 'gray',
                     '--swiper-pagination-bullet-inactive-opacity': '0.4'
                 }}
@@ -21,6 +21,11 @@ export default function ProductBanner() {
                 modules={[Zoom, Pagination]}
                 className="mySwiper h-full"
             >
+                <SwiperSlide>
+                    <div className="swiper-zoom-container child:rounded-2xl">
+                        <img src='/images/p-1.png' alt='img' loading='lazy' />
+                    </div>
+                </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-zoom-container child:rounded-2xl">
                         <img src='/images/p-1.png' alt='img' loading='lazy' />
