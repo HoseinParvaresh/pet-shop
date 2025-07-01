@@ -39,6 +39,7 @@
   --color-footer: #3a3330;
 
   --shadow-primary: 0px 5px 40px -20px;
+  --shadow-normal: 0px 2px 50px 0px #2424240d;
 
   --font-dana: "Dana";
   --font-danaBold: "Dana Bold";
@@ -55,6 +56,7 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
+
 }
 
 @layer components {
