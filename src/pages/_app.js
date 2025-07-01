@@ -10,12 +10,14 @@ import Footer from "@/components/modules/Footer/Footer";
 import AuthContext from "@/context/authContext";
 import apiRequests from "@/Services/Axios/Configs/Configs";
 import { useCallback } from "react";
-
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps,router }) {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [token, setToken] = useState(null)
   const [userInfos, setUserInfos] = useState(null)
+
+  const noLayoutRoutes = ['/user-dashboard']
+  const isNoLayout = noLayoutRoutes.includes(router.pathname)
 
   const login = useCallback((userInfos, token) => {
     setToken(token)
@@ -62,9 +64,9 @@ export default function App({ Component, pageProps }) {
       <div className="font-dana">
         <ParallaxProvider>
           <Svg />
-          <Header />
+          {!isNoLayout && <Header />}
           <Component {...pageProps} />
-          <Footer />
+          {!isNoLayout && <Footer />}
         </ParallaxProvider>
       </div>
     </AuthContext.Provider>

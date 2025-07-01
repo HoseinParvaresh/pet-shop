@@ -1,113 +1,51 @@
+import { RiSettings4Line } from "react-icons/ri";
+import { TbLogout2 } from "react-icons/tb";
+import Link from "next/link";
+import { BiHomeAlt2 } from "react-icons/bi";
+
+// const menuItem = [
+//     {id:1,title:'خانه',link:'/',icon:<RiHome5Line/>},
+//     {id:2,title:'خانه',link:'/',icon:<RiHome5Line/>},
+//     {id:3,title:'خانه',link:'/',icon:<RiHome5Line/>},
+//     {id:4,title:'خانه',link:'/',icon:<RiHome5Line/>},
+// ]
+
 export default function UserDashboard() {
     return (
         <section class="relative flex lg:items-start lg:gap-x-8 lg:p-9 max-w-[1440px] mx-auto bg-black/10">
-            <aside class="-right-65 sm:-right-70 lg:!h-[calc(100vh-64px)] fixed top-0 bottom-0 z-50 md:static lg:sticky lg:top-5 lg:h-max overflow-y-auto w-65 sm:w-70 md:w-66 lg:w-70 shrink-0 bg-white md:border-l md:border-l-black-10 px-7 py-5 lg:rounded-lg max-md:transition-all max-md:duration-300">
-                <div class="flex items-center justify-between pb-5 mb-5 border-b border-b-light">
+            {/* side bar */}
+            <aside class="-right-65 sm:-right-70 lg:!h-[calc(100vh-64px)] fixed top-0 bottom-0 z-50 md:static lg:sticky lg:top-5 overflow-y-auto w-65 sm:w-70 md:w-66 lg:w-70 shrink-0 bg-white md:border-l md:border-l-black-10 px-7 py-5 lg:rounded-lg max-md:transition-all max-md:duration-300">
+                {/* top => button / profile / number */}
+                <div class="flex items-center justify-between pb-5 mb-5 border-b border-b-black/5">
                     <div class="flex items-center gap-x-2">
                         <img class="size-11 rounded-full" src="https://secure.gravatar.com/avatar/305d06cbd488be05e4d58cce3723d4d5?s=96&amp;d=mm&amp;r=g" loading="lazy" />
-                        <div class="flex flex-col text-label">
-                            <span class="font-demibold max-w-28 truncate select-none">حسین</span>
-                            <span class="font-regular text-secondary" data-clarity-mask="true">09176437156</span>
+                        <div class="flex flex-col gap-2">
+                            <span class="max-w-28 truncate select-none text-sm font-danaBold">حسین</span>
+                            <span class="text-black text-xs">09176437156</span>
                         </div>
                     </div>
+                    {/* setting and signout button */}
                     <div class="flex items-center gap-x-3">
-                        <button class="flex items-center justify-center cursor-pointer">
-                            <span class="iconify i-linear:setting-2 size-4.5 text-muted hover:text-primary transition-colors" aria-hidden="true">
-                            </span>
-                        </button>
-                        <button class="flex items-center justify-center cursor-pointer">
-                            <span class="iconify i-linear:logout size-4.5 text-muted hover:text-red-90 transition-colors" aria-hidden="true">
-                            </span>
-                        </button>
+                        <RiSettings4Line className="size-5 text-black/50 hover:text-black transition-colors cursor-pointer" />
+                        <TbLogout2 className="size-5 text-black/50 hover:text-red-500 transition-colors cursor-pointer" />
                     </div>
                 </div>
+                {/* menu */}
                 <div class="flex flex-col gap-y-5">
                     <div class="flex flex-col gap-y-2.5">
-                        <span class="text-label text-secondary font-regular select-none">دسترسی سریع</span>
+                        <span class="text-sm text-gray-500 select-none">دسترسی سریع</span>
                         <div class="flex flex-col gap-y-2">
-                            <a href="/" class="router-link-active router-link-exact-active flex items-center gap-x-2.5 py-1.5 group" aria-current="page">
+                            <Link href="/" class="flex items-center gap-x-2.5 py-1.5 group">
                                 <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
                                 </span>
-                                <span class="iconify i-linear:home size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true">
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">خانه</span>
-                            </a>
-                            <a href="/courses" class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                                </span>
-                                <span class="iconify i-linear:flash size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" >
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">دوره های من</span>
-                            </a>
-                            <a href="/transactions" class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                                </span>
-                                <span class="iconify i-linear:wallet size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" >
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">اشتراک و تراکنش‌ها</span>
-                            </a>
-                            <a href="/tickets" class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                                </span>
-                                <span class="iconify i-linear:sms size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" >
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">تیکت ها</span>
-                            </a>
-                            <a href="/questions" class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                                </span>
-                                <span class="iconify i-linear:message-question size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" >
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">پرسش و پاسخ ها</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-y-2.5"><span class="text-label text-secondary font-regular select-none">سبزلـرن پرمیوم - بزودی</span>
-                        <div class="flex flex-col gap-y-2">
-                            <button class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                                </span>
-                                <span class="iconify i-linear:box size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" >
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">دوره های ویژه</span>
-                            </button>
-                            <button class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                                </span>
-                                <span class="iconify i-linear:youtube size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" >
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">وبینار های من</span>
-                            </button>
-                            <button class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                                </span>
-                                <span class="iconify i-linear:lamp-charge size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" >
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">سبزبات (Ai)</span>
-                            </button>
-                            <button class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                                </span>
-                                <span class="iconify i-linear:microphone-2 size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" >
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">پادکست ها</span>
-                            </button>
-                            <button class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                                </span>
-                                <span class="iconify i-linear:folder-open size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" >
-                                </span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">برنامه تمرینی</span>
-                            </button>
-                            <button class="flex items-center gap-x-2.5 py-1.5 group">
-                                <span class="active-badge block w-0.5 h-5 ml-1 rounded-full"></span>
-                                <span class="iconify i-linear:24-support size-5 text-secondary group-hover:text-brand transition-colors" aria-hidden="true" ></span>
-                                <span class="text-primary group-hover:text-brand text-caption transition-colors">پشتیبانی اختصاصی</span>
-                            </button>
+                                <BiHomeAlt2 className="size-5 text-black/80 group-hover:text-primary transition-colors"/>
+                                <span class="group-hover:text-primary text-sm transition-colors">خانه</span>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </aside>
+            {/* content -> main */}
             <section class="flex flex-col lg:gap-y-8 w-full overflow-hidden">
                 <header class="flex items-center justify-between shrink-0 w-full h-22 px-5 sm:px-7 bg-white max-lg:border-b max-lg:border-b-light lg:rounded-lg lg:dark:darker-gradient">
                     <button class="btn-icon-area md:!hidden">
