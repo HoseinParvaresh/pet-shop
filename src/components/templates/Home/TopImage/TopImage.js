@@ -5,6 +5,12 @@ import TopImageCard from './TopImageCard';
 
 export default function TopImage() {
 
+    const topImageItems = [
+        { id: 1, title: "خانه حیوانات", desc: "فروش انواع خانه و باکس نگهداری حیوانات با بالاترین کیفیت", image: "/images/pet-home.png" },
+        { id: 2, title: "سلامت حیوانات", desc: "فروش انواع لوازم و ادوات سلامت و رشد و ایمنی حیوانات", image: "/images/pet-h.png" },
+        { id: 3, title: "مراقبت حیوانات", desc: "فروش انواع وسایل آرایش و آراستن و مراقبتی حیوانات", image: "/images/pet-s.png" },
+    ]
+
 
     return (
         <div className='container relative flex flex-col items-center'>
@@ -42,9 +48,11 @@ export default function TopImage() {
                 {/* cards */}
             </ParallaxBanner>
             <div className='flex flex-col md:flex-row absolute w-full md:w-auto items-center gap-4 md:gap-7 top-full md:top-[87%] px-5'>
-                <TopImageCard title={"خانه حیوانات"} desc={"فروش انواع خانه و باکس نگهداری حیوانات با بالاترین کیفیت"} src={"/images/pet-home.png"} />
-                <TopImageCard title={"سلامت حیوانات"} desc={"فروش انواع لوازم و ادوات سلامت و رشد و ایمنی حیوانات"} src={"/images/pet-h.png"} />
-                <TopImageCard title={"مراقبت حیوانات"} desc={"فروش انواع وسایل آرایش و آراستن و مراقبتی حیوانات"} src={"/images/pet-s.png"} />
+                {
+                    topImageItems.map((item) => (
+                        <TopImageCard key={item.id} title={item.title} desc={item.desc} src={item.image}/>
+                    ))
+                }
             </div>
         </div>
     );

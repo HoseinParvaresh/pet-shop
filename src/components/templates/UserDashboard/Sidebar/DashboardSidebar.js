@@ -8,10 +8,11 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { MdOutlineManageAccounts } from "react-icons/md";
 import Link from "next/link";
 import * as motion from "motion/react-client"
+import AsideMenuItem from "./SidebarMenuItem";
 
 export default function Aside() {
 
-    const SideMenuItems = [
+    const AsideMenuItems = [
         { id: 1, title: 'خانه', link: '/', icon: <BiHomeAlt2 /> },
         { id: 2, title: 'سفارش های من', link: '/', icon: <BiReceipt /> },
         { id: 3, title: ' آدرس ها', link: '/', icon: <RiMapPinLine /> },
@@ -19,6 +20,7 @@ export default function Aside() {
         { id: 5, title: 'علاقه مندی ها', link: '/', icon: <AiOutlineHeart /> },
         { id: 6, title: 'جزئیات حساب', link: '/', icon: <MdOutlineManageAccounts /> },
     ]
+    
     return (
         <aside class="-right-65 sm:-right-70 lg:!h-[calc(100vh-64px)] fixed top-0 bottom-0 z-50 md:static lg:sticky lg:top-5 overflow-y-auto w-65 sm:w-70 md:w-66 lg:w-70 shrink-0 bg-white md:border-l md:border-l-black/10 px-7 py-5 lg:rounded-lg max-md:transition-all max-md:duration-300">
             {/* top => buttons / profile */}
@@ -54,15 +56,8 @@ export default function Aside() {
             {/* menu */}
             <div class="flex flex-col gap-y-4">
                 {
-                    SideMenuItems.map((menu) => (
-                        <Link key={menu.id} href={menu.link} class="flex items-center gap-x-2.5 py-1.5 group">
-                            <span class="active-badge block w-0.5 h-5 ml-1 rounded-full">
-                            </span>
-                            <div className="*:size-5 text-black/80 group-hover:text-primary transition-colors">
-                                {menu.icon}
-                            </div>
-                            <span class="group-hover:text-primary text-sm transition-colors">{menu.title}</span>
-                        </Link>
+                    AsideMenuItems.map((item) => (
+                        <AsideMenuItem key={item.id} title={item.title} link={item.link} icon={item.icon}/>
                     ))
                 }
             </div>

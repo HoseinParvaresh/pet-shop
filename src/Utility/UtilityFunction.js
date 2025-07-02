@@ -20,5 +20,20 @@ function isValidPassword(password) {
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
     return passwordRegex.test(password);
 }
+function addToRecentlyViewed(productId) {
+    if (typeof window === 'undefined') return;
 
-export { customScroll, formatNumber, calcDiscountPrice, toggleMobileNavbar, isValidEmail, isValidPassword }
+    let viewed = JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
+    viewed = viewed.filter(id => id !== productId); 
+    viewed.unshift(productId);
+    if (viewed.length > 4) viewed = viewed.slice(0, 4);
+
+    localStorage.setItem('recentlyViewed', JSON.stringify(viewed));
+}
+
+function getRecentlyViewed() {
+    if (typeof window === 'undefined') return [];
+    return JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
+}
+
+export { customScroll, formatNumber, calcDiscountPrice, toggleMobileNavbar, isValidEmail, isValidPassword,addToRecentlyViewed ,getRecentlyViewed}

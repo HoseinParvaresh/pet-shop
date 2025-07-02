@@ -10,6 +10,10 @@ import ProductActions from '@/components/templates/Product/ProductActions';
 
 export default function Main() {
 
+    // useEffect(() => {
+    //     addToRecentlyViewed(productId);
+    //   }, [productId]);
+
     return (
         <main className='max-w-[1920px] m-h mx-auto overflow-x-hidden mt-8 sm:mt-10 mb-10'>
             <div className='container'>

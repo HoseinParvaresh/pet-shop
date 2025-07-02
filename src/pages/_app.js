@@ -38,20 +38,20 @@ export default function App({ Component, pageProps,router }) {
     });
   }, [])
 
-  useEffect(() => {
-    const localStorageData = JSON.parse(localStorage.getItem("user"))
-    if (localStorageData) {            
-      apiRequests.get("/users/profile/", {
-        headers: {
-          Authorization: `Bearer ${localStorageData.token}`
-        }
-      }).then(res => {
-        setToken(localStorageData.token)
-        setIsLoggedIn(true)
-        setUserInfos(res.data.data)
-      })
-    }
-  }, [login])
+  // useEffect(() => {
+  //   const localStorageData = JSON.parse(localStorage.getItem("user"))
+  //   if (localStorageData) {            
+  //     apiRequests.get("/users/profile/", {
+  //       headers: {
+  //         Authorization: `Bearer ${localStorageData.token}`
+  //       }
+  //     }).then(res => {
+  //       setToken(localStorageData.token)
+  //       setIsLoggedIn(true)
+  //       setUserInfos(res.data.data)
+  //     })
+  //   }
+  // }, [login])
 
   return (
     <AuthContext.Provider value={{
