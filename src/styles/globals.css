@@ -157,7 +157,7 @@
   }
   /* overlay */
   .mobile-overlay {
-    @apply z-20 fixed w-full h-screen bg-black/50 inset-0 invisible opacity-0;
+    @apply z-40 fixed w-full h-screen bg-black/50 inset-0 invisible opacity-0;
   }
 
   /* Mobile Navbar */

@@ -22,7 +22,7 @@ export default function Aside() {
     ]
     
     return (
-        <aside class="-right-65 sm:-right-70 lg:!h-[calc(100vh-64px)] fixed top-0 bottom-0 z-50 md:static lg:sticky lg:top-5 overflow-y-auto w-65 sm:w-70 md:w-66 lg:w-70 shrink-0 bg-white md:border-l md:border-l-black/10 px-7 py-5 lg:rounded-lg max-md:transition-all max-md:duration-300">
+        <aside class="navigation -right-65 sm:-right-70 lg:!h-[calc(100vh-64px)] fixed top-0 bottom-0 z-50 md:static lg:sticky lg:top-5 overflow-y-auto w-65 sm:w-70 md:w-66 lg:w-70 shrink-0 bg-white md:border-l md:border-l-black/10 px-7 py-5 lg:rounded-lg max-md:transition-all max-md:duration-300">
             {/* top => buttons / profile */}
             <div class="flex items-center justify-between pb-5 mb-5 border-b border-b-black/5">
                 {/* profile */}

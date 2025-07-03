@@ -8,13 +8,11 @@ export default function DashboardContent() {
         <section class="flex flex-col lg:gap-y-8 w-full overflow-hidden">
             <DashboardHeader />
             <section class="bg-white p-5 sm:p-7 lg:rounded-lg h-full">
-                <div>
-                    <div class="-mx-5 -mb-6 lg:-m-7 lg:dark:-m-[29px] bg-black/5">
+                    <div class="-mx-5 -mb-6 lg:-m-7 bg-black/5">
                         <UserStatsSummary/>
                         <RecentlyViewedProducts/>
                         <LatestInteractions/>
                     </div>
-                </div>
             </section>
         </section>
     );

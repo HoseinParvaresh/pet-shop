@@ -16,7 +16,7 @@ export default function App({ Component, pageProps,router }) {
   const [token, setToken] = useState(null)
   const [userInfos, setUserInfos] = useState(null)
 
-  const noLayoutRoutes = ['/user-dashboard']
+  const noLayoutRoutes = ['/user-dashboard','/admin-dashboard']
   const isNoLayout = noLayoutRoutes.includes(router.pathname)
 
   const login = useCallback((userInfos, token) => {

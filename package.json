@@ -24,6 +24,7 @@
     "react-multi-date-picker": "^4.5.2",
     "react-scroll-parallax": "^3.4.5",
     "react-simple-typewriter": "^5.0.1",
+    "recharts": "^3.0.2",
     "sweetalert2": "^11.22.2",
     "swiper": "^11.2.6",
     "uuid": "^11.1.0"

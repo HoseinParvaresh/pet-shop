@@ -12,7 +12,7 @@ export default function Logo() {
                 className="hidden lg:block"
                 />
             <div className="font-MorabbaBold">
-                <p className="text-white lg:text-dark-primary text-2xl 3xs:mb-2 text-center"> <span className="hidden 2xs:inline">سایت </span><span className="text-primary">پیلیسوک</span></p>  
+                <p className="text-white lg:text-dark-primary text-xl 4xs:text-2xl 3xs:mb-2 text-center"> <span className="hidden 2xs:inline">سایت </span><span className="text-primary">پیلیسوک</span></p>  
                 <p className="text-white lg:text-dark-secondary/70 text-xs hidden 2xs:block">دوســت دار حــیـــوانــات خـانـگـی</p>
             </div>  
         </Link>

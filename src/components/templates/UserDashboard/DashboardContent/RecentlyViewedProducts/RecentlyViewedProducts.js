@@ -18,7 +18,8 @@ export default function RecentlyViewedProducts() {
                             <img class="size-full rounded-md group-hover:scale-105 transition-all object-cover" src="/images/p-1.png" alt="" />
                         </div>
                         <div class="p-3">
-                            <div class="pb-4 mb-4 border-b border-b-black/10"><a href="#" target="_blank" class="text-xs xl:text-sm h-12 xl:h-14 line-clamp-2">آموزش ۲۰ کتابخانه کاربردی ReactJS برای بازارکار</a>
+                            <div class="pb-4 mb-4 border-b border-b-black/10">
+                                <Link href="#" target="_blank" class="text-xs xl:text-sm h-7 xl:h-10 line-clamp-2">ظرف غذا  هه تهته تهت هت هتمخصوص پرندگان</Link>
                             </div>
                             <div className="btn btn-primary btn-sm w-full">مشاهده</div>
                         </div>
