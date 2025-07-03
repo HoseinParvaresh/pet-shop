@@ -5,8 +5,6 @@ import { formatNumber } from "@/Utility/UtilityFunction";
 
 export default function StatisticsCards({ title, number, percent, benefit, chartData, color, icon }) {
 
-
-
     return (
         <div className="flex flex-col p-4 w-full h-40 rounded-lg bg-white">
             <div className="text-green-500 text-blue-500 text-yellow-500"></div>
@@ -45,7 +43,7 @@ export default function StatisticsCards({ title, number, percent, benefit, chart
                     }}
                 >
                     <Tooltip />
-                    <Line yAxisId="right" type="monotone" dataKey="uv" stroke="#82ca9d" strokeWidth={2} />
+                    <Line yAxisId="right" type="monotone" dataKey="درآمد" stroke={`${color === 'green' ? '#82ca9d' : color === 'blue' ? '#8884d8' : '#ffc658'}`} strokeWidth={2} />
                 </LineChart>
             </ResponsiveContainer>
         </div>

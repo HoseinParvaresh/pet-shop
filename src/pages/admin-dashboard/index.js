@@ -7,42 +7,22 @@ import { HiOutlineEye } from "react-icons/hi";
 export default function AdminDashboard() {
 
     const chartDataSalary = [
-        {
-            "uv": 4000,
-            "pv": 2400,
-            "amt": 2400
-        },
-        {
-            "uv": 3000,
-            "pv": 1398,
-            "amt": 2210
-        },
-        {
-            "uv": 2000,
-            "pv": 9800,
-            "amt": 2290
-        },
-        {
-            "uv": 2780,
-            "pv": 3908,
-            "amt": 2000
-        },
-        {
-            "uv": 1890,
-            "pv": 4800,
-            "amt": 2181
-        },
-        {
-            "uv": 2390,
-            "pv": 3800,
-            "amt": 2500
-        },
-        {
-            "uv": 3490,
-            "pv": 4300,
-            "amt": 2100
-        }
+        { "درآمد": 1685000 },
+        { "درآمد": 1056000 },
+        { "درآمد": 3258596 },
+        { "درآمد": 1002586 },
+        { "درآمد": 2354120 },
+        { "درآمد": 3058955 },
     ]
+    const chartDataCustomers = [
+        { "مشتریان": 1685000 },
+        { "مشتریان": 1056000 },
+        { "مشتریان": 3258596 },
+        { "مشتریان": 1002586 },
+        { "مشتریان": 2354120 },
+        { "مشتریان": 3058955 },
+    ]
+
     const StatisticsCardsData = [
         { id: 1, title: "درآمد", number: 1685000, percent: 20, benefit: true, chartData: chartDataSalary, color: "green", icon: <FaWallet /> },
         { id: 2, title: "کل مشتریان", number: 8400, percent: 15, benefit: true, chartData: chartDataSalary, color: "blue", icon: <HiUsers /> },
