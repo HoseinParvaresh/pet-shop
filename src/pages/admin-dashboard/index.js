@@ -17,7 +17,7 @@ export default function AdminDashboard() {
                     <section class="bg-black/5 p-6">
                         <StatisticsCards />
                         {/* Store Metrics Chart / Top Products List   */}
-                        <div className="flex gap-6">
+                        <div className="grid grid-cols-2 gap-6">
                             <StoreMetricsChart />
                             <TopProductsList />
                         </div>
