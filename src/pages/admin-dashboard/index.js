@@ -1,4 +1,4 @@
-import DashboardHeader from "@/components/templates/UserDashboard/DashboardContent/DashboardHeader/DashboardHeader";
+import DashboardHeader from "@/components/modules/Dashboard/DashboardHeader";
 import StatisticsCards from "@/components/templates/AdminDashboard/StatisticsCards/StatisticsCards";
 import StoreMetricsChart from "@/components/templates/AdminDashboard/StoreMetricsChart/StoreMetricsChart";
 import TopProductsList from "@/components/templates/AdminDashboard/TopProductsList/TopProductsList";
@@ -11,13 +11,13 @@ export default function AdminDashboard() {
                 {/* side bar */}
                 <div className="bg-yellow-500 hidden lg:block h-screen w-[250px]"></div>
                 {/* content */}
-                <section class="flex flex-col w-full overflow-hidden">
+                <section className="flex flex-col w-full overflow-hidden">
                     <DashboardHeader />
                     {/* content */}
-                    <section class="bg-black/5 p-6">
+                    <section className="p-6 flex flex-col gap-6">
                         <StatisticsCards />
                         {/* Store Metrics Chart / Top Products List   */}
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <StoreMetricsChart />
                             <TopProductsList />
                         </div>

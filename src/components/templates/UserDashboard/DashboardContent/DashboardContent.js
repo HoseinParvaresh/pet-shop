@@ -1,4 +1,4 @@
-import DashboardHeader from "./DashboardHeader/DashboardHeader";
+import DashboardHeader from "../../../modules/Dashboard/DashboardHeader";
 import UserStatsSummary from "./UserStatsSummary/UserStatsSummary";
 import RecentlyViewedProducts from "./RecentlyViewedProducts/RecentlyViewedProducts";
 import LatestInteractions from "./LatestInteractions/LatestInteractions";
