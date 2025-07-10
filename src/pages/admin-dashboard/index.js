@@ -2,6 +2,7 @@ import DashboardHeader from "@/components/modules/Dashboard/DashboardHeader";
 import StatisticsCards from "@/components/templates/AdminDashboard/StatisticsCards/StatisticsCards";
 import StoreMetricsChart from "@/components/templates/AdminDashboard/StoreMetricsChart/StoreMetricsChart";
 import TopProductsList from "@/components/templates/AdminDashboard/TopProductsList/TopProductsList";
+import Transactions from "@/components/templates/AdminDashboard/Transactions/Transactions";
 
 export default function AdminDashboard() {
 
@@ -20,6 +21,10 @@ export default function AdminDashboard() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <StoreMetricsChart />
                             <TopProductsList />
+                        </div>
+                        {/* Transactions */}
+                        <div className="grid grid-cols-3">
+                            <Transactions/>
                         </div>
                     </section>
                 </section>

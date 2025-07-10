@@ -3,7 +3,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 
 export default function DashboardSectionHeader({ title, subtitle }) {
     return (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 dir-rtl">
             <p className="text-sm font-danaBold">{title}</p>
             <div className="flex gap-1">
                 <FaCalendarAlt className="size-3"/>
