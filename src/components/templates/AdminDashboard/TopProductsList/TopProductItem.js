@@ -1,23 +1,17 @@
 import { Line, LineChart, Tooltip, ResponsiveContainer } from 'recharts';
-import { formatNumber } from "@/Utility/UtilityFunction";
-
+import Link from 'next/link';
 export default function TopProductItem(Props) {
 
-   
-
     return (
-        <div className="flex flex-col 2xs:flex-row 2xs:items-center justify-between gap-3 border border-black/30 rounded-lg px-2">
+        <div className="flex flex-col 2xs:flex-row 2xs:items-center justify-between gap-3 border border-black/20 rounded-lg p-2 2xs:px-2 2xs:py-0">
             {/* right */}
-            <div className="flex items-center gap-1 min-w-max">
-                <img className="size-22 2xs:size-20" src={Props.image} alt="p-1" />
-                <div>
-                    <p className="text-sm md:text-xs lg:text-sm mb-1 font-danaBold">{Props.title}</p>
-                    <p className="text-xs">{formatNumber(Props.price)} <span className="ml-1">تومان</span></p>
-                </div>
-            </div>
+            <Link href={"#"} className="flex items-center gap-2 2xs:gap-1">
+                <img className="size-22 2xs:size-20 border border-black/20 2xs:border-none rounded-md" src={Props.image} alt="p-1" />
+                <p className="text-sm md:text-xs lg:text-sm mb-1 font-danaBold line-clamp-3">{Props.title}</p>
+            </Link>
             {/* center */}
-            <div className="min-w-max">
-                <p className="text-sm flex gap-1 2xs:flex-col lg:flex-row"> {Props.sale} <span>فروش</span></p>
+            <div className="mt-2 2xs:mt-0">
+                <p className="text-sm flex gap-1 flex-col"> {Props.sale} <span>فروش</span></p>
             </div>
             {/* left */}
             <div className="2xs:w-40 h-full">

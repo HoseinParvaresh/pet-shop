@@ -13,9 +13,13 @@ export default function TopProductsList() {
     ]
 
     const Products = [
-        {id:1,title:"ظرف غذای حیوانات",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
-        {id:2,title:"ظرف غذای حیوانات",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
-        {id:3,title:"ظرف غذای حیوانات",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
+        {id:1,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
+        {id:2,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
+        {id:3,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
+        {id:4,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
+        {id:5,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
+        {id:6,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
+
     ]
 
     return (
