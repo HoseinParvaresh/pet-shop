@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/Utility/UtilityFunction"
 
 function Table({
   className,
@@ -23,7 +23,7 @@ function TableHeader({
   return (
     <thead
       data-slot="table-header"
-      className={cn("[&_tr]:border-b", className)}
+      className={cn("[&_tr]:border-b ", className)}
       {...props} />
   );
 }
@@ -47,7 +47,10 @@ function TableFooter({
   return (
     <tfoot
       data-slot="table-footer"
-      className={cn("bg-muted/50 border-t font-medium [&>tr]:last:border-b-0", className)}
+      className={cn(
+        "bg-zinc-100/50 border-t font-medium [&>tr]:last:border-b-0",
+        className
+      )}
       {...props} />
   );
 }
@@ -60,7 +63,7 @@ function TableRow({
     <tr
       data-slot="table-row"
       className={cn(
-        "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors",
+        "hover:bg-zinc-100/50 data-[state=selected]:bg-zinc-100 border-b border-zinc-200 transition-colors",
         className
       )}
       {...props} />
@@ -75,7 +78,7 @@ function TableHead({
     <th
       data-slot="table-head"
       className={cn(
-        "text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pl-0 [&>[role=checkbox]]:translate-y-[2px]",
+        "text-zinc-950 h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pl-0 [&>[role=checkbox]]:translate-y-[2px]",
         className
       )}
       {...props} />
@@ -104,7 +107,7 @@ function TableCaption({
   return (
     <caption
       data-slot="table-caption"
-      className={cn("text-muted-foreground mt-4 text-sm", className)}
+      className={cn("text-zinc-500 mt-4 text-sm", className)}
       {...props} />
   );
 }

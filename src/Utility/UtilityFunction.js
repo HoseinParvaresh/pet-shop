@@ -1,3 +1,6 @@
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge"
+
 function customScroll(id) {
     const scrollPercent = (window.scrollY - 100) / ((document.body.clientHeight) - (window.innerHeight))
     document.querySelector(id).style.right = (Math.round(scrollPercent * 100)) + '%'
@@ -30,10 +33,13 @@ function addToRecentlyViewed(productId) {
 
     localStorage.setItem('recentlyViewed', JSON.stringify(viewed));
 }
-
 function getRecentlyViewed() {
     if (typeof window === 'undefined') return [];
     return JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
 }
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
 
-export { customScroll, formatNumber, calcDiscountPrice, toggleMobileNavbar, isValidEmail, isValidPassword,addToRecentlyViewed ,getRecentlyViewed}
+
+export { customScroll, formatNumber, calcDiscountPrice, toggleMobileNavbar, isValidEmail, isValidPassword,addToRecentlyViewed ,getRecentlyViewed,cn}

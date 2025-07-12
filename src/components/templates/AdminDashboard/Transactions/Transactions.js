@@ -1,131 +1,14 @@
 "use client"
-
 import React, { useState } from "react"
-import {
-  flexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
-} from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
+import { columns } from './columns'
+import { data } from './data'
+import { flexRender, getCoreRowModel, getFilteredRowModel,getPaginationRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table"
+import { ChevronDown } from "lucide-react"
+import { Button } from "@/components/shadcn/button"
+import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuTrigger } from "@/components/shadcn/dropdown-menu"
+import { Input } from "@/components/shadcn/input"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/shadcn/table"
 import DashboardSectionHeader from "@/components/modules/Dashboard/DashboardSectionHeader"
-
-const data = [
-  { id: "m5gr84i9", amount: 316, status: "پرداخت شده", email: "ken99@example.com" },
-  { id: "3u1reuv4", amount: 242, status: "پرداخت شده", email: "Abe45@example.com" },
-  { id: "derv1ws0", amount: 837, status: "در جریان", email: "Monserrat44@example.com" },
-  { id: "5kma53ae", amount: 874, status: "پرداخت شده", email: "Silas22@example.com" },
-  { id: "bhqecj4p", amount: 721, status: "رد شده", email: "carmella@example.com" },
-]
-
-const columns = [
-  {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
-  {
-    accessorKey: "email",
-    header: ({ column }) => (
-      <Button
-        variant="ghost"
-        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        className="flex flex-row-reverse gap-2"
-      >
-        <ArrowUpDown className="w-4 h-4" />
-        ایمیل
-      </Button>
-    ),
-    cell: ({ row }) => <div className="lowercase text-right">{row.getValue("email")}</div>,
-  },
-  {
-    accessorKey: "status",
-    header: () => <div className="text-right">وضعیت</div>,
-    cell: ({ row }) => (
-      <div className="capitalize text-right">{row.getValue("status")}</div>
-    ),
-  },
-  {
-    accessorKey: "amount",
-    header: () => <div className="text-right">مبلغ</div>,
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"))
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount)
-
-      return <div className="text-right">{formatted}</div>
-    },
-  },
-  {
-    id: "actions",
-    enableHiding: false,
-    cell: ({ row }) => {
-      const payment = row.original
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <MoreHorizontal />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="start">
-            <DropdownMenuLabel>عملیات</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
-            >
-              کپی شناسه پرداخت
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>مشاهده مشتری</DropdownMenuItem>
-            <DropdownMenuItem>جزئیات پرداخت</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      )
-    },
-  },
-]
 
 export default function Transactions() {
   const [sorting, setSorting] = useState([])
@@ -155,7 +38,7 @@ export default function Transactions() {
   return (
     <div className="w-full col-span-2 bg-white rounded-lg pt-4 pb-1 px-4 h-120" dir="rtl">
       <DashboardSectionHeader title="سابقه تراکنش‌ها" subtitle="در ۳۰ روز گذشته" />
-      
+
       {/* top */}
       <div className="flex items-center justify-between py-4 flex-row-reverse">
         <DropdownMenu>
@@ -165,7 +48,7 @@ export default function Transactions() {
               ستون‌ها
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="start">
+          <DropdownMenuContent className="dir-rtl">
             {table
               .getAllColumns()
               .filter((column) => column.getCanHide())
@@ -176,7 +59,7 @@ export default function Transactions() {
                   checked={column.getIsVisible()}
                   onCheckedChange={(value) => column.toggleVisibility(!!value)}
                 >
-                  {column.id}
+                  {column.columnDef.name}
                 </DropdownMenuCheckboxItem>
               ))}
           </DropdownMenuContent>
@@ -193,7 +76,7 @@ export default function Transactions() {
       </div>
 
       {/* center */}
-      <div className="rounded-md border" dir="rtl">
+      <div className="rounded-md border border-zinc-200" dir="rtl">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -203,9 +86,9 @@ export default function Transactions() {
                     {header.isPlaceholder
                       ? null
                       : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
                   </TableHead>
                 ))}
               </TableRow>
@@ -245,15 +128,7 @@ export default function Transactions() {
           {table.getFilteredSelectedRowModel().rows.length} از{" "}
           {table.getFilteredRowModel().rows.length} ردیف انتخاب شده
         </div>
-        <div className="space-x-2 space-x-reverse">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage()}
-          >
-            قبلی
-          </Button>
+        <div className="space-x-2">
           <Button
             variant="outline"
             size="sm"
@@ -261,6 +136,14 @@ export default function Transactions() {
             disabled={!table.getCanNextPage()}
           >
             بعدی
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            قبلی
           </Button>
         </div>
       </div>
