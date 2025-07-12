@@ -3,6 +3,7 @@ import StatisticsCards from "@/components/templates/AdminDashboard/StatisticsCar
 import StoreMetricsChart from "@/components/templates/AdminDashboard/StoreMetricsChart/StoreMetricsChart";
 import TopProductsList from "@/components/templates/AdminDashboard/TopProductsList/TopProductsList";
 import Transactions from "@/components/templates/AdminDashboard/Transactions/Transactions";
+import VisitorsSection from "@/components/templates/AdminDashboard/VisitorsSection/VisitorsSection";
 
 export default function AdminDashboard() {
 
@@ -25,6 +26,9 @@ export default function AdminDashboard() {
                         {/* Transactions */}
                         <div className="grid grid-cols-3">
                             <Transactions/>
+                        </div>
+                        <div className="p-6">
+                            <VisitorsSection/>
                         </div>
                     </section>
                 </section>
