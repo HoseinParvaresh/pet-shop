@@ -1,47 +1,37 @@
+"use client"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/shadcn/card"
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/shadcn/chart"
 import MetricCard from "./MetricCard";
 import DashboardSectionHeader from '@/components/modules/Dashboard/DashboardSectionHeader';
 export default function StoreMetricsChart() {
 
-    const data = [
-        {
-            name: 'فروردین',
-            "فروش کل": 4000,
-            "مشتریان": 2400,
-            "بازدید کنندگان": 2400,
+    const chartData = [
+        { month: "فروردین", salary: 186, customer: 80, visitor: 100 },
+        { month: "اردیبهشت", salary: 305, customer: 200, visitor: 200 },
+        { month: "خرداد", salary: 237, customer: 120, visitor: 150 },
+        { month: "تیر", salary: 73, customer: 190, visitor: 83 },
+        { month: "مرداد", salary: 209, customer: 130, visitor: 220 },
+        { month: "شهریور", salary: 214, customer: 140, visitor: 128 },
+
+    ]
+
+    const chartConfig = {
+        salary: {
+            label: "درآمد",
+            color: "#82ca9d",
         },
-        {
-            name: 'اردیبهشت',
-            "فروش کل": 3000,
-            "مشتریان": 1398,
-            "بازدید کنندگان": 2210,
+        customer: {
+            label: "مشتریان",
+            color: "#8884d8",
         },
-        {
-            name: 'خرداد',
-            "فروش کل": 2000,
-            "مشتریان": 3001,
-            "بازدید کنندگان": 2290,
+        visitor: {
+            label: "بازدید",
+            color: "#ffc658",
         },
-        {
-            name: 'تیر',
-            "فروش کل": 2780,
-            "مشتریان": 3908,
-            "بازدید کنندگان": 2000,
-        },
-        {
-            name: 'مرداد',
-            "فروش کل": 1890,
-            "مشتریان": 4800,
-            "بازدید کنندگان": 2181,
-        },
-        {
-            name: 'شهریور',
-            "فروش کل": 2390,
-            "مشتریان": 3800,
-            "بازدید کنندگان": 2500,
-        },
-    ];
+    }
+
     const metricCardsData = [
         { id: 1, title: "درآمد", value: 268500, benefit: true, change: 5 },
         { id: 2, title: "کل مشتریان", value: 8400, benefit: true, change: 12.3 },
@@ -49,8 +39,8 @@ export default function StoreMetricsChart() {
     ]
 
     return (
-        <div className="flex flex-col gap-6 p-4 w-full rounded-lg bg-white">
-            <DashboardSectionHeader title={"شاخص های فرودگاه"} subtitle={" در 30 روز گذشته"}/>
+        <div className="flex flex-col col-span-2 gap-6 p-4 w-full rounded-lg bg-white">
+            <DashboardSectionHeader title={"شاخص های فروشگاه"} subtitle={"در 6 ماه گذشته"} />
             {/* Metric Card */}
             <div className="flex items-center justify-between md:px-3 lg:px-5">
                 {
@@ -60,22 +50,28 @@ export default function StoreMetricsChart() {
                 }
             </div>
             {/* chart */}
-            <div style={{ width: '100%', height: 300 }} className="dir-ltr">
-                <ResponsiveContainer>
-                    <BarChart
-                        data={data}
-                    >
-                        <CartesianGrid vertical={false} strokeDasharray="0" />
-                        <XAxis className="text-xs" dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend wrapperStyle={{ fontSize: '12px' }} iconSize={10} />
-                        <Bar dataKey="فروش کل" fill="#82ca9d" />
-                        <Bar dataKey="مشتریان" fill="#8884d8" />
-                        <Bar dataKey="بازدید کنندگان" fill="#ffc658" />
-                    </BarChart>
-                </ResponsiveContainer>
-            </div>
+            <Card className={"shadow-none border-none"}>
+                <CardContent>
+                    <ChartContainer config={chartConfig}>
+                        <BarChart accessibilityLayer data={chartData}>
+                            <CartesianGrid vertical={false} />
+                            <XAxis
+                                dataKey="month"
+                                tickLine={false}
+                                tickMargin={10}
+                                axisLine={false}
+                            />
+                            <ChartTooltip
+                                cursor={false}
+                                content={<ChartTooltipContent indicator="dashed" />}
+                            />
+                            <Bar dataKey="salary" fill="var(--color-salary)" radius={4} />
+                            <Bar dataKey="customer" fill="var(--color-customer)" radius={4} />
+                            <Bar dataKey="visitor" fill="var(--color-visitor)" radius={4} />
+                        </BarChart>
+                    </ChartContainer>
+                </CardContent>
+            </Card>
         </div>
     );
 }

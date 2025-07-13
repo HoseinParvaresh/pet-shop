@@ -17,6 +17,7 @@ const menuList = [
     { id: 4, title: "درباره ما", link: "/about" },
     { id: 5, title: "تماس با ما ", link: "/contact" },
 ]
+//chart data
 const TransactionsData = [
     { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com" },
     { id: "3u1reuv4", amount: 42500, status: "پرداخت شده", email: "Abe45@example.com" },
@@ -116,6 +117,27 @@ const VisitorsSectionData = [
     { date: "1404-03-27", desktop: 149, mobile: 200 },
     { date: "1404-03-28", desktop: 103, mobile: 160 },
     { date: "1404-03-29", desktop: 446, mobile: 400 },
-  ];
+]
+const StatisticsCardsSalaryData = [
+    { week: "4 هفته قبل", data: 3820000 },
+    { week: "3 هفته قبل", data: 6540000 },
+    { week: "2 هفته قبل", data: 5790000 },
+    { week: "هفته قبل", data: 7960000 },
+]
+const StatisticsCardsCustomerData = [
+    { week: "4 هفته قبل", data: 70 },
+    { week: "3 هفته قبل", data: 53 },
+    { week: "2 هفته قبل", data: 80 },
+    { week: "هفته قبل", data: 61 },
+]
+const StatisticsCardsVisitorData = [
+    { week: "4 هفته قبل", data: 1500 },
+    { week: "3 هفته قبل", data: 2863 },
+    { week: "2 هفته قبل", data: 1452 },
+    { week: "هفته قبل", data: 2750 },
+]
 
-export { url, toggleList, categoryList, menuList,VisitorsSectionData,TransactionsData }
+export {
+    url, toggleList, categoryList, menuList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
+    StatisticsCardsCustomerData, StatisticsCardsVisitorData
+}

@@ -15,7 +15,7 @@ export default function StatisticsCardsItem(Props) {
 
     const chartConfig = {
         data: {
-            label: "Desktop",
+            label: Props.title,
             color: `${Props.color}`,
         }
     }
@@ -27,7 +27,7 @@ export default function StatisticsCardsItem(Props) {
         return Math.floor(((firstData - secondData) / secondData) * 100) + "%"
     }
     return (
-        <Card className={"gap-0 pt-4 pb-1.5 shadow-none border-none"}>
+        <Card className={`gap-0 pt-4 pb-1.5 shadow-none border-none ${Props.id === 3 ? 'col-span-2 md:col-span-1' : ''}`}>
             <CardHeader>
                 <div className="flex justify-between items-center">
                     {/* left => title / price / percent */}
@@ -51,17 +51,17 @@ export default function StatisticsCardsItem(Props) {
                 </div>
             </CardHeader>
             <CardContent>
-                <ChartContainer className={"h-30 w-full"} config={chartConfig}>
+                <ChartContainer className={"h-20 w-full"} config={chartConfig}>
                     <AreaChart
                         accessibilityLayer
                         data={Props.chartData}
                     >
                         <XAxis
-                            dataKey="month"
+                            dataKey="week"
                             tickLine={false}
                             axisLine={false}
                             tickMargin={8}
-                        // tickFormatter={(value) => value.slice(0, 3)}
+                            hide={true}
                         />
                         <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
                         <defs>
