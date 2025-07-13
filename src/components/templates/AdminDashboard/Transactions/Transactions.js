@@ -36,7 +36,7 @@ export default function Transactions() {
   })
 
   return (
-    <div className="w-full col-span-2 bg-white rounded-lg pt-4 pb-1 px-4 h-120" dir="rtl">
+    <div className="w-full col-span-3 md:col-span-2 bg-white rounded-lg pt-4 pb-1 px-4 h-120" dir="rtl">
       <DashboardSectionHeader title="سابقه تراکنش‌ها" subtitle="در ۳۰ روز گذشته" />
 
       {/* top */}

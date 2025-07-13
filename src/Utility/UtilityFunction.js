@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge"
+import moment from 'moment-jalaali'
 
 function customScroll(id) {
     const scrollPercent = (window.scrollY - 100) / ((document.body.clientHeight) - (window.innerHeight))
@@ -27,7 +28,7 @@ function addToRecentlyViewed(productId) {
     if (typeof window === 'undefined') return;
 
     let viewed = JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
-    viewed = viewed.filter(id => id !== productId); 
+    viewed = viewed.filter(id => id !== productId);
     viewed.unshift(productId);
     if (viewed.length > 4) viewed = viewed.slice(0, 4);
 
@@ -38,8 +39,19 @@ function getRecentlyViewed() {
     return JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
 }
 function cn(...inputs) {
-  return twMerge(clsx(inputs));
+    return twMerge(clsx(inputs));
+}
+function convertDate(dateStr, withYear = false) {
+    moment.loadPersian({ dialect: 'persian-modern', usePersianDigits: true })
+    const date = moment(dateStr, 'jYYYY-jMM-jDD')
+    return withYear
+        ? date.format('jD jMMMM jYYYY')   // مثلاً "۱ فروردین ۱۴۰۴"
+        : date.format('jD jMMMM')         // مثلاً "۱ فروردین"
 }
 
 
-export { customScroll, formatNumber, calcDiscountPrice, toggleMobileNavbar, isValidEmail, isValidPassword,addToRecentlyViewed ,getRecentlyViewed,cn}
+
+export {
+    customScroll, formatNumber, calcDiscountPrice, toggleMobileNavbar, isValidEmail, isValidPassword, addToRecentlyViewed,
+    getRecentlyViewed, cn, convertDate
+}

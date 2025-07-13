@@ -62,10 +62,6 @@ export const columns = [
         className="flex flex-row-reverse gap-2"
       >
         وضعیت
-        {
-          console.log(column.getIsSorted())
-          
-        }
       </Button>
     ),
     cell: ({ row }) => {

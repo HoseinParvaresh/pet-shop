@@ -1,28 +1,27 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
+import { chartData } from './chartData'
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
-
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/shadcn/card"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/shadcn/chart"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/shadcn/select"
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
-import chartData from './visitorsData'
+import { ToggleGroup, ToggleGroupItem } from "@/components/shadcn/toggle-group"
+import { convertDate } from "@/Utility/UtilityFunction"
 
-const description = "An interactive area chart"
 
 const chartConfig = {
   visitors: {
     label: "Visitors",
   },
   desktop: {
-    label: "Desktop",
-    color: "var(--primary)",
+    label: "دسکتاپ",
+    color: "#82ca9d",
   },
   mobile: {
-    label: "Mobile",
-    color: "var(--primary)",
+    label: "موبایل",
+    color: "#8884d8",
   },
 }
 
@@ -39,7 +38,7 @@ export default function VisitorsSection() {
 
   const filteredData = chartData.filter((item) => {
     const date = new Date(item.date)
-    const referenceDate = new Date("2024-06-30")
+    const referenceDate = new Date("1404-03-29")
     let daysToSubtract = 90
     if (timeRange === "30d") {
       daysToSubtract = 30
@@ -47,19 +46,20 @@ export default function VisitorsSection() {
       daysToSubtract = 7
     }
     const startDate = new Date(referenceDate)
+    
     startDate.setDate(startDate.getDate() - daysToSubtract)
     return date >= startDate
   })
 
   return (
-    <Card className="@container/card">
+    <Card className="@container/card shadow-none border-none">
       <CardHeader>
-        <CardTitle>Total Visitors</CardTitle>
+        <CardTitle>تمام بازدید کنندگان</CardTitle>
         <CardDescription>
           <span className="hidden @[540px]/card:block">
-            Total for the last 3 months
+            در ۳ ماه اخیر
           </span>
-          <span className="@[540px]/card:hidden">Last 3 months</span>
+          <span className="@[540px]/card:hidden">در ۳ ماه اخیر</span>
         </CardDescription>
         <CardAction>
           <ToggleGroup
@@ -69,27 +69,27 @@ export default function VisitorsSection() {
             variant="outline"
             className="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex"
           >
-            <ToggleGroupItem value="90d">Last 3 months</ToggleGroupItem>
-            <ToggleGroupItem value="30d">Last 30 days</ToggleGroupItem>
-            <ToggleGroupItem value="7d">Last 7 days</ToggleGroupItem>
+            <ToggleGroupItem className="dir-rtl" value="90d">3 ماه گذشته</ToggleGroupItem>
+            <ToggleGroupItem className="dir-rtl" value="30d">30 روز گذشته</ToggleGroupItem>
+            <ToggleGroupItem className="dir-rtl" value="7d">7 روز گذشته</ToggleGroupItem>
           </ToggleGroup>
           <Select value={timeRange} onValueChange={setTimeRange}>
             <SelectTrigger
-              className="flex w-40 **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate @[767px]/card:hidden"
+              className="flex w-40 dir-rtl **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate @[767px]/card:hidden"
               size="sm"
               aria-label="Select a value"
             >
-              <SelectValue placeholder="Last 3 months" />
+              <SelectValue placeholder="3 ماه گذشته" />
             </SelectTrigger>
-            <SelectContent className="rounded-xl">
+            <SelectContent className="rounded-xl dir-rtl">
               <SelectItem value="90d" className="rounded-lg">
-                Last 3 months
+                3 ماه گذشته
               </SelectItem>
               <SelectItem value="30d" className="rounded-lg">
-                Last 30 days
+                30 روز گذشته
               </SelectItem>
               <SelectItem value="7d" className="rounded-lg">
-                Last 7 days
+                7 روز گذشته
               </SelectItem>
             </SelectContent>
           </Select>
@@ -134,25 +134,14 @@ export default function VisitorsSection() {
               axisLine={false}
               tickMargin={8}
               minTickGap={32}
-              tickFormatter={(value) => {
-                const date = new Date(value)
-                return date.toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                })
-              }}
+              tickFormatter={(value) => convertDate(value)}
             />
             <ChartTooltip
               cursor={false}
               defaultIndex={isMobile ? -1 : 10}
               content={
                 <ChartTooltipContent
-                  labelFormatter={(value) => {
-                    return new Date(value).toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                    })
-                  }}
+                  labelFormatter={(value) => convertDate(value)}
                   indicator="dot"
                 />
               }

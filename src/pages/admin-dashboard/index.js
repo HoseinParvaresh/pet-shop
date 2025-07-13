@@ -25,11 +25,9 @@ export default function AdminDashboard() {
                         </div>
                         {/* Transactions */}
                         <div className="grid grid-cols-3">
-                            <Transactions/>
+                            <Transactions />
                         </div>
-                        <div className="p-6">
-                            <VisitorsSection/>
-                        </div>
+                        <VisitorsSection />
                     </section>
                 </section>
             </div>
