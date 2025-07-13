@@ -136,8 +136,16 @@ const StatisticsCardsVisitorData = [
     { week: "2 هفته قبل", data: 1452 },
     { week: "هفته قبل", data: 2750 },
 ]
+const StoreMetricsData = [
+    { month: "فروردین", salary: 186, customer: 80, visitor: 100 },
+    { month: "اردیبهشت", salary: 305, customer: 200, visitor: 200 },
+    { month: "خرداد", salary: 237, customer: 120, visitor: 150 },
+    { month: "تیر", salary: 73, customer: 190, visitor: 83 },
+    { month: "مرداد", salary: 209, customer: 130, visitor: 220 },
+    { month: "شهریور", salary: 214, customer: 140, visitor: 128 },
+]
 
 export {
     url, toggleList, categoryList, menuList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
-    StatisticsCardsCustomerData, StatisticsCardsVisitorData
+    StatisticsCardsCustomerData, StatisticsCardsVisitorData,StoreMetricsData
 }

@@ -1,101 +1,75 @@
 import { Card, CardContent, CardHeader, } from "@/components/shadcn/card"
 import { ChartContainer, ChartTooltip, ChartTooltipContent, } from "@/components/shadcn/chart"
-import { Area, AreaChart, XAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 import Link from 'next/link';
 import { convertDate } from "@/Utility/UtilityFunction";
+import { formatNumber } from "@/Utility/UtilityFunction";
 export default function TopProductItem(Props) {
 
     const chartConfig = {
         data: {
             label: "فروش",
-            color: `#000`,
+            color: `#f69946`,
         }
     }
     const StatisticsCardsVisitorData = [
-        { date: "1404-02-31", data: 178 },
         { date: "1404-03-01", data: 470 },
-        { date: "1404-03-02", data: 103 },
-        { date: "1404-03-03", data: 439 },
-        { date: "1404-03-04", data: 88 },
+        { date: "1404-03-02", data: 224 },
+        { date: "1404-03-03", data: 302 },
+        { date: "1404-03-04", data: 135 },
         { date: "1404-03-05", data: 294 },
-        { date: "1404-03-06", data: 323 },
-        { date: "1404-03-07", data: 385 },
-        { date: "1404-03-08", data: 438 },
-        { date: "1404-03-09", data: 155 },
-        { date: "1404-03-10", data: 92 },
-        { date: "1404-03-11", data: 492 },
-        { date: "1404-03-12", data: 81 },
-        { date: "1404-03-13", data: 426 },
-        { date: "1404-03-14", data: 307 },
-        { date: "1404-03-15", data: 371 },
-        { date: "1404-03-16", data: 475 },
-        { date: "1404-03-17", data: 107 },
-        { date: "1404-03-18", data: 341 },
-        { date: "1404-03-19", data: 408 },
-        { date: "1404-03-20", data: 169 },
-        { date: "1404-03-21", data: 317 },
-        { date: "1404-03-22", data: 480 },
-        { date: "1404-03-23", data: 132 },
-        { date: "1404-03-24", data: 141 },
-        { date: "1404-03-25", data: 434 },
-        { date: "1404-03-26", data: 448 },
-        { date: "1404-03-27", data: 149 },
-        { date: "1404-03-28", data: 103 },
-        { date: "1404-03-29", data: 446 },
+        { date: "1404-03-06", data: 189 },
+        { date: "1404-03-07", data: 250 },
     ]
 
     return (
-        <div className="flex flex-col 2xs:items-center justify-between gap-3 border border-black/20 rounded-lg p-2 2xs:px-2 2xs:py-0">
-            {/* right */}
-            <Link href={"#"} className="flex items-center gap-2 2xs:gap-1">
-                <img className="size-22 2xs:size-20 border border-black/20 2xs:border-none rounded-md" src={Props.image} alt="p-1" />
-                <p className="text-sm md:text-xs lg:text-sm mb-1 font-danaBold line-clamp-3">{Props.title}</p>
-            </Link>
-            {/* center */}
-            <div className="mt-2 2xs:mt-0">
-                <p className="text-sm flex gap-1 flex-col"> {Props.sale} <span>فروش</span></p>
-            </div>
-            {/* left */}
-            <CardContent className={"p-0"}>
-                <ChartContainer className={"h-20 w-full"} config={chartConfig}>
-                    <AreaChart
-                        accessibilityLayer
-                        data={StatisticsCardsVisitorData}
-                        margin={{ top: 20 }}
-                    >
-                        <XAxis
-                            dataKey="date"
-                            tickLine={false}
-                            axisLine={false}
-                            hide={true}
+        <div className="px-4 rounded-2xl">
+            <div className="rounded-lg bg-secondary pb-1">
+                <div className=" flex flex-col items-center  rounded-md pt-5 px-5">
+                    {/* image */}
+                    <Link href={"/product/2"}>
+                        <div>
+                            <div className="bg-gray-200 rounded-full border-10 border-white">
+                                <img className="w-60" src="/images/p-1.png" alt="p-1" />
+                            </div>
+                        </div>
+                    </Link>
+                    {/* title / total sell */}
+                    <div className="text-center flex flex-col gap-2 mt-5">
+                        {/* title */}
+                        <Link href={"/product/2"} className="text-dark-primary font-danaBold line-clamp-1 text-base xs:text-sm sm:text-base">ظرف غذا مخصوص پرندگان</Link>
+                        {/* price */}
+                        <div className="flex-center gap-1">
+                            <p className=" text-primary font-danaBold text-base xs:text-sm sm:text-base">{formatNumber(4560000)}</p>
+                            <svg className="size-3 sm:size-4 text-primary"><use href="#toman"></use></svg>
+                        </div>
+                        {/* total sell */}
+                        <p className="text-dark-primary font-danaBold line-clamp-1 text-base xs:text-sm mt-1">فروش کل :<span>300</span></p>
+                    </div>
 
-                        />
-                        <ChartTooltip cursor={false} content={<ChartTooltipContent labelFormatter={(value) => convertDate(value)} indicator="dot" />} />
-                        {/* <defs>
-                            <linearGradient id="topProduct" x1="0" y1="0" x2="0" y2="1">
-                                <stop
-                                    offset="5%"
-                                    stopColor="var(--color-data)"
-                                    stopOpacity={0.8}
+                </div>
+                {/* chart */}
+                <Card className={"shadow-none border-none p-0 bg-secondary"}>
+                    <CardContent>
+                        <ChartContainer config={chartConfig}>
+                            <BarChart accessibilityLayer data={StatisticsCardsVisitorData}>
+                                <XAxis
+                                    dataKey="date"
+                                    tickLine={false}
+                                    tickMargin={10}
+                                    axisLine={false}
+                                    tickFormatter={(value) => convertDate(value)}
                                 />
-                                <stop
-                                    offset="95%"
-                                    stopColor="var(--color-data)"
-                                    stopOpacity={0.1}
+                                <ChartTooltip
+                                    cursor={false}
+                                    content={<ChartTooltipContent labelFormatter={(value) => convertDate(value)} indicator="dot" />}
                                 />
-                            </linearGradient>
-                        </defs> */}
-                        <Area
-                            dataKey="data"
-                            type="natural"
-                            fill={`url(#topProduct)`}
-                            fillOpacity={0.4}
-                            stroke="var(--color-data)"
-                            stackId="a"
-                        />
-                    </AreaChart>
-                </ChartContainer>
-            </CardContent>
+                                <Bar dataKey="data" fill="var(--color-data)" radius={4} />
+                            </BarChart>
+                        </ChartContainer>
+                    </CardContent>
+                </Card>
+            </div>
         </div>
     );
 }

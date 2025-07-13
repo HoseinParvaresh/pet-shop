@@ -14,17 +14,11 @@ export default function TopProductsList() {
 
     const Products = [
         {id:1,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
-        {id:2,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
-        {id:3,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
-        {id:4,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
-        {id:5,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
-        {id:6,title:"ظرف غذای مخصوص پرندگان",price:168000,image:"/images/p-1.png",sale:345,data:chartDataVisit},
-
     ]
 
     return (
-        <div className="flex flex-col gap-6 p-4 w-full rounded-lg bg-white max-h-122 overflow-y-scroll">
-            <DashboardSectionHeader title={"پرفروش محصولات"} subtitle={" در 30 روز گذشته"} />
+        <div className="flex flex-col gap-6 p-4 w-full rounded-lg bg-white">
+            <DashboardSectionHeader title={"پرفروش ترین محصولات"} subtitle={" در 7 روز گذشته"} />
             <div className="flex flex-col gap-4">
                 {
                     Products.map((product) => (
