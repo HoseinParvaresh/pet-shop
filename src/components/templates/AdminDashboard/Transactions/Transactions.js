@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import { columns } from './columns'
-import { data } from './data'
+import { TransactionsData as data } from "@/Utility/Constants"
 import { flexRender, getCoreRowModel, getFilteredRowModel,getPaginationRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table"
 import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/shadcn/button"

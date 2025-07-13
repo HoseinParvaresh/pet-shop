@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import { chartData } from './chartData'
+import { VisitorsSectionData as chartData } from "@/Utility/Constants"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/shadcn/card"
@@ -46,13 +46,13 @@ export default function VisitorsSection() {
       daysToSubtract = 7
     }
     const startDate = new Date(referenceDate)
-    
+
     startDate.setDate(startDate.getDate() - daysToSubtract)
     return date >= startDate
   })
 
   return (
-    <Card className="@container/card shadow-none border-none">
+    <Card className="@container/card shadow-none border-none col-span-3 md:col-span-2">
       <CardHeader>
         <CardTitle>تمام بازدید کنندگان</CardTitle>
         <CardDescription>
@@ -62,23 +62,13 @@ export default function VisitorsSection() {
           <span className="@[540px]/card:hidden">در ۳ ماه اخیر</span>
         </CardDescription>
         <CardAction>
-          <ToggleGroup
-            type="single"
-            value={timeRange}
-            onValueChange={setTimeRange}
-            variant="outline"
-            className="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex"
-          >
+          <ToggleGroup type="single" value={timeRange} onValueChange={setTimeRange} variant="outline" className="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex">
             <ToggleGroupItem className="dir-rtl" value="90d">3 ماه گذشته</ToggleGroupItem>
             <ToggleGroupItem className="dir-rtl" value="30d">30 روز گذشته</ToggleGroupItem>
             <ToggleGroupItem className="dir-rtl" value="7d">7 روز گذشته</ToggleGroupItem>
           </ToggleGroup>
           <Select value={timeRange} onValueChange={setTimeRange}>
-            <SelectTrigger
-              className="flex w-40 dir-rtl **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate @[767px]/card:hidden"
-              size="sm"
-              aria-label="Select a value"
-            >
+            <SelectTrigger className="flex w-40 dir-rtl **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate @[767px]/card:hidden" size="sm" aria-label="Select a value">
               <SelectValue placeholder="3 ماه گذشته" />
             </SelectTrigger>
             <SelectContent className="rounded-xl dir-rtl">
@@ -96,70 +86,23 @@ export default function VisitorsSection() {
         </CardAction>
       </CardHeader>
       <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
-        <ChartContainer
-          config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
-        >
+        <ChartContainer config={chartConfig} className="aspect-auto h-[250px] w-full">
           <AreaChart data={filteredData}>
             <defs>
               <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="var(--color-desktop)"
-                  stopOpacity={1.0}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="var(--color-desktop)"
-                  stopOpacity={0.1}
-                />
+                <stop offset="5%" stopColor="var(--color-desktop)" stopOpacity={1.0} />
+                <stop offset="95%" stopColor="var(--color-desktop)" stopOpacity={0.1} />
               </linearGradient>
               <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="var(--color-mobile)"
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="var(--color-mobile)"
-                  stopOpacity={0.1}
-                />
+                <stop offset="5%" stopColor="var(--color-mobile)" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="var(--color-mobile)" stopOpacity={0.1} />
               </linearGradient>
             </defs>
             <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="date"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              minTickGap={32}
-              tickFormatter={(value) => convertDate(value)}
-            />
-            <ChartTooltip
-              cursor={false}
-              defaultIndex={isMobile ? -1 : 10}
-              content={
-                <ChartTooltipContent
-                  labelFormatter={(value) => convertDate(value)}
-                  indicator="dot"
-                />
-              }
-            />
-            <Area
-              dataKey="mobile"
-              type="natural"
-              fill="url(#fillMobile)"
-              stroke="var(--color-mobile)"
-              stackId="a"
-            />
-            <Area
-              dataKey="desktop"
-              type="natural"
-              fill="url(#fillDesktop)"
-              stroke="var(--color-desktop)"
-              stackId="a"
-            />
+            <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} minTickGap={32} tickFormatter={(value) => convertDate(value)} />
+            <ChartTooltip cursor={false} defaultIndex={isMobile ? -1 : 10} content={<ChartTooltipContent labelFormatter={(value) => convertDate(value)} indicator="dot" />} />
+            <Area dataKey="mobile" type="natural" fill="url(#fillMobile)" stroke="var(--color-mobile)" stackId="a" />
+            <Area dataKey="desktop" type="natural" fill="url(#fillDesktop)" stroke="var(--color-desktop)" stackId="a" />
           </AreaChart>
         </ChartContainer>
       </CardContent>
