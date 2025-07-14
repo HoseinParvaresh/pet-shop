@@ -144,8 +144,46 @@ const StoreMetricsData = [
     { month: "مرداد", salary: 209, customer: 130, visitor: 220 },
     { month: "شهریور", salary: 214, customer: 140, visitor: 128 },
 ]
+const TopProductsListData = [
+    [
+        { date: "1404-03-01", data: 301 },
+        { date: "1404-03-02", data: 221 },
+        { date: "1404-03-03", data: 189 },
+        { date: "1404-03-04", data: 418 },
+        { date: "1404-03-05", data: 83 },
+        { date: "1404-03-06", data: 226 },
+        { date: "1404-03-07", data: 347 },
+    ],
+    [
+        { date: "1404-03-01", data: 470 },
+        { date: "1404-03-02", data: 224 },
+        { date: "1404-03-03", data: 302 },
+        { date: "1404-03-04", data: 135 },
+        { date: "1404-03-05", data: 294 },
+        { date: "1404-03-06", data: 189 },
+        { date: "1404-03-07", data: 250 },
+    ],
+    [
+        { date: "1404-03-01", data: 302 },
+        { date: "1404-03-02", data: 111 },
+        { date: "1404-03-03", data: 204 },
+        { date: "1404-03-04", data: 45 },
+        { date: "1404-03-05", data: 98 },
+        { date: "1404-03-06", data: 201 },
+        { date: "1404-03-07", data: 292 },
+    ],
+    [
+        { date: "1404-03-01", data: 197 },
+        { date: "1404-03-02", data: 265 },
+        { date: "1404-03-03", data: 442 },
+        { date: "1404-03-04", data: 318 },
+        { date: "1404-03-05", data: 209 },
+        { date: "1404-03-06", data: 367 },
+        { date: "1404-03-07", data: 125 },
+    ],
+]
 
 export {
     url, toggleList, categoryList, menuList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
-    StatisticsCardsCustomerData, StatisticsCardsVisitorData,StoreMetricsData
+    StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData,TopProductsListData
 }

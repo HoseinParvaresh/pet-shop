@@ -4,6 +4,7 @@ import StoreMetricsChart from "@/components/templates/AdminDashboard/StoreMetric
 import TopProductsList from "@/components/templates/AdminDashboard/TopProductsList/TopProductsList";
 import Transactions from "@/components/templates/AdminDashboard/Transactions/Transactions";
 import VisitorsSection from "@/components/templates/AdminDashboard/VisitorsSection/VisitorsSection";
+import TopCategories from "@/components/templates/AdminDashboard/TopCategories/TopCategories";
 
 export default function AdminDashboard() {
 
@@ -12,22 +13,20 @@ export default function AdminDashboard() {
             <div className="relative flex items-start">
                 {/* side bar */}
                 <div className="bg-yellow-500 hidden lg:block h-screen w-[250px]"></div>
-                {/* content */}
                 <section className="flex flex-col w-full overflow-hidden">
                     <DashboardHeader />
                     {/* content */}
                     <section className="p-6 flex flex-col gap-6">
                         <StatisticsCards />
-                        {/* Store Metrics Chart / Top Products List   */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-6">
                             <StoreMetricsChart />
                             <TopProductsList />
                         </div>
-                        {/* Transactions */}
-                        <div className="grid grid-cols-3">
-                            <VisitorsSection />
-                        </div>
                         <Transactions />
+                        <div className="grid grid-cols-3 gap-6">
+                            <VisitorsSection />
+                            <TopCategories/>
+                        </div>
                     </section>
                 </section>
             </div>

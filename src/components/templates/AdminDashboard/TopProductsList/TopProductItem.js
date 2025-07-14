@@ -12,16 +12,6 @@ export default function TopProductItem(Props) {
             color: `#f69946`,
         }
     }
-    const StatisticsCardsVisitorData = [
-        { date: "1404-03-01", data: 470 },
-        { date: "1404-03-02", data: 224 },
-        { date: "1404-03-03", data: 302 },
-        { date: "1404-03-04", data: 135 },
-        { date: "1404-03-05", data: 294 },
-        { date: "1404-03-06", data: 189 },
-        { date: "1404-03-07", data: 250 },
-    ]
-
     return (
         <div className="p-1 pb-2 rounded-2xl">
             <div className="rounded-lg shadow-md border border-black/10 pb-1">
@@ -30,21 +20,21 @@ export default function TopProductItem(Props) {
                     <Link href={"/product/2"}>
                         <div>
                             <div className="bg-gray-200 rounded-full border-10 border-white">
-                                <img className="w-60" src="/images/p-1.png" alt="p-1" />
+                                <img className="w-60" src={Props.image} alt="p-1" />
                             </div>
                         </div>
                     </Link>
                     {/* title / total sell */}
                     <div className="text-center flex flex-col gap-2 mt-5">
                         {/* title */}
-                        <Link href={"/product/2"} className="text-dark-primary font-danaBold line-clamp-1 text-base xs:text-sm xl:text-base">ظرف غذا مخصوص پرندگان</Link>
+                        <Link href={"/product/2"} className="text-dark-primary font-danaBold line-clamp-1 text-base xs:text-sm xl:text-base">{Props.title}</Link>
                         {/* price */}
                         <div className="flex-center gap-1">
-                            <p className=" text-primary font-danaBold text-base xs:text-sm xl:text-base">{formatNumber(4560000)}</p>
+                            <p className=" text-primary font-danaBold text-base xs:text-sm xl:text-base">{formatNumber(Props.price)}</p>
                             <svg className="size-3 sm:size-4 text-primary"><use href="#toman"></use></svg>
                         </div>
                         {/* total sell */}
-                        <p className="text-dark-primary font-danaBold line-clamp-1 text-base sm:text-sm mt-1">فروش کل: <span>300</span></p>
+                        <p className="text-dark-primary font-danaBold line-clamp-1 text-base sm:text-sm mt-1">فروش کل: <span>{Props.sale}</span></p>
                     </div>
 
                 </div>
@@ -52,7 +42,7 @@ export default function TopProductItem(Props) {
                 <Card className={"shadow-none border-none p-0"}>
                     <CardContent>
                         <ChartContainer config={chartConfig}>
-                            <BarChart accessibilityLayer data={StatisticsCardsVisitorData}>
+                            <BarChart accessibilityLayer data={Props.data}>
                                 <XAxis
                                     dataKey="date"
                                     tickLine={false}
