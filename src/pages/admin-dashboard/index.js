@@ -6,6 +6,7 @@ import Transactions from "@/components/templates/AdminDashboard/Transactions/Tra
 import VisitorsSection from "@/components/templates/AdminDashboard/VisitorsSection/VisitorsSection";
 import TopCategories from "@/components/templates/AdminDashboard/TopCategories/TopCategories";
 
+
 export default function AdminDashboard() {
 
     return (

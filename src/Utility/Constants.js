@@ -19,11 +19,12 @@ const menuList = [
 ]
 //chart data
 const TransactionsData = [
-    { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com" },
-    { id: "3u1reuv4", amount: 42500, status: "پرداخت شده", email: "Abe45@example.com" },
-    { id: "derv1ws0", amount: 1890500, status: "در جریان", email: "Monserrat44@example.com" },
-    { id: "5kma53ae", amount: 3000000, status: "پرداخت شده", email: "Silas22@example.com" },
-    { id: "bhqecj4p", amount: 10500, status: "ناموفق", email: "carmella@example.com" },
+    { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com", name: "حسین پرورش" },
+    { id: "3u1reuv4", amount: 42500, status: "پرداخت شده", email: "Abe45@example.com", name: "علی ابراهیمی" },
+    { id: "derv1ws0", amount: 1890500, status: "در جریان", email: "Monserrat44@example.com", name: "محمد محمودی" },
+    { id: "5kma53ae", amount: 3000000, status: "پرداخت شده", email: "Silas22@example.com", name: "راحله رضایی" },
+    { id: "bhqecj4p", amount: 10500, status: "ناموفق", email: "carmella@example.com", name: "حجت پولادی" },
+    { id: "aqjhcj5m", amount: 10500, status: "در جریان", email: "hojat@example.com", name: "حجت پولادی" },
 ]
 const VisitorsSectionData = [
     { date: "1404-01-01", desktop: 222, mobile: 150 },

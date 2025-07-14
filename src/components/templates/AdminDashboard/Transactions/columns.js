@@ -39,6 +39,20 @@ export const columns = [
     enableHiding: false,
   },
   {
+    accessorKey: "name",
+    name : "نام و نام خانوادگی",
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        className="flex flex-row-reverse gap-2"
+      >
+        نام و نام خانوادگی
+      </Button>
+    ),
+    cell: ({ row }) => <div className="lowercase text-right">{row.getValue("name")}</div>,
+  },
+  {
     accessorKey: "email",
     name : "ایمیل",
     header: ({ column }) => (
