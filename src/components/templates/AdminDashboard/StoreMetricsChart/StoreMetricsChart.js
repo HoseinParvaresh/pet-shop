@@ -41,7 +41,7 @@ export default function StoreMetricsChart() {
             </div>
             {/* chart */}
             <Card className={"shadow-none border-none"}>
-                <CardContent>
+                <CardContent className={"p-0 2xs:px-6"}>
                     <ChartContainer config={chartConfig}>
                         <BarChart accessibilityLayer data={StoreMetricsData}>
                             <CartesianGrid vertical={false} />

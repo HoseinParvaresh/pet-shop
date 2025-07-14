@@ -11,7 +11,7 @@ export default function MetricCard({ title, value, benefit, change, color }) {
             </div>
             <p className="text-sm font-danaBold">{formatNumber(value)}</p>
             <div className={`flex-center text-xs ${benefit ? 'text-green-500' : 'text-red-500'} `}>
-                {benefit ? <TiArrowSortedUp className="size-5" /> : <TiArrowSortedDown className="size-5" />}
+                {benefit ? <TiArrowSortedUp className="hidden 3xs:block size-5" /> : <TiArrowSortedDown className="hidden 3xs:block size-5" />}
                 <div className="flex-center gap-1">
                     <span>{change}%</span>
                     <span>ماه قبل</span>

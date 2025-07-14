@@ -52,7 +52,7 @@ export default function VisitorsSection() {
   })
 
   return (
-    <Card className="@container/card shadow-none border-none col-span-3 md:col-span-2">
+    <Card className="@container/card shadow-none border-none w-full">
       <CardHeader>
         <CardTitle>تمام بازدید کنندگان</CardTitle>
         <CardDescription>

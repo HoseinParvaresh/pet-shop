@@ -27,7 +27,7 @@ export default function StatisticsCardsItem(Props) {
         return Math.floor(((firstData - secondData) / secondData) * 100) + "%"
     }
     return (
-        <Card className={`gap-0 pt-4 pb-1.5 shadow-none border-none ${Props.id === 3 ? 'col-span-2 md:col-span-1' : ''}`}>
+        <Card className={`gap-0 pt-4 pb-1.5 shadow-none border-none ${Props.id === 3 ? 'col-span-1 sm:col-span-2 md:col-span-1' : ''}`}>
             <CardHeader>
                 <div className="flex justify-between items-center">
                     {/* left => title / price / percent */}

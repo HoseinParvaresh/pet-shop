@@ -23,7 +23,7 @@ export default function AdminDashboard() {
                             <TopProductsList />
                         </div>
                         <Transactions />
-                        <div className="grid grid-cols-3 gap-6">
+                        <div className="flex flex-col md:flex-row gap-6">
                             <VisitorsSection />
                             <TopCategories/>
                         </div>
