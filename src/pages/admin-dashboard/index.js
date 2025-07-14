@@ -19,7 +19,7 @@ export default function AdminDashboard() {
                     <section className="p-6 flex flex-col gap-6">
                         <StatisticsCards />
                         {/* Store Metrics Chart / Top Products List   */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-6">
                             <StoreMetricsChart />
                             <TopProductsList />
                         </div>

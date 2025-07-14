@@ -23,9 +23,9 @@ export default function TopProductItem(Props) {
     ]
 
     return (
-        <div className="px-4 rounded-2xl">
-            <div className="rounded-lg bg-secondary pb-1">
-                <div className=" flex flex-col items-center  rounded-md pt-5 px-5">
+        <div className="p-1 pb-2 rounded-2xl">
+            <div className="rounded-lg shadow-md border border-black/10 pb-1">
+                <div className=" flex flex-col items-center rounded-md pt-5 px-5 md:px-3 lg:px-5">
                     {/* image */}
                     <Link href={"/product/2"}>
                         <div>
@@ -37,19 +37,19 @@ export default function TopProductItem(Props) {
                     {/* title / total sell */}
                     <div className="text-center flex flex-col gap-2 mt-5">
                         {/* title */}
-                        <Link href={"/product/2"} className="text-dark-primary font-danaBold line-clamp-1 text-base xs:text-sm sm:text-base">ظرف غذا مخصوص پرندگان</Link>
+                        <Link href={"/product/2"} className="text-dark-primary font-danaBold line-clamp-1 text-base xs:text-sm xl:text-base">ظرف غذا مخصوص پرندگان</Link>
                         {/* price */}
                         <div className="flex-center gap-1">
-                            <p className=" text-primary font-danaBold text-base xs:text-sm sm:text-base">{formatNumber(4560000)}</p>
+                            <p className=" text-primary font-danaBold text-base xs:text-sm xl:text-base">{formatNumber(4560000)}</p>
                             <svg className="size-3 sm:size-4 text-primary"><use href="#toman"></use></svg>
                         </div>
                         {/* total sell */}
-                        <p className="text-dark-primary font-danaBold line-clamp-1 text-base xs:text-sm mt-1">فروش کل :<span>300</span></p>
+                        <p className="text-dark-primary font-danaBold line-clamp-1 text-base sm:text-sm mt-1">فروش کل: <span>300</span></p>
                     </div>
 
                 </div>
                 {/* chart */}
-                <Card className={"shadow-none border-none p-0 bg-secondary"}>
+                <Card className={"shadow-none border-none p-0"}>
                     <CardContent>
                         <ChartContainer config={chartConfig}>
                             <BarChart accessibilityLayer data={StatisticsCardsVisitorData}>
