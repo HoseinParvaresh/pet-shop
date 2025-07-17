@@ -19,13 +19,13 @@ const menuList = [
 ]
 //chart data
 const TransactionsData = [
-    { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com", name: "حسین پرورش", number:"09176437156", date:["1404-05-05","18:20:16"] },
-    { id: "3u1reuv4", amount: 42500, status: "پرداخت شده", email: "Abe45@example.com", name: "علی ابراهیمی", number:"09164778809", date:["1404-01-06","12:45:00"] },
-    { id: "derv1ws0", amount: 1890500, status: "در جریان", email: "Monserrat44@example.com", name: "محمد محمودی", number:"09175488963", date:["1404-06-07","19:30:10"] },
-    { id: "5kma53ae", amount: 3000000, status: "پرداخت شده", email: "Silas22@example.com", name: "راحله رضایی", number:"09175263224", date:["1404-11-08","22:12:60"] },
-    { id: "bhqecj4p", amount: 10500, status: "ناموفق", email: "hojat@example.com", name: "حجت پولادی", number:"09307717247", date:["1404-10-09","21:55:50"] },
-    { id: "aqjhcj5m", amount: 852000, status: "در جریان", email: "saeed@example.com", name: "سعید محمدی", number:"09352145524", date:["1404-08-10","15:48:01"] },
-    { id: "wvw43343", amount: 423000, status: "موفق", email: "ali@example.com", name: "علی مردانی", number:"09352145524", date:["1404-06-11","00:26:09"] },
+    { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com", name: "حسین پرورش", number: "09176437156", date: ["1404-05-05", "18:20:16"] },
+    { id: "3u1reuv4", amount: 42500, status: "پرداخت شده", email: "Abe45@example.com", name: "علی ابراهیمی", number: "09164778809", date: ["1404-01-06", "12:45:00"] },
+    { id: "derv1ws0", amount: 1890500, status: "در جریان", email: "Monserrat44@example.com", name: "محمد محمودی", number: "09175488963", date: ["1404-06-07", "19:30:10"] },
+    { id: "5kma53ae", amount: 3000000, status: "پرداخت شده", email: "Silas22@example.com", name: "راحله رضایی", number: "09175263224", date: ["1404-11-08", "22:12:60"] },
+    { id: "bhqecj4p", amount: 10500, status: "ناموفق", email: "hojat@example.com", name: "حجت پولادی", number: "09307717247", date: ["1404-10-09", "21:55:50"] },
+    { id: "aqjhcj5m", amount: 852000, status: "در جریان", email: "saeed@example.com", name: "سعید محمدی", number: "09352145524", date: ["1404-08-10", "15:48:01"] },
+    { id: "wvw43343", amount: 423000, status: "موفق", email: "ali@example.com", name: "علی مردانی", number: "09352145524", date: ["1404-06-11", "00:26:09"] },
 ]
 const VisitorsSectionData = [
     { date: "1404-01-01", desktop: 222, mobile: 150 },
@@ -184,8 +184,17 @@ const TopProductsListData = [
         { date: "1404-03-07", data: 125 },
     ],
 ]
+const RecentUsersData = [
+    { id: "5dff23", name: "الهام جوادی", userName: "elham-javadi", email: "emy_jac@xyz.com", number: "09174561236", password: "elham23431vev", createdAt: ["1404-11-16", "16:20:12"] },
+    { id: "8acb39", name: "سعید نعمتی", userName: "saeed-nemati", email: "saeed_n@xyz.com", number: "09123567891", password: "Saeed!2024@", createdAt: ["1403-09-21", "09:45:33"] },
+    { id: "2fd781", name: "مهسا رجبی", userName: "mahsa-rajabi", email: "mahsa_r@xyz.com", number: "09381122345", password: "MahsaR!984#", createdAt: ["1404-03-10", "18:30:11"] },
+    { id: "7bfa90", name: "کامران صادقی", userName: "kamran-sadeghi", email: "kamran_sd@xyz.com", number: "09212345678", password: "K@mran2025**", createdAt: ["1404-05-04", "11:12:09"] },
+    { id: "d3412e", name: "لیلا کرمی", userName: "leila-karami", email: "leila_kr@xyz.com", number: "09191122334", password: "LeilaK#1403!", createdAt: ["1403-12-29", "20:55:44"] },
+    { id: "6ae9cb", name: "امیررضا احمدی", userName: "amirreza-ahmadi", email: "amirreza_a@xyz.com", number: "09357788900", password: "Amir!Rz@23", createdAt: ["1404-06-13", "14:14:14"] },
+    { id: "f029bd", name: "سارا ملک‌زاده", userName: "sara-malekzadeh", email: "sara_mz@xyz.com", number: "09130011223", password: "SaraM@789#", createdAt: ["1404-01-26", "08:07:51"] }
+]
 
 export {
     url, toggleList, categoryList, menuList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
-    StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData,TopProductsListData
+    StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData, TopProductsListData, RecentUsersData
 }

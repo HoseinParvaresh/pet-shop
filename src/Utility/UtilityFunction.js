@@ -45,13 +45,36 @@ function convertDate(dateStr, withYear = false) {
     moment.loadPersian({ dialect: 'persian-modern', usePersianDigits: true })
     const date = moment(dateStr, 'jYYYY-jMM-jDD')
     return withYear
-        ? date.format('jD jMMMM jYYYY')   // مثلاً "۱ فروردین ۱۴۰۴"
-        : date.format('jD jMMMM')         // مثلاً "۱ فروردین"
+        ? date.format('jD jMMMM jYYYY') 
+        : date.format('jD jMMMM')        
 }
+function calcRelativeTimeDifference(createdAt) {
+    const currentTime = new Date();
+    const createdTime = new Date(createdAt);
 
+    const timeDifference = currentTime - createdTime;
+    const hours = Math.floor(timeDifference / (60 * 60 * 1000));
+    const minutes = Math.floor(timeDifference / (60 * 1000));
+    const days = Math.floor(hours / 24);
+
+
+    if (minutes < 1) {
+        return 'لحظاتی پیش'
+    }
+    if (minutes < 60) {
+        return `${minutes} دقیقه پیش`
+    }
+    else {
+        if (hours < 24) {
+            return `${hours} ساعت پیش`;
+        } else {
+            return `${days} روز پیش`;
+        }
+    }
+};
 
 
 export {
     customScroll, formatNumber, calcDiscountPrice, toggleMobileNavbar, isValidEmail, isValidPassword, addToRecentlyViewed,
-    getRecentlyViewed, cn, convertDate
+    getRecentlyViewed, cn, convertDate, calcRelativeTimeDifference
 }

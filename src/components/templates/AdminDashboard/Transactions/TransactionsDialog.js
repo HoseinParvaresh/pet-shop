@@ -49,7 +49,7 @@ export default function TransactionsDialog(Props) {
             </div>
             <div className="grid gap-3">
               <Label htmlFor="status-1">تاریخ</Label>
-              <Input readOnly id="status-1" name="status" defaultValue={convertDate(Props.date[0]) + " ساعت " + Props.date[1]} />
+              <Input readOnly id="status-1" name="status" defaultValue={convertDate(Props.date[0],true) + " ساعت " + Props.date[1]} />
             </div>
           </div>
         </DialogContent>

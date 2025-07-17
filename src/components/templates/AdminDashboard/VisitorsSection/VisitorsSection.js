@@ -9,6 +9,7 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/shadcn/select"
 import { ToggleGroup, ToggleGroupItem } from "@/components/shadcn/toggle-group"
 import { convertDate } from "@/Utility/UtilityFunction"
+import DashboardSectionHeader from "@/components/modules/Dashboard/DashboardSectionHeader"
 
 const chartConfig = {
   visitors: {
@@ -53,13 +54,7 @@ export default function VisitorsSection() {
   return (
     <Card className="@container/card shadow-none border-none w-full">
       <CardHeader>
-        <CardTitle>تمام بازدید کنندگان</CardTitle>
-        <CardDescription>
-          <span className="hidden @[540px]/card:block">
-            در ۳ ماه اخیر
-          </span>
-          <span className="@[540px]/card:hidden">در ۳ ماه اخیر</span>
-        </CardDescription>
+        <DashboardSectionHeader title={"تمام بازدید کنندگان"} subtitle={"در 3 ماه اخیر"}/>
         <CardAction>
           <ToggleGroup type="single" value={timeRange} onValueChange={setTimeRange} variant="outline" className="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex">
             <ToggleGroupItem className="dir-rtl" value="90d">3 ماه گذشته</ToggleGroupItem>
