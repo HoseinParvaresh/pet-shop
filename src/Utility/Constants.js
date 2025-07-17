@@ -19,12 +19,13 @@ const menuList = [
 ]
 //chart data
 const TransactionsData = [
-    { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com", name: "حسین پرورش" },
-    { id: "3u1reuv4", amount: 42500, status: "پرداخت شده", email: "Abe45@example.com", name: "علی ابراهیمی" },
-    { id: "derv1ws0", amount: 1890500, status: "در جریان", email: "Monserrat44@example.com", name: "محمد محمودی" },
-    { id: "5kma53ae", amount: 3000000, status: "پرداخت شده", email: "Silas22@example.com", name: "راحله رضایی" },
-    { id: "bhqecj4p", amount: 10500, status: "ناموفق", email: "carmella@example.com", name: "حجت پولادی" },
-    { id: "aqjhcj5m", amount: 10500, status: "در جریان", email: "hojat@example.com", name: "حجت پولادی" },
+    { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com", name: "حسین پرورش", number:"09176437156", date:["1404-05-05","18:20:16"] },
+    { id: "3u1reuv4", amount: 42500, status: "پرداخت شده", email: "Abe45@example.com", name: "علی ابراهیمی", number:"09164778809", date:["1404-01-06","12:45:00"] },
+    { id: "derv1ws0", amount: 1890500, status: "در جریان", email: "Monserrat44@example.com", name: "محمد محمودی", number:"09175488963", date:["1404-06-07","19:30:10"] },
+    { id: "5kma53ae", amount: 3000000, status: "پرداخت شده", email: "Silas22@example.com", name: "راحله رضایی", number:"09175263224", date:["1404-11-08","22:12:60"] },
+    { id: "bhqecj4p", amount: 10500, status: "ناموفق", email: "hojat@example.com", name: "حجت پولادی", number:"09307717247", date:["1404-10-09","21:55:50"] },
+    { id: "aqjhcj5m", amount: 852000, status: "در جریان", email: "saeed@example.com", name: "سعید محمدی", number:"09352145524", date:["1404-08-10","15:48:01"] },
+    { id: "wvw43343", amount: 423000, status: "موفق", email: "ali@example.com", name: "علی مردانی", number:"09352145524", date:["1404-06-11","00:26:09"] },
 ]
 const VisitorsSectionData = [
     { date: "1404-01-01", desktop: 222, mobile: 150 },

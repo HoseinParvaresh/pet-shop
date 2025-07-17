@@ -14,6 +14,8 @@ import { formatNumber } from "@/Utility/UtilityFunction"
 import { HiOutlineXCircle } from "react-icons/hi2";
 import { HiOutlineClock } from "react-icons/hi2";
 import { HiOutlineCheckCircle } from "react-icons/hi2";
+import TransactionsDialog from "./TransactionsDialog"
+import { convertDate } from "@/Utility/UtilityFunction"
 
 export const columns = [
   {
@@ -40,7 +42,7 @@ export const columns = [
   },
   {
     accessorKey: "name",
-    name : "نام و نام خانوادگی",
+    name: "نام و نام خانوادگی",
     header: ({ column }) => (
       <Button
         variant="ghost"
@@ -54,7 +56,7 @@ export const columns = [
   },
   {
     accessorKey: "email",
-    name : "ایمیل",
+    name: "ایمیل",
     header: ({ column }) => (
       <Button
         variant="ghost"
@@ -65,6 +67,25 @@ export const columns = [
       </Button>
     ),
     cell: ({ row }) => <div className="lowercase text-right">{row.getValue("email")}</div>,
+  },
+  {
+    accessorKey: "date",
+    name: "تاریخ",
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        className="flex flex-row-reverse gap-2"
+      >
+        تاریخ
+      </Button>
+    ),
+    cell: ({ row }) => {
+        const date = row.original.date[0]
+      return (
+        <div className="lowercase text-right">{convertDate(date)}</div>
+      )
+    },
   },
   {
     accessorKey: "status",
@@ -82,16 +103,16 @@ export const columns = [
       const status = row.getValue("status")
       return (
         <div className="capitalize text-right">
-          {status === "ناموفق" ? <div className="flex items-center gap-1 text-red-500"><HiOutlineXCircle className=" size-4.5" /> <span>ناموفق</span></div> : 
-           status === "در جریان" ? <div className="flex items-center gap-1 text-yellow-500"><HiOutlineClock className=" size-4.5" /> <span>در جریان</span></div> :
-           <div className="flex items-center gap-1 text-green-500"><HiOutlineCheckCircle className=" size-4.5" /> <span>پرداخت شده</span></div>}
+          {status === "ناموفق" ? <div className="flex items-center gap-1 text-red-500"><HiOutlineXCircle className=" size-4.5" /> <span>ناموفق</span></div> :
+            status === "در جریان" ? <div className="flex items-center gap-1 text-yellow-500"><HiOutlineClock className=" size-4.5" /> <span>در جریان</span></div> :
+              <div className="flex items-center gap-1 text-green-500"><HiOutlineCheckCircle className=" size-4.5" /> <span>پرداخت شده</span></div>}
         </div>
       )
     },
   },
   {
     accessorKey: "amount",
-    name : "مبلغ",
+    name: "مبلغ",
     header: ({ column }) => (
       <Button
         variant="ghost"
@@ -111,6 +132,7 @@ export const columns = [
     enableHiding: false,
     cell: ({ row }) => {
       const payment = row.original
+      
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -122,15 +144,16 @@ export const columns = [
           <DropdownMenuContent align="start">
             <DropdownMenuLabel>عملیات</DropdownMenuLabel>
             <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
+              onClick={() => {
+                navigator.clipboard.writeText(payment.id);
+              }}
             >
               کپی شناسه پرداخت
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>مشاهده مشتری</DropdownMenuItem>
-            <DropdownMenuItem>جزئیات پرداخت</DropdownMenuItem>
+              <TransactionsDialog {...row.original}/>
           </DropdownMenuContent>
-        </DropdownMenu>
+        </DropdownMenu >
       )
     },
   },

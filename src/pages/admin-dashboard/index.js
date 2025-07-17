@@ -5,12 +5,12 @@ import TopProductsList from "@/components/templates/AdminDashboard/TopProductsLi
 import Transactions from "@/components/templates/AdminDashboard/Transactions/Transactions";
 import VisitorsSection from "@/components/templates/AdminDashboard/VisitorsSection/VisitorsSection";
 import TopCategories from "@/components/templates/AdminDashboard/TopCategories/TopCategories";
-
-
+import RecentUsers from "@/components/templates/AdminDashboard/RecentUsers/RecentUsers";
+import OrderSummary from "@/components/templates/AdminDashboard/OrderSummary/OrderSummary";
 export default function AdminDashboard() {
 
     return (
-        <div className="bg-black/5">
+        <div className="bg-black/5 font-dana">
             <div className="relative flex items-start">
                 {/* side bar */}
                 <div className="bg-yellow-500 hidden lg:block h-screen w-[250px]"></div>
@@ -26,7 +26,11 @@ export default function AdminDashboard() {
                         <Transactions />
                         <div className="flex flex-col md:flex-row gap-6">
                             <VisitorsSection />
-                            <TopCategories/>
+                            <TopCategories />
+                        </div>
+                        <div className="flex gap-6">
+                            <RecentUsers/>
+                            <OrderSummary/>
                         </div>
                     </section>
                 </section>

@@ -9,19 +9,9 @@ import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMe
 import { Input } from "@/components/shadcn/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/shadcn/table"
 import DashboardSectionHeader from "@/components/modules/Dashboard/DashboardSectionHeader"
-import {
-  ChevronLeft,
-  ChevronRight,
-  ChevronsLeft,
-  ChevronsRight,
-} from "lucide-react"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/shadcn/select"
+import {ChevronLeft,ChevronRight,ChevronsLeft,ChevronsRight} from "lucide-react"
+import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from "@/components/shadcn/select"
+import { ScrollArea,ScrollBar } from "@/components/shadcn/scroll-area"
 
 export default function Transactions() {
   const [sorting, setSorting] = useState([])
@@ -51,7 +41,7 @@ export default function Transactions() {
   return (
     <div className="w-full col-span-3 md:col-span-2 bg-white rounded-lg p-4" dir="rtl">
       <DashboardSectionHeader title="سابقه تراکنش‌ها" subtitle="در ۳۰ روز گذشته" />
-
+      
       {/* top */}
       <div className="flex items-center justify-between py-4 flex-row-reverse">
         <DropdownMenu>
@@ -79,17 +69,16 @@ export default function Transactions() {
         </DropdownMenu>
 
         <Input
-          placeholder="فیلتر ایمیل..."
+          placeholder="جستجو در ایمیل ها..."
           value={(table.getColumn("email")?.getFilterValue()) ?? ""}
           onChange={(event) =>
             table.getColumn("email")?.setFilterValue(event.target.value)
           }
-          className="max-w-30 xs:max-w-70 md:max-w-96 text-right text-xs xs:text-sm md:text-base"
+          className="max-w-30 xs:max-w-70 md:max-w-96 text-right text-xs xs:text-sm"
         />
       </div>
-
       {/* center */}
-      <div className="rounded-md border border-zinc-200" dir="rtl">
+      <ScrollArea className="rounded-md border border-zinc-200 h-71" dir="rtl">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -133,16 +122,17 @@ export default function Transactions() {
             )}
           </TableBody>
         </Table>
-      </div>
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
 
       {/* bottom */}
       <div className="flex items-center justify-between px-2 mt-4">
-        <div className="text-muted-foreground flex-1 text-sm dir-rtl">
+        <div className="hidden 3xs:block text-muted-foreground flex-1 text-xs 2xs:text-sm dir-rtl">
           {table.getFilteredSelectedRowModel().rows.length} از{" "}
           {table.getFilteredRowModel().rows.length} <span className="hidden md:inline">ردیف انتخاب شده</span>
-          
+
         </div>
-        <div className="flex items-center space-x-6 lg:space-x-8">
+        <div className="flex gap-2 3xs:gap-0 items-center space-x-0 md:space-x-6 lg:space-x-8">
           <div className="flex items-center space-x-2">
             <p className="hidden md:block text-sm font-medium">ردیف در هر صفحه</p>
             <Select
@@ -163,7 +153,7 @@ export default function Transactions() {
               </SelectContent>
             </Select>
           </div>
-          <div className="flex w-[100px] items-center justify-center text-sm font-medium">
+          <div className="flex 3xs:w-[70px]  2xs:w-[100px] items-center justify-center text-xs 2xs:text-sm font-medium">
             صفحه {table.getState().pagination.pageIndex + 1} از{" "}
             {table.getPageCount()}
           </div>

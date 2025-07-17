@@ -10,7 +10,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ToggleGroup, ToggleGroupItem } from "@/components/shadcn/toggle-group"
 import { convertDate } from "@/Utility/UtilityFunction"
 
-
 const chartConfig = {
   visitors: {
     label: "Visitors",
