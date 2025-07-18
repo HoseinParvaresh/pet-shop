@@ -13,7 +13,7 @@ import { IoMdMore } from "react-icons/io";
 
 export default function RecentUserItem(Props) {
     return (
-        <div className="px-2 py-3 border-b border-black/15  last:border-none flex items-center justify-between hover:bg-gray-100 transition-all duration-300 hover:rounded-md">
+        <div className="px-2 py-2.5 border-b border-black/15 last:border-none flex items-center justify-between hover:bg-gray-100 transition-all duration-300 hover:rounded-md">
             {/* right */}
             <div className="flex gap-2 items-center">
                 <img className="size-10 rounded-full" src="https://secure.gravatar.com/avatar/305d06cbd488be05e4d58cce3723d4d5?s=96&d=mm&r=g" alt="user" />
@@ -26,7 +26,7 @@ export default function RecentUserItem(Props) {
             <Dialog>
                 <form>
                     <DialogTrigger asChild>
-                        <Button variant="outline"><IoMdMore/></Button>
+                        <Button className={"!p-2 hover:bg-white hover:scale-110"} variant="outline"><IoMdMore /></Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[500px] dir-rtl font-dana">
                         <DialogHeader>

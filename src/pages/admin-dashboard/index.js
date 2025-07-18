@@ -6,7 +6,9 @@ import Transactions from "@/components/templates/AdminDashboard/Transactions/Tra
 import VisitorsSection from "@/components/templates/AdminDashboard/VisitorsSection/VisitorsSection";
 import TopCategories from "@/components/templates/AdminDashboard/TopCategories/TopCategories";
 import RecentUsers from "@/components/templates/AdminDashboard/RecentUsers/RecentUsers";
+import OrderStatus from "@/components/templates/AdminDashboard/OrderStatus/OrderStatus";
 import OrderSummary from "@/components/templates/AdminDashboard/OrderSummary/OrderSummary";
+
 export default function AdminDashboard() {
 
     return (
@@ -28,10 +30,11 @@ export default function AdminDashboard() {
                             <VisitorsSection />
                             <TopCategories />
                         </div>
-                        <div className="flex gap-6">
+                        <div className="flex flex-col lg:flex-row gap-6">
                             <RecentUsers/>
-                            <OrderSummary/>
+                            <OrderStatus/>
                         </div>
+                        <OrderSummary/>
                     </section>
                 </section>
             </div>

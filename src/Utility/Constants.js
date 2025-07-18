@@ -191,10 +191,17 @@ const RecentUsersData = [
     { id: "7bfa90", name: "کامران صادقی", userName: "kamran-sadeghi", email: "kamran_sd@xyz.com", number: "09212345678", password: "K@mran2025**", createdAt: ["1404-05-04", "11:12:09"] },
     { id: "d3412e", name: "لیلا کرمی", userName: "leila-karami", email: "leila_kr@xyz.com", number: "09191122334", password: "LeilaK#1403!", createdAt: ["1403-12-29", "20:55:44"] },
     { id: "6ae9cb", name: "امیررضا احمدی", userName: "amirreza-ahmadi", email: "amirreza_a@xyz.com", number: "09357788900", password: "Amir!Rz@23", createdAt: ["1404-06-13", "14:14:14"] },
-    { id: "f029bd", name: "سارا ملک‌زاده", userName: "sara-malekzadeh", email: "sara_mz@xyz.com", number: "09130011223", password: "SaraM@789#", createdAt: ["1404-01-26", "08:07:51"] }
 ]
-
+const OrderSummaryData = [
+    { month: "فروردین", complete: 450, cancel: 300, referral: 36 },
+    { month: "اردیبهشت", complete: 442, cancel: 220, referral: 38 },
+    { month: "خرداد", complete: 520, cancel: 120, referral: 36 },
+    { month: "تیر", complete: 550, cancel: 140, referral: 56 },
+    { month: "مرداد", complete: 600, cancel: 250, referral: 55 },
+    { month: "شهریور", complete: 480, cancel: 100, referral: 37 },
+]
 export {
     url, toggleList, categoryList, menuList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
-    StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData, TopProductsListData, RecentUsersData
+    StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData, TopProductsListData, RecentUsersData,
+    OrderSummaryData
 }
