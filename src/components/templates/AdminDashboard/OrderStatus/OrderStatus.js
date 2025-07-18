@@ -12,7 +12,7 @@ import {
     ChartLegendContent
 } from "@/components/shadcn/chart"
 import DashboardSectionHeader from "@/components/modules/Dashboard/DashboardSectionHeader"
-import { OrderSummaryData } from "@/Utility/Constants"
+import { OrderStatusData } from "@/Utility/Constants"
 
 
 
@@ -40,7 +40,7 @@ export default function OrderStatus() {
             <Card className={"border-none shadow-none pb-0"}>
                 <CardContent>
                     <ChartContainer config={chartConfig}>
-                        <BarChart accessibilityLayer data={OrderSummaryData}>
+                        <BarChart accessibilityLayer data={OrderStatusData}>
                             <CartesianGrid vertical={false} />
                             <XAxis
                                 dataKey="month"

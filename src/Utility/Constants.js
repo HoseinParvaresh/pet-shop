@@ -192,7 +192,7 @@ const RecentUsersData = [
     { id: "d3412e", name: "لیلا کرمی", userName: "leila-karami", email: "leila_kr@xyz.com", number: "09191122334", password: "LeilaK#1403!", createdAt: ["1403-12-29", "20:55:44"] },
     { id: "6ae9cb", name: "امیررضا احمدی", userName: "amirreza-ahmadi", email: "amirreza_a@xyz.com", number: "09357788900", password: "Amir!Rz@23", createdAt: ["1404-06-13", "14:14:14"] },
 ]
-const OrderSummaryData = [
+const OrderStatusData = [
     { month: "فروردین", complete: 450, cancel: 300, referral: 36 },
     { month: "اردیبهشت", complete: 442, cancel: 220, referral: 38 },
     { month: "خرداد", complete: 520, cancel: 120, referral: 36 },
@@ -200,8 +200,18 @@ const OrderSummaryData = [
     { month: "مرداد", complete: 600, cancel: 250, referral: 55 },
     { month: "شهریور", complete: 480, cancel: 100, referral: 37 },
 ]
+const OrderSummaryData = [
+    { id: "m5gr84i9", name: "ظرف غذای پرندگان", image: "/images/p-1.png", customerName: "بردیا زاهدی", customerNumber: "09185239669" ,price: "640000", status: "complete", date: ["1404-08-12", "16:42:09"] },
+    { id: "x7pa93ke", name: "اسباب‌بازی سگ", image: "/images/p-2.png", customerName: "نگار موسوی", customerNumber: "09127894561", price: "320000", status: "pending", date: ["1404-07-04", "10:15:33"] },
+    { id: "b4lk23mz", name: "قلاده گربه", image: "/images/p-3.png", customerName: "مانی فرهمند", customerNumber: "09213341228", price: "185000", status: "cancelled", date: ["1404-06-21", "18:05:49"] },
+    { id: "u9et41nw", name: "آبخوری پرندگان", image: "/images/p-4.png", customerName: "الهام احمدی", customerNumber: "09382255674", price: "79000", status: "complete", date: ["1404-05-30", "09:22:18"] },
+    { id: "d2qm60vf", name: "کیف حمل سگ", image: "/images/p-5.png", customerName: "شایان محمودی", customerNumber: "09121119000", price: "460000", status: "complete", date: ["1404-09-03", "13:40:12"] },
+    { id: "p1rz38yd", name: "شن گربه معطر", image: "/images/p-6.png", customerName: "پریسا نادری", customerNumber: "09354321099", price: "124000", status: "pending", date: ["1404-10-17", "20:00:01"] },
+    { id: "h6nv75tr", name: "پتو گرم حیوانات", image: "/images/p-7.png", customerName: "کیانا یزدی", customerNumber: "09124563421", price: "229000", status: "complete", date: ["1404-11-02", "07:14:55"] }
+
+]
 export {
     url, toggleList, categoryList, menuList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
     StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData, TopProductsListData, RecentUsersData,
-    OrderSummaryData
+    OrderStatusData, OrderSummaryData
 }

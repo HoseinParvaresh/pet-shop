@@ -8,11 +8,13 @@ import TopCategories from "@/components/templates/AdminDashboard/TopCategories/T
 import RecentUsers from "@/components/templates/AdminDashboard/RecentUsers/RecentUsers";
 import OrderStatus from "@/components/templates/AdminDashboard/OrderStatus/OrderStatus";
 import OrderSummary from "@/components/templates/AdminDashboard/OrderSummary/OrderSummary";
+import { Toaster } from "react-hot-toast";
 
 export default function AdminDashboard() {
 
     return (
         <div className="bg-black/5 font-dana">
+            <Toaster/>
             <div className="relative flex items-start">
                 {/* side bar */}
                 <div className="bg-yellow-500 hidden lg:block h-screen w-[250px]"></div>

@@ -16,7 +16,7 @@ import { HiOutlineClock } from "react-icons/hi2";
 import { HiOutlineCheckCircle } from "react-icons/hi2";
 import TransactionsDialog from "./TransactionsDialog"
 import { convertDate } from "@/Utility/UtilityFunction"
-
+import Alert from "@/Utility/Alert"
 export const columns = [
   {
     id: "select",
@@ -52,7 +52,7 @@ export const columns = [
         نام و نام خانوادگی
       </Button>
     ),
-    cell: ({ row }) => <div className="lowercase text-right">{row.getValue("name")}</div>,
+    cell: ({ row }) => <div className="lowercase text-right pr-3">{row.getValue("name")}</div>,
   },
   {
     accessorKey: "email",
@@ -142,9 +142,9 @@ export const columns = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start">
-            <DropdownMenuLabel>عملیات</DropdownMenuLabel>
             <DropdownMenuItem
               onClick={() => {
+                Alert("success","کپی شد!")
                 navigator.clipboard.writeText(payment.id);
               }}
             >
