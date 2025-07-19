@@ -2,13 +2,12 @@ import DashboardHeader from "@/components/modules/Dashboard/DashboardHeader";
 import StatisticsCards from "@/components/templates/AdminDashboard/StatisticsCards/StatisticsCards";
 import StoreMetricsChart from "@/components/templates/AdminDashboard/StoreMetricsChart/StoreMetricsChart";
 import TopProductsList from "@/components/templates/AdminDashboard/TopProductsList/TopProductsList";
-import Transactions from "@/components/templates/AdminDashboard/Transactions/Transactions";
 import VisitorsSection from "@/components/templates/AdminDashboard/VisitorsSection/VisitorsSection";
 import TopCategories from "@/components/templates/AdminDashboard/TopCategories/TopCategories";
 import RecentUsers from "@/components/templates/AdminDashboard/RecentUsers/RecentUsers";
 import OrderStatus from "@/components/templates/AdminDashboard/OrderStatus/OrderStatus";
-import OrderSummary from "@/components/templates/AdminDashboard/OrderSummary/OrderSummary";
 import DataTables from "@/components/templates/AdminDashboard/DataTables/DataTables";
+import Sidebar from "@/components/templates/AdminDashboard/Sidebar/Sidebar";
 import { Toaster } from "react-hot-toast";
 
 export default function AdminDashboard() {
@@ -18,7 +17,7 @@ export default function AdminDashboard() {
             <Toaster/>
             <div className="relative flex items-start">
                 {/* side bar */}
-                <div className="bg-yellow-500 hidden lg:block h-screen w-[250px]"></div>
+                <Sidebar/>
                 <section className="flex flex-col w-full overflow-hidden">
                     <DashboardHeader />
                     {/* content */}
