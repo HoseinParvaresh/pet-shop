@@ -15,7 +15,6 @@ import {
 } from "lucide-react"
 
 import { NavMain } from "./nav-main"
-import { NavProjects } from "./nav-projects"
 import { NavUser } from "./nav-user"
 import { TeamSwitcher } from "./team-switcher"
 import {
@@ -56,23 +55,9 @@ const data = {
       url: "#",
       icon: SquareTerminal,
       isActive: true,
-      items: [
-        {
-          title: "مرور کلی",
-          url: "#",
-        },
-        {
-          title: "آمار و گزارش‌ها",
-          url: "#",
-        },
-        {
-          title: "تنظیمات",
-          url: "#",
-        },
-      ],
     },
     {
-      title: "کاربران",
+      title: "مدیریت کاربران",
       url: "#",
       icon: Bot,
       items: [
@@ -81,7 +66,11 @@ const data = {
           url: "#",
         },
         {
-          title: "نقش‌ها و دسترسی‌ها",
+          title: "ایجاد/ ویرایش کاربر",
+          url: "#",
+        },
+        {
+          title: "نقش‌ها و سطح دسترسی",
           url: "#",
         },
         {
@@ -91,26 +80,121 @@ const data = {
       ],
     },
     {
-      title: "مستندات",
+      title: "مدیریت محصولات",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "معرفی",
+          title: "لیست محصولات",
           url: "#",
         },
         {
-          title: "شروع سریع",
+          title: "افزودن محصول جدید",
           url: "#",
         },
         {
-          title: "آموزش‌ها",
+          title: "دسته‌بندی‌ها",
           url: "#",
         },
         {
-          title: "تغییرات",
+          title: "تگ‌ها",
           url: "#",
         },
+      ],
+    },
+    {
+      title: "مدیریت سفارشات",
+      url: "#",
+      icon: BookOpen,
+      items: [
+        {
+          title: "لیست سفارشات",
+          url: "#",
+        },
+        {
+          title: "وضعیت‌ها",
+          url: "#",
+        },
+        {
+          title: "فاکتورها",
+          url: "#",
+        }
+      ],
+    },
+    {
+      title: "گزارش‌ها",
+      url: "#",
+      icon: BookOpen,
+      items: [
+        {
+          title: "آمار فروش و بازدید",
+          url: "#",
+        },
+        {
+          title: "رفتار کاربران",
+          url: "#",
+        },
+        {
+          title: "نمودارها و تحلیل‌ها",
+          url: "#",
+        }
+      ],
+    },
+    {
+      title: "کامنت‌ها",
+      url: "#",
+      icon: BookOpen,
+      items: [
+        {
+          title: "نظرات کاربران",
+          url: "#",
+        },
+        {
+          title: "ارتباط با پشتیبانی",
+          url: "#",
+        },
+        {
+          title: "فرم تماس / تیکت‌ها",
+          url: "#",
+        }
+      ],
+    },
+    {
+      title: "تنظیمات سیستم",
+      url: "#",
+      icon: BookOpen,
+      items: [
+        {
+          title: "تنظیمات کلی",
+          url: "#",
+        },
+        {
+          title: "سئو",
+          url: "#",
+        },
+        {
+          title: "ایمیل‌ها / نوتیفیکیشن‌ها",
+          url: "#",
+        },
+        {
+          title: "API keys / تنظیمات امنیتی",
+          url: "#",
+        }
+      ],
+    },
+    {
+      title: "مقالات",
+      url: "#",
+      icon: BookOpen,
+      items: [
+        {
+          title: "ایجاد مقاله",
+          url: "#",
+        },
+        {
+          title: "ویرایش یا حذف مقاله",
+          url: "#",
+        }
       ],
     },
     {
@@ -119,39 +203,18 @@ const data = {
       icon: Settings2,
       items: [
         {
-          title: "عمومی",
+          title: "پروفایل",
           url: "#",
         },
         {
-          title: "تیم",
+          title: "تغییر رمز",
           url: "#",
         },
         {
-          title: "صورتحساب",
+          title: "خروج از سیستم",
           url: "#",
-        },
-        {
-          title: "محدودیت‌ها",
-          url: "#",
-        },
+        }
       ],
-    },
-  ],
-  projects: [
-    {
-      name: "طراحی مهندسی",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "فروش و بازاریابی",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "سفر و گردشگری",
-      url: "#",
-      icon: Map,
     },
   ],
 }
@@ -166,7 +229,6 @@ export function AppSidebar({ ...props }) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

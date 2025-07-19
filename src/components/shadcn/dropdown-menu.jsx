@@ -156,7 +156,7 @@ function DropdownMenuShortcut({
     <span
       data-slot="dropdown-menu-shortcut"
       className={cn(
-        "text-zinc-500 ml-auto text-xs tracking-widest ",
+        "text-zinc-500 mr-auto text-xs tracking-widest ",
         className
       )}
       {...props} />

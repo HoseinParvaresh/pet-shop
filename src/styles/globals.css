@@ -58,7 +58,6 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
-
 }
 @layer components {
   /* { -- background images -- } */
@@ -81,7 +80,7 @@
   }
   .bg__reservation {
     background-image: url("/images/reservation-bg.png");
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
     width: 100%;
@@ -148,13 +147,13 @@
     @apply inline-block font-danaBold text-sm mb-2 md:mb-3;
   }
   .text_input {
-    @apply w-full h-13 placeholder:text-slate-500 text-gray-900 bg-white text-sm py-3.5 pr-3.5 pl-13 rounded outline-none
+    @apply w-full h-13 placeholder:text-slate-500 text-gray-900 bg-white text-sm py-3.5 pr-3.5 pl-13 rounded outline-none;
   }
   .textarea_input {
-    @apply w-full min-h-30 placeholder:text-slate-500 text-gray-900 bg-white text-sm p-3.5 outline-none rounded
+    @apply w-full min-h-30 placeholder:text-slate-500 text-gray-900 bg-white text-sm p-3.5 outline-none rounded;
   }
   .select_input {
-    @apply w-full h-13 text-slate-500 bg-white text-sm p-3.5 border-l-[14px] border-l-transparent rounded outline-none
+    @apply w-full h-13 text-slate-500 bg-white text-sm p-3.5 border-l-[14px] border-l-transparent rounded outline-none;
   }
   /* overlay */
   .mobile-overlay {
@@ -324,7 +323,7 @@
 }
 
 :root {
-  --sidebar: hsl(0 0% 98%);
+  --sidebar: hsl(0, 0%, 100%);
   --sidebar-foreground: hsl(240 5.3% 26.1%);
   --sidebar-primary: hsl(240 5.9% 10%);
   --sidebar-primary-foreground: hsl(0 0% 98%);
@@ -343,3 +342,13 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+:root {
+   
+  body[data-scroll-locked][data-scroll-locked] {
+    overflow: auto !important;
+  }
+  body[data-scroll-locked] {
+    margin-right: 0 !important;
+  }
+}
+
