@@ -201,15 +201,28 @@ const OrderStatusData = [
     { month: "شهریور", complete: 480, cancel: 100, referral: 37 },
 ]
 const OrderSummaryData = [
-    { id: "m5gr84i9", name: "ظرف غذای پرندگان", image: "/images/p-1.png", customerName: "بردیا زاهدی", customerNumber: "09185239669" ,price: "640000", status: "complete", date: ["1404-08-12", "16:42:09"] },
-    { id: "x7pa93ke", name: "اسباب‌بازی سگ", image: "/images/p-2.png", customerName: "نگار موسوی", customerNumber: "09127894561", price: "320000", status: "pending", date: ["1404-07-04", "10:15:33"] },
-    { id: "b4lk23mz", name: "قلاده گربه", image: "/images/p-3.png", customerName: "مانی فرهمند", customerNumber: "09213341228", price: "185000", status: "cancelled", date: ["1404-06-21", "18:05:49"] },
-    { id: "u9et41nw", name: "آبخوری پرندگان", image: "/images/p-4.png", customerName: "الهام احمدی", customerNumber: "09382255674", price: "79000", status: "complete", date: ["1404-05-30", "09:22:18"] },
-    { id: "d2qm60vf", name: "کیف حمل سگ", image: "/images/p-5.png", customerName: "شایان محمودی", customerNumber: "09121119000", price: "460000", status: "complete", date: ["1404-09-03", "13:40:12"] },
-    { id: "p1rz38yd", name: "شن گربه معطر", image: "/images/p-6.png", customerName: "پریسا نادری", customerNumber: "09354321099", price: "124000", status: "pending", date: ["1404-10-17", "20:00:01"] },
-    { id: "h6nv75tr", name: "پتو گرم حیوانات", image: "/images/p-7.png", customerName: "کیانا یزدی", customerNumber: "09124563421", price: "229000", status: "complete", date: ["1404-11-02", "07:14:55"] }
-
+    { id: "a1b2c3d4", name: "تشویقی سگ", image: "/images/p-1.png", customerName: "نگین رفیعی", customerNumber: "09121234567", price: "95000", status: "pending", date: ["1404-04-11", "14:22:31"] },
+    { id: "e5f6g7h8", name: "جعبه خاک گربه", image: "/images/p-2.png", customerName: "محمدرضا عزتی", customerNumber: "09124560088", price: "132000", status: "processing", date: ["1404-05-06", "10:01:45"] },
+    { id: "i9j0k1l2", name: "ظرف غذا استیل", image: "/images/p-3.png", customerName: "زهرا امیری", customerNumber: "09223334455", price: "78000", status: "shipped", date: ["1404-03-20", "19:40:02"] },
+    { id: "m3n4o5p6", name: "لباس زمستانی سگ", image: "/images/p-4.png", customerName: "علی شاکری", customerNumber: "09357779900", price: "240000", status: "delivered", date: ["1404-02-17", "08:15:27"] },
+    { id: "q7r8s9t0", name: "تشک گربه", image: "/images/p-5.png", customerName: "فرزانه جلالی", customerNumber: "09128881234", price: "185000", status: "canceled", date: ["1404-06-03", "11:59:59"] },
+    { id: "u1v2w3x4", name: "باکس حمل پرنده", image: "/images/p-6.png", customerName: "مهدی کیان", customerNumber: "09350001122", price: "145000", status: "returned", date: ["1404-07-21", "16:16:16"] },
+    { id: "y5z6a7b8", name: "ظرف آب اتومات", image: "/images/p-7.png", customerName: "شیما محمدی", customerNumber: "09127776655", price: "112000", status: "failed", date: ["1404-08-08", "12:32:10"] },
+    { id: "c9d0e1f2", name: "قلاده چرمی سگ", image: "/images/p-1.png", customerName: "نریمان راد", customerNumber: "09193334466", price: "99000", status: "pending", date: ["1404-01-12", "09:12:33"] },
+    { id: "g3h4i5j6", name: "عروسک گربه", image: "/images/p-2.png", customerName: "سمانه حاجی‌پور", customerNumber: "09215558844", price: "67000", status: "processing", date: ["1404-10-01", "13:01:01"] },
+    { id: "k7l8m9n0", name: "شامپو حیوانات", image: "/images/p-3.png", customerName: "فریبرز یکتا", customerNumber: "09126669977", price: "59000", status: "shipped", date: ["1404-09-27", "15:49:20"] },
+    { id: "o1p2q3r4", name: "کیف حمل سگ", image: "/images/p-4.png", customerName: "نسترن جعفری", customerNumber: "09131110022", price: "305000", status: "delivered", date: ["1404-03-04", "17:35:55"] },
+    { id: "s5t6u7v8", name: "پتو نرم حیوانات", image: "/images/p-5.png", customerName: "بهزاد نیکو", customerNumber: "09123456789", price: "129000", status: "canceled", date: ["1404-04-19", "20:10:41"] },
+    { id: "w9x0y1z2", name: "توالت گربه", image: "/images/p-6.png", customerName: "بهناز سلیمانی", customerNumber: "09361122334", price: "215000", status: "returned", date: ["1404-11-11", "07:44:30"] },
+    { id: "a3b4c5d6", name: "تشویقی مرغی سگ", image: "/images/p-7.png", customerName: "شروین فرهمند", customerNumber: "09125557788", price: "47000", status: "failed", date: ["1404-02-08", "18:25:19"] },
+    { id: "e7f8g9h0", name: "شن ضدبو گربه", image: "/images/p-1.png", customerName: "شایسته عزیزی", customerNumber: "09224440011", price: "138000", status: "pending", date: ["1404-05-28", "22:02:09"] },
+    { id: "i1j2k3l4", name: "بازی هوش سگ", image: "/images/p-2.png", customerName: "سعید گودرزی", customerNumber: "09129998877", price: "99000", status: "processing", date: ["1404-08-15", "14:05:44"] },
+    { id: "m5n6o7p8", name: "لباس تابستانی گربه", image: "/images/p-3.png", customerName: "طاهره زمانی", customerNumber: "09358880099", price: "75000", status: "shipped", date: ["1404-06-12", "12:00:00"] },
+    { id: "q9r0s1t2", name: "قفس پرنده", image: "/images/p-4.png", customerName: "یونس رادمنش", customerNumber: "09129992233", price: "410000", status: "delivered", date: ["1404-07-07", "09:30:18"] },
+    { id: "u3v4w5x6", name: "جای خواب گربه", image: "/images/p-5.png", customerName: "پریا سهرابی", customerNumber: "09218887766", price: "178000", status: "canceled", date: ["1404-09-14", "06:45:00"] },
+    { id: "y7z8a9b0", name: "کاسه دو قلوی غذا", image: "/images/p-6.png", customerName: "عادل منصوری", customerNumber: "09123334455", price: "115000", status: "returned", date: ["1404-10-20", "11:11:11"] }
 ]
+
 export {
     url, toggleList, categoryList, menuList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
     StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData, TopProductsListData, RecentUsersData,

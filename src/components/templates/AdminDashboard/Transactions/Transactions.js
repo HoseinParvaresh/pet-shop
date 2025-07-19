@@ -39,9 +39,7 @@ export default function Transactions() {
   })
 
   return (
-    <div className="w-full col-span-3 md:col-span-2 bg-white rounded-lg p-4" dir="rtl">
-      <DashboardSectionHeader title="سابقه تراکنش‌ها" subtitle="در ۳۰ روز گذشته" />
-      
+    <div dir="rtl">
       {/* top */}
       <div className="flex items-center justify-between py-4 flex-row-reverse">
         <DropdownMenu>

@@ -13,7 +13,7 @@ import {ChevronLeft,ChevronRight,ChevronsLeft,ChevronsRight} from "lucide-react"
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from "@/components/shadcn/select"
 import { ScrollArea,ScrollBar } from "@/components/shadcn/scroll-area"
 
-export default function Transactions() {
+export default function OrderSummary() {
   const [sorting, setSorting] = useState([])
   const [columnFilters, setColumnFilters] = useState([])
   const [columnVisibility, setColumnVisibility] = useState({})
@@ -39,9 +39,7 @@ export default function Transactions() {
   })
 
   return (
-    <div className="w-full col-span-3 md:col-span-2 bg-white rounded-lg p-4" dir="rtl">
-      <DashboardSectionHeader title="سابقه سفارشات" subtitle="در ۳۰ روز گذشته" />
-      
+    <div dir="rtl">      
       {/* top */}
       <div className="flex items-center justify-between py-4 flex-row-reverse">
         <DropdownMenu>
@@ -78,7 +76,7 @@ export default function Transactions() {
         />
       </div>
       {/* center */}
-      <ScrollArea className="rounded-md border border-zinc-200 h-71" dir="rtl">
+      <ScrollArea className="rounded-md border border-zinc-200 h-[286px]" dir="rtl">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

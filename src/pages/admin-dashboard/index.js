@@ -8,6 +8,7 @@ import TopCategories from "@/components/templates/AdminDashboard/TopCategories/T
 import RecentUsers from "@/components/templates/AdminDashboard/RecentUsers/RecentUsers";
 import OrderStatus from "@/components/templates/AdminDashboard/OrderStatus/OrderStatus";
 import OrderSummary from "@/components/templates/AdminDashboard/OrderSummary/OrderSummary";
+import DataTables from "@/components/templates/AdminDashboard/DataTables/DataTables";
 import { Toaster } from "react-hot-toast";
 
 export default function AdminDashboard() {
@@ -27,7 +28,7 @@ export default function AdminDashboard() {
                             <StoreMetricsChart />
                             <TopProductsList />
                         </div>
-                        <Transactions />
+                        <DataTables />
                         <div className="flex flex-col md:flex-row gap-6">
                             <VisitorsSection />
                             <TopCategories />
@@ -36,7 +37,6 @@ export default function AdminDashboard() {
                             <RecentUsers/>
                             <OrderStatus/>
                         </div>
-                        <OrderSummary/>
                     </section>
                 </section>
             </div>

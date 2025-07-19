@@ -1,21 +1,12 @@
 
-import { MoreHorizontal } from "lucide-react"
 import { Button } from "@/components/shadcn/button"
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-} from "@/components/shadcn/dropdown-menu"
 import { formatNumber } from "@/Utility/UtilityFunction"
-import { HiOutlineXCircle } from "react-icons/hi2"
-import { HiOutlineClock } from "react-icons/hi2"
-import { HiOutlineCheckCircle } from "react-icons/hi2"
+
 import OrderSummaryDialog from "./OrderSummaryDialog"
 import { convertDate } from "@/Utility/UtilityFunction"
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import Alert from "@/Utility/Alert"
+import StatusBadge from "./StatusBadge";
 
 export const columns = [
   {
@@ -34,7 +25,7 @@ export const columns = [
   },
   {
     accessorKey: "name",
-    name: "name",
+    name: "اسم محصول",
     header: () => (
       <Button
         variant="ghost"
@@ -115,9 +106,7 @@ export const columns = [
       const status = row.getValue("status")
       return (
         <div className="capitalize text-right">
-          {status === "cancelled" ? <div className="flex items-center gap-1 text-red-500"><HiOutlineXCircle className=" size-4.5" /> <span>ناموفق</span></div> :
-            status === "pending" ? <div className="flex items-center gap-1 text-yellow-500"><HiOutlineClock className=" size-4.5" /> <span>در جریان</span></div> :
-              <div className="flex items-center gap-1 text-green-500"><HiOutlineCheckCircle className=" size-4.5" /> <span>پرداخت شده</span></div>}
+          <StatusBadge status={status} />
         </div>
       )
     },
@@ -129,25 +118,6 @@ export const columns = [
       const payment = row.original
 
       return (
-        // <DropdownMenu>
-        //   <DropdownMenuTrigger asChild>
-        //     <Button variant="ghost" className="h-8 w-8 p-0">
-        //       <span className="sr-only">Open menu</span>
-        //       <MoreHorizontal />
-        //     </Button>
-        //   </DropdownMenuTrigger>
-        //   <DropdownMenuContent align="start">
-        //     <DropdownMenuItem
-        //       onClick={() => {
-        //         navigator.clipboard.writeText(payment.id);
-        //       }}
-        //     >
-        //       کپی شناسه پرداخت
-        //     </DropdownMenuItem>
-        //     <DropdownMenuSeparator />
-        //       <OrderSummaryDialog {...row.original}/>
-        //   </DropdownMenuContent>
-        // </DropdownMenu >
         <div className="flex">
           <div onClick={() => {
             navigator.clipboard.writeText(payment.id);
