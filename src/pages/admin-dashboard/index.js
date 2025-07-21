@@ -1,4 +1,3 @@
-import DashboardHeader from "@/components/modules/Dashboard/DashboardHeader";
 import StatisticsCards from "@/components/templates/AdminDashboard/StatisticsCards/StatisticsCards";
 import StoreMetricsChart from "@/components/templates/AdminDashboard/StoreMetricsChart/StoreMetricsChart";
 import TopProductsList from "@/components/templates/AdminDashboard/TopProductsList/TopProductsList";
@@ -9,19 +8,23 @@ import OrderStatus from "@/components/templates/AdminDashboard/OrderStatus/Order
 import DataTables from "@/components/templates/AdminDashboard/DataTables/DataTables";
 import Sidebar from "@/components/templates/AdminDashboard/Sidebar/Sidebar";
 import { Toaster } from "react-hot-toast";
+import { AppSidebar } from "@/components/templates/AdminDashboard/Sidebar/app-sidebar"
+import { SidebarProvider, SidebarTrigger } from "@/components/shadcn/sidebar"
 
 export default function AdminDashboard() {
 
     return (
         <div className="bg-black/5 font-dana">
-            <Toaster/>
-            <div className="relative flex items-start">
-                {/* side bar */}
-                <Sidebar/>
-                <section className="flex flex-col w-full overflow-hidden">
-                    <DashboardHeader />
+            <Toaster />
+            {/* side bar */}
+            <SidebarProvider className="flex w-full overflow-hidden">
+                <AppSidebar side="right" />
+                <div>
+                    <div className="w-full bg-white p-6">
+                        <SidebarTrigger />
+                    </div>
                     {/* content */}
-                    <section className="p-6 flex flex-col gap-6">
+                    <section className="flex flex-col gap-6  p-6">
                         <StatisticsCards />
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-6">
                             <StoreMetricsChart />
@@ -33,12 +36,12 @@ export default function AdminDashboard() {
                             <TopCategories />
                         </div>
                         <div className="flex flex-col lg:flex-row gap-6">
-                            <RecentUsers/>
-                            <OrderStatus/>
+                            <RecentUsers />
+                            <OrderStatus />
                         </div>
                     </section>
-                </section>
-            </div>
+                </div>
+            </SidebarProvider>
         </div>
     );
 }

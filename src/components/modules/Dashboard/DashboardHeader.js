@@ -7,7 +7,8 @@ import { toggleMobileNavbar } from "@/Utility/UtilityFunction"
 import { useState } from "react";
 import * as motion from "motion/react-client"
 
-export default function DashboardHeader() {
+
+export default function DashboardHeader({admin}) {
 
     const [search, setSearch] = useState()
     return (
@@ -15,10 +16,9 @@ export default function DashboardHeader() {
             {/* overlay */}
             <div onClick={toggleMobileNavbar} className="mobile-overlay"></div>
             {/* bars icon */}
-            <HiMiniBars3 onClick={toggleMobileNavbar} className="md:!hidden size-6" />
-
+            <HiMiniBars3 onClick={toggleMobileNavbar} className={`${admin ? 'lg:!hidden' : 'md:!hidden'} size-6`} />
             {/* search */}
-            <div className="relative z-20 hidden md:flex items-center justify-between gap-x-4 w-60 bg-black/5 rounded-lg py-1 px-4 h-12">
+            <div className={`relative z-20 hidden ${admin ? 'lg:flex' : 'md:flex'} items-center justify-between gap-x-4 w-60 bg-black/5 rounded-lg py-1 px-4 h-12`}>
                 <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder=" تیکت ها، سفارش ها و..." className="size-full text-xs placeholder:text-sm outline-none" />
                 <CiSearch className="text-sm shrink-0 text-gray-500 size-5 cursor-pointer" />
             </div>

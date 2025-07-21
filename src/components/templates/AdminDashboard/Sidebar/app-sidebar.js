@@ -1,29 +1,20 @@
 "use client"
 
 import * as React from "react"
+import { HiOutlineUsers,HiOutlineClipboardList,HiOutlineNewspaper } from "react-icons/hi";
+import { TbReportAnalytics,TbSettings,TbPackages,TbDiscount } from "react-icons/tb";
+
 import {
   AudioWaveform,
-  BookOpen,
-  Bot,
   Command,
-  Frame,
   GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
   SquareTerminal,
 } from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
 import { TeamSwitcher } from "./team-switcher"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarRail,
-} from "@/components/shadcn/sidebar"
+import {Sidebar,SidebarContent,SidebarFooter,SidebarHeader,SidebarRail} from "@/components/shadcn/sidebar"
 
 // This is sample data.
 const data = {
@@ -57,32 +48,9 @@ const data = {
       isActive: true,
     },
     {
-      title: "مدیریت کاربران",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "لیست کاربران",
-          url: "#",
-        },
-        {
-          title: "ایجاد/ ویرایش کاربر",
-          url: "#",
-        },
-        {
-          title: "نقش‌ها و سطح دسترسی",
-          url: "#",
-        },
-        {
-          title: "گزارش فعالیت",
-          url: "#",
-        },
-      ],
-    },
-    {
       title: "مدیریت محصولات",
       url: "#",
-      icon: BookOpen,
+      icon: TbPackages,
       items: [
         {
           title: "لیست محصولات",
@@ -93,19 +61,30 @@ const data = {
           url: "#",
         },
         {
-          title: "دسته‌بندی‌ها",
+          title: "دسته بندی محصولات",
           url: "#",
-        },
-        {
-          title: "تگ‌ها",
-          url: "#",
-        },
+        }
       ],
     },
     {
+      title: "مدیریت کاربران",
+      url: "#",
+      icon: HiOutlineUsers,
+      items: [
+        {
+          title: "لیست کاربران",
+          url: "#",
+        },
+        {
+          title: "گزارش فعالیت",
+          url: "#",
+        },
+      ],
+    }, 
+    {
       title: "مدیریت سفارشات",
       url: "#",
-      icon: BookOpen,
+      icon: HiOutlineClipboardList,
       items: [
         {
           title: "لیست سفارشات",
@@ -122,9 +101,39 @@ const data = {
       ],
     },
     {
+      title: "مقالات",
+      url: "#",
+      icon: HiOutlineNewspaper,
+      items: [
+        {
+          title: "لیست مقالات",
+          url: "#",
+        },
+        {
+          title: "ایجاد مقاله",
+          url: "#",
+        }
+      ],
+    },
+    {
+      title: "کد تخفیف",
+      url: "#",
+      icon: TbDiscount,
+      items: [
+        {
+          title: "دریافت کدهای تخفیف",
+          url: "#",
+        },
+        {
+          title: "ایجاد کد تخفیف",
+          url: "#",
+        }
+      ],
+    },
+    {
       title: "گزارش‌ها",
       url: "#",
-      icon: BookOpen,
+      icon: TbReportAnalytics,
       items: [
         {
           title: "آمار فروش و بازدید",
@@ -141,28 +150,9 @@ const data = {
       ],
     },
     {
-      title: "کامنت‌ها",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "نظرات کاربران",
-          url: "#",
-        },
-        {
-          title: "ارتباط با پشتیبانی",
-          url: "#",
-        },
-        {
-          title: "فرم تماس / تیکت‌ها",
-          url: "#",
-        }
-      ],
-    },
-    {
       title: "تنظیمات سیستم",
       url: "#",
-      icon: BookOpen,
+      icon: TbSettings,
       items: [
         {
           title: "تنظیمات کلی",
@@ -181,44 +171,9 @@ const data = {
           url: "#",
         }
       ],
-    },
-    {
-      title: "مقالات",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "ایجاد مقاله",
-          url: "#",
-        },
-        {
-          title: "ویرایش یا حذف مقاله",
-          url: "#",
-        }
-      ],
-    },
-    {
-      title: "تنظیمات",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "پروفایل",
-          url: "#",
-        },
-        {
-          title: "تغییر رمز",
-          url: "#",
-        },
-        {
-          title: "خروج از سیستم",
-          url: "#",
-        }
-      ],
-    },
+    }
   ],
 }
-
 
 
 export function AppSidebar({ ...props }) {

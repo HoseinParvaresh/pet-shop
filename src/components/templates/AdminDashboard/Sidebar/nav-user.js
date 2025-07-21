@@ -31,7 +31,9 @@ import {
 } from "@/components/shadcn/sidebar"
 
 export function NavUser({user}) {
-  const { isMobile } = useSidebar()
+  const { isMobile,toggleSidebar } = useSidebar()
+  
+  
 
   return (
     <SidebarMenu>
@@ -73,7 +75,7 @@ export function NavUser({user}) {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>
+              <DropdownMenuItem onClick={toggleSidebar}>
                 <Sparkles />
                   ارتقا به پرو
               </DropdownMenuItem>

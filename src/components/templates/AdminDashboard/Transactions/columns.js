@@ -102,7 +102,7 @@ export const columns = [
     cell: ({ row }) => {
       const status = row.getValue("status")
       return (
-        <div className="capitalize text-right">
+        <div className="capitalize text-right font-danaBold">
           {status === "ناموفق" ? <div className="flex items-center gap-1 text-red-500"><HiOutlineXCircle className=" size-4.5" /> <span>ناموفق</span></div> :
             status === "در جریان" ? <div className="flex items-center gap-1 text-yellow-500"><HiOutlineClock className=" size-4.5" /> <span>در جریان</span></div> :
               <div className="flex items-center gap-1 text-green-500"><HiOutlineCheckCircle className=" size-4.5" /> <span>پرداخت شده</span></div>}
