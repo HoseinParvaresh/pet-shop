@@ -3,7 +3,7 @@ import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 import { Card, CardContent } from "@/components/shadcn/card"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/shadcn/chart"
 import MetricCard from "./MetricCard";
-import DashboardSectionHeader from '@/components/modules/Dashboard/DashboardSectionHeader';
+import DashboardSectionHeader from '@/components/templates/AdminDashboard/common/DashboardSectionHeader';
 import { StoreMetricsData } from "@/Utility/Constants";
 export default function StoreMetricsChart() {
 

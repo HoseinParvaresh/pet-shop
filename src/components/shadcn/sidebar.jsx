@@ -117,7 +117,7 @@ function SidebarProvider({
             }
           }
           className={cn(
-            "group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-max",
+            "group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar block md:flex min-h-svh w-max",
             className
           )}
           {...props}>
@@ -178,7 +178,7 @@ function Sidebar({
 
   return (
     <div
-      className="group peer text-sidebar-foreground hidden lg:block"
+      className="group peer text-sidebar-foreground hidden md:block"
       data-state={state}
       data-collapsible={state === "collapsed" ? collapsible : ""}
       data-variant={variant}
@@ -239,7 +239,7 @@ function SidebarTrigger({
         toggleSidebar()
       }}
       {...props}>
-      <PanelLeftIcon />
+      <PanelLeftIcon className="size-5" />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );

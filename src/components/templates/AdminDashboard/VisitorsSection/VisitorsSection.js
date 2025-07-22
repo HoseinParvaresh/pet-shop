@@ -9,7 +9,7 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/shadcn/select"
 import { ToggleGroup, ToggleGroupItem } from "@/components/shadcn/toggle-group"
 import { convertDate } from "@/Utility/UtilityFunction"
-import DashboardSectionHeader from "@/components/modules/Dashboard/DashboardSectionHeader"
+import DashboardSectionHeader from "@/components/templates/AdminDashboard/common/DashboardSectionHeader"
 
 const chartConfig = {
   visitors: {

@@ -6,10 +6,10 @@ import TopCategories from "@/components/templates/AdminDashboard/TopCategories/T
 import RecentUsers from "@/components/templates/AdminDashboard/RecentUsers/RecentUsers";
 import OrderStatus from "@/components/templates/AdminDashboard/OrderStatus/OrderStatus";
 import DataTables from "@/components/templates/AdminDashboard/DataTables/DataTables";
-import Sidebar from "@/components/templates/AdminDashboard/Sidebar/Sidebar";
 import { Toaster } from "react-hot-toast";
 import { AppSidebar } from "@/components/templates/AdminDashboard/Sidebar/app-sidebar"
 import { SidebarProvider, SidebarTrigger } from "@/components/shadcn/sidebar"
+import DashboardHeader from "@/components/templates/UserDashboard/DashboardHeader/DashboardHeader";
 
 export default function AdminDashboard() {
 
@@ -17,12 +17,12 @@ export default function AdminDashboard() {
         <div className="bg-black/5 font-dana">
             <Toaster />
             {/* side bar */}
-            <SidebarProvider className="flex w-full overflow-hidden">
+            <SidebarProvider className="w-full overflow-hidden">
                 <AppSidebar side="right" />
-                <div>
-                    <div className="w-full bg-white p-6">
-                        <SidebarTrigger />
-                    </div>
+                <section>
+                    {/* header */}
+
+                    <DashboardHeader admin={true}/>
                     {/* content */}
                     <section className="flex flex-col gap-6  p-6">
                         <StatisticsCards />
@@ -40,7 +40,7 @@ export default function AdminDashboard() {
                             <OrderStatus />
                         </div>
                     </section>
-                </div>
+                </section>
             </SidebarProvider>
         </div>
     );

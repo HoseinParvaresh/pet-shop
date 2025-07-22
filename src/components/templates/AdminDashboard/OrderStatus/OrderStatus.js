@@ -11,7 +11,7 @@ import {
     ChartLegend,
     ChartLegendContent
 } from "@/components/shadcn/chart"
-import DashboardSectionHeader from "@/components/modules/Dashboard/DashboardSectionHeader"
+import DashboardSectionHeader from "@/components/templates/AdminDashboard/common/DashboardSectionHeader"
 import { OrderStatusData } from "@/Utility/Constants"
 
 

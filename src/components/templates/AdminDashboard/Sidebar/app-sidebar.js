@@ -1,8 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { HiOutlineUsers,HiOutlineClipboardList,HiOutlineNewspaper } from "react-icons/hi";
-import { TbReportAnalytics,TbSettings,TbPackages,TbDiscount } from "react-icons/tb";
+import { HiOutlineUsers, HiOutlineClipboardList, HiOutlineNewspaper } from "react-icons/hi";
+import { TbReportAnalytics, TbSettings, TbPackages, TbDiscount } from "react-icons/tb";
 
 import {
   AudioWaveform,
@@ -14,7 +14,9 @@ import {
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
 import { TeamSwitcher } from "./team-switcher"
-import {Sidebar,SidebarContent,SidebarFooter,SidebarHeader,SidebarRail} from "@/components/shadcn/sidebar"
+import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@/components/shadcn/sidebar"
+import { useSidebar } from "@/components/shadcn/sidebar"
+
 
 // This is sample data.
 const data = {
@@ -80,7 +82,7 @@ const data = {
           url: "#",
         },
       ],
-    }, 
+    },
     {
       title: "مدیریت سفارشات",
       url: "#",
@@ -177,6 +179,30 @@ const data = {
 
 
 export function AppSidebar({ ...props }) {
+
+  const { toggleSidebar } = useSidebar()
+  const triggeredRef = React.useRef(false);
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1023px)');
+
+    const handleChange = (e) => {
+      if (e.matches && !triggeredRef.current) {
+        triggeredRef.current = true;
+        toggleSidebar()
+      }
+    };
+    if (mediaQuery.matches && !triggeredRef.current) {
+      triggeredRef.current = true;
+      toggleSidebar()
+    }
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
+
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
@@ -188,7 +214,7 @@ export function AppSidebar({ ...props }) {
       <SidebarFooter>
         <NavUser user={data.user} />
       </SidebarFooter>
-      <SidebarRail />
+      <SidebarRail className="!hidden lg:!block" />
     </Sidebar>
   )
 }

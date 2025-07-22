@@ -13,12 +13,12 @@ import AsideMenuItem from "./SidebarMenuItem";
 export default function Aside() {
 
     const AsideMenuItems = [
-        { id: 1, title: 'خانه', link: '/', icon: <BiHomeAlt2 /> },
-        { id: 2, title: 'سفارش های من', link: '/', icon: <BiReceipt /> },
-        { id: 3, title: ' آدرس ها', link: '/', icon: <RiMapPinLine /> },
-        { id: 4, title: 'تیکت های پشتیبانی', link: '/', icon: <HiOutlineChatAlt2 /> },
-        { id: 5, title: 'علاقه مندی ها', link: '/', icon: <AiOutlineHeart /> },
-        { id: 6, title: 'جزئیات حساب', link: '/', icon: <MdOutlineManageAccounts /> },
+        { id: 1, title: 'خانه', link: '/', icon: BiHomeAlt2 },
+        { id: 2, title: 'سفارش های من', link: '/', icon: BiReceipt },
+        { id: 3, title: ' آدرس ها', link: '/', icon: RiMapPinLine },
+        { id: 4, title: 'تیکت های پشتیبانی', link: '/', icon: HiOutlineChatAlt2 },
+        { id: 5, title: 'علاقه مندی ها', link: '/', icon: AiOutlineHeart },
+        { id: 6, title: 'جزئیات حساب', link: '/', icon: MdOutlineManageAccounts },
     ]
     
     return (
@@ -57,7 +57,7 @@ export default function Aside() {
             <div class="flex flex-col gap-y-4">
                 {
                     AsideMenuItems.map((item) => (
-                        <AsideMenuItem key={item.id} title={item.title} link={item.link} icon={item.icon}/>
+                        <AsideMenuItem key={item.id} {...item}/>
                     ))
                 }
             </div>

@@ -1,4 +1,4 @@
-import DashboardSectionHeader from "@/components/modules/Dashboard/DashboardSectionHeader";
+import DashboardSectionHeader from "@/components/templates/AdminDashboard/common/DashboardSectionHeader";
 import TopProductItem from "./TopProductItem";
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules';
