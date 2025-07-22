@@ -18,13 +18,12 @@ export default function AdminDashboard() {
             <Toaster />
             {/* side bar */}
             <SidebarProvider className="w-full overflow-hidden">
+                {/* sidebar */}
                 <AppSidebar side="right" />
                 <section>
-                    {/* header */}
-
                     <DashboardHeader admin={true}/>
                     {/* content */}
-                    <section className="flex flex-col gap-6  p-6">
+                    <section className="flex flex-col gap-6 p-6">
                         <StatisticsCards />
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-6">
                             <StoreMetricsChart />

@@ -35,7 +35,7 @@ export default function HeaderButtons() {
       </motion.div>
       {/* user button */}
       <motion.div
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.8 }}
       >
         {

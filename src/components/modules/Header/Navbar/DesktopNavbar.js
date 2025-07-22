@@ -31,7 +31,7 @@ export default function DesktopNavbar() {
                 menuList.map((item) => (
                     <motion.li
                         key={item.id}
-                        whileHover={{ scale: 1.2 }}
+                        whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.8 }}
                         className="cursor-pointer hover:text-primary transition-colors"
                         onMouseEnter={mouseEnterHandler}
