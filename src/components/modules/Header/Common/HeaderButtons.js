@@ -6,7 +6,6 @@ import { useContext } from "react";
 export default function HeaderButtons() {
 
   const authContext = useContext(AuthContext)
-  console.log(authContext);
 
   return (
     <div className="flex items-center justify-between gap-4">
@@ -34,7 +33,7 @@ export default function HeaderButtons() {
         </Link>
       </motion.div>
       {/* user button */}
-      <motion.div
+      <div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.8 }}
       >
@@ -54,7 +53,7 @@ export default function HeaderButtons() {
             </Link>
           )
         }
-      </motion.div >
+      </div>
     </div>
   );
 }

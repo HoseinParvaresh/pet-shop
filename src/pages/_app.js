@@ -49,6 +49,9 @@ export default function App({ Component, pageProps,router }) {
         setToken(localStorageData.token)
         setIsLoggedIn(true)
         setUserInfos(res.data.data)
+      }).catch(res => {
+        console.log(res);
+        
       })
     }
   }, [login])
