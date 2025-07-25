@@ -1,5 +1,5 @@
 "use client"
-import DashboardSectionHeader from "@/components/templates/AdminDashboard/common/DashboardSectionHeader";
+import DashboardSectionHeader from "../common/DashboardSectionHeader"
 import { Pie, PieChart, Label } from "recharts"
 import { Card, CardContent } from "@/components/shadcn/card"
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent } from "@/components/shadcn/chart"

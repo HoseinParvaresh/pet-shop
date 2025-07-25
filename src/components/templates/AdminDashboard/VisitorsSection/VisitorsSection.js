@@ -4,12 +4,12 @@ import React, { useState, useEffect } from "react"
 import { VisitorsSectionData as chartData } from "@/Utility/Constants"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 import { useIsMobile } from "@/hooks/use-mobile"
-import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/shadcn/card"
+import { Card, CardAction, CardContent, CardHeader } from "@/components/shadcn/card"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/shadcn/chart"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/shadcn/select"
 import { ToggleGroup, ToggleGroupItem } from "@/components/shadcn/toggle-group"
 import { convertDate } from "@/Utility/UtilityFunction"
-import DashboardSectionHeader from "@/components/templates/AdminDashboard/common/DashboardSectionHeader"
+import DashboardSectionHeader from "../common/DashboardSectionHeader"
 
 const chartConfig = {
   visitors: {
@@ -54,7 +54,7 @@ export default function VisitorsSection() {
   return (
     <Card className="@container/card shadow-none border-none w-full">
       <CardHeader>
-        <DashboardSectionHeader title={"تمام بازدید کنندگان"} subtitle={"در 3 ماه اخیر"}/>
+        <DashboardSectionHeader title={"تمام بازدید کنندگان"} subtitle={"در 3 ماه اخیر"} />
         <CardAction>
           <ToggleGroup type="single" value={timeRange} onValueChange={setTimeRange} variant="outline" className="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex">
             <ToggleGroupItem className="dir-rtl" value="90d">3 ماه گذشته</ToggleGroupItem>
