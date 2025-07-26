@@ -162,14 +162,16 @@ export function AuthForm({ className, ...props }) {
                             <div className="grid gap-3">
                                 <div className="flex items-center">
                                     <Label htmlFor="password">رمز عبور</Label>
-                                    <Link
-                                        href="#"
-                                        className="mr-auto text-black/70 hover:text-black text-sm underline-offset-2 hover:underline transition-colors"
-                                    >
+                                    <Link href="#" className="mr-auto text-black/70 hover:text-black text-sm underline-offset-2 hover:underline transition-colors">
                                         رمز عبورت رو فراموش کردی؟
                                     </Link>
                                 </div>
-                                <Input id="password" type="password" required value={password} onChange={e => setPassword(e.target.value)} />
+                                <Input
+                                    id="password"
+                                    type="password"
+                                    required value={password}
+                                    onChange={e => setPassword(e.target.value)}
+                                    className={"dir-ltr"} />
                             </div>
                             <div onClick={() => signup(email, password)} className="w-full btn btn-primary btn-sm py-2 rounded-md">
                                 ادامه
