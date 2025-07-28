@@ -9,8 +9,7 @@ import Footer from "@/components/modules/Footer/Footer";
 import AuthProvider from "@/context/authContext";
 export default function App({ Component, pageProps, router }) {
 
-
-  const noLayoutRoutes = ['/user-dashboard','/admin-dashboard']
+  const noLayoutRoutes = ['/user-dashboard', '/admin-dashboard']
   const isNoLayout = noLayoutRoutes.includes(router.pathname)
 
   useEffect(() => {
@@ -22,11 +21,11 @@ export default function App({ Component, pageProps, router }) {
   return (
     <AuthProvider>
       <div className="font-dana">
-          <Svg />
-          {!isNoLayout && <Header />}
-          <Component {...pageProps} />
-          {!isNoLayout && <Footer />}
-      </div>
-    </AuthProvider>
+        <Svg />
+        {!isNoLayout && <Header />}
+        <Component {...pageProps} />
+        {!isNoLayout && <Footer />}
+      </div >
+    </AuthProvider >
   );
 }

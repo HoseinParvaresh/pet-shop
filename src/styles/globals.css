@@ -189,6 +189,20 @@
     @apply text-xs md:text-sm font-danaBold opacity-80 text-center md:text-start;
   }
 
+  /* loading */
+  #loading text {
+    @apply stroke-primary text-[70px] 2xs:text-[100px] md:text-[150px] stroke-[5px] animate-[textAnimate_2s_infinite_alternate] fill-primary;
+  }
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      fill: transparent;
+    }
+    100% {
+      stroke-dasharray: 50% 0;
+    }
+  }
+
   /* ------ { ... Home Page Component ... } ------ */
   /* title */
   .title {
@@ -343,7 +357,6 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 :root {
-
   body[data-scroll-locked][data-scroll-locked] {
     overflow: auto !important;
   }
@@ -351,15 +364,3 @@
     margin-right: 0 !important;
   }
 }
-
-.dark {
-  --sidebar: hsl(240 5.9% 10%);
-  --sidebar-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-primary: hsl(224.3 76.3% 48%);
-  --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(240 3.7% 15.9%);
-  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-border: hsl(240 3.7% 15.9%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
-}
-

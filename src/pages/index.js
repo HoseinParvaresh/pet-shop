@@ -9,8 +9,31 @@ import IntroducingProducts from "@/components/templates/Home/IntroducingProducts
 import { Toaster } from "react-hot-toast";
 import Swal from 'sweetalert2'
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { useState, useEffect } from "react";
 
 export default function Home() {
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+
+  }, [])
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false)
+    }
+
+    if (document.readyState === 'complete') {
+      handleLoad()
+    } else {
+      window.addEventListener('load', handleLoad)
+    }
+
+    return () => {
+      window.removeEventListener('load', handleLoad)
+    }
+  }, [])
 
   // Swal.fire({
   //   text: "سایت هنوز در مرحله توسعه قرار داره و ممکنه ظاهرش یا فیچر هاش در ادامه تغییر کنه",
@@ -18,16 +41,28 @@ export default function Home() {
   // });
 
   return (
-    <ParallaxProvider>
-      <Toaster />
-      <TopImage />
-      <OurAdvantages />
-      <OurServices />
-      <TrustUs />
-      <CustomerComments />
-      <LastArticles />
-      <IntroducingProducts />
-      <JoinNewsletter />
-    </ParallaxProvider>
+    <>
+      {
+        loading &&
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
+          <svg id="loading" className="w-full h-full">
+            <text className="font-Morabba 2xs:font-MorabbaBold" x="50%" y="50%" textAnchor="middle">
+              پیلیسوک
+            </text>
+          </svg>
+        </div>
+      }
+      <ParallaxProvider>
+        <Toaster />
+        <TopImage />
+        <OurAdvantages />
+        <OurServices />
+        <TrustUs />
+        <CustomerComments />
+        <LastArticles />
+        <IntroducingProducts />
+        <JoinNewsletter />
+      </ParallaxProvider>
+    </>
   );
 }
