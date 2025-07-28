@@ -5,7 +5,7 @@ import { Input } from "@/components/shadcn/input"
 import { Label } from "@/components/shadcn/label"
 import Link from "next/link"
 import React, { useState, useContext } from 'react';
-import AuthContext from '@/context/authContext';
+import { AuthContext } from "@/context/authContext"
 import { v4 as uuidv4 } from 'uuid';
 import { isValidEmail, isValidPassword } from '@/Utility/UtilityFunction';
 import Alert from '@/Utility/Alert';
@@ -38,7 +38,7 @@ export function AuthForm({ className, ...props }) {
                 authContext.login(res.data.user, res.data.access)
                 setTimeout(() => {
                     window.location.replace("/")
-                  }, 2000);
+                }, 2000);
             }
         } catch (error) {
             if (error.response?.status === 401) {
@@ -49,6 +49,7 @@ export function AuthForm({ className, ...props }) {
                 return false
             } else {
                 Alert("error", "خطای ناشناخته");
+                console.log(error);
                 return false
             }
         }
