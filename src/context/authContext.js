@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState, useCallback,useContext } from "react";
+import { createContext, useEffect, useState, useCallback, useContext } from "react";
 import apiRequests from "@/Services/Axios/Configs/Configs";
 
 
@@ -46,13 +46,7 @@ export default function AuthProvider({ children }) {
     }, [login])
 
     return (
-        <AuthContext.Provider value={{
-            isLoggedIn,
-            token,
-            userInfos,
-            login,
-            logout
-        }}>
+        <AuthContext.Provider value={{ isLoggedIn, token, userInfos, login, logout }}>
             {children}
         </AuthContext.Provider>
     );
