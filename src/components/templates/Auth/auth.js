@@ -88,6 +88,7 @@ export function AuthForm({ className, ...props }) {
                 return false
             } else {
                 Alert("error", "خطای ناشناخته");
+                console.log(error);
                 return false
             }
         }
