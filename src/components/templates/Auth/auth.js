@@ -36,7 +36,9 @@ export function AuthForm({ className, ...props }) {
             if (res.status === 200) {
                 Alert("successful", "با موفقیت وارد شدید");
                 authContext.login(res.data.user, res.data.access)
-                router.replace("/")
+                setTimeout(() => {
+                    window.location.replace("/")
+                  }, 2000);
             }
         } catch (error) {
             if (error.response?.status === 401) {

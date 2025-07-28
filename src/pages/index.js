@@ -8,6 +8,8 @@ import JoinNewsletter from "@/components/templates/Home/JoinNewsletter/JoinNewsl
 import IntroducingProducts from "@/components/templates/Home/IntroducingProducts/IntroducingProducts";
 import { Toaster } from "react-hot-toast";
 import Swal from 'sweetalert2'
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 export default function Home() {
 
   // Swal.fire({
@@ -16,7 +18,7 @@ export default function Home() {
   // });
 
   return (
-    <>
+    <ParallaxProvider>
       <Toaster />
       <TopImage />
       <OurAdvantages />
@@ -26,6 +28,6 @@ export default function Home() {
       <LastArticles />
       <IntroducingProducts />
       <JoinNewsletter />
-    </>
+    </ParallaxProvider>
   );
 }

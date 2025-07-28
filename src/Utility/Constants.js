@@ -17,6 +17,12 @@ const menuList = [
     { id: 4, title: "درباره ما", link: "/about" },
     { id: 5, title: "تماس با ما ", link: "/contact" },
 ]
+const productSortList = [
+    { id: 1, title: "همه محصولات", dataId: "default", first: true },
+    { id: 2, title: "ارزان ترین", dataId: "cheapest", first: false },
+    { id: 3, title: "گران ترین", dataId: "most-expensive", first: false },
+    { id: 4, title: "پرفروش ترین", dataId: "best-seller", first: false },
+]
 //chart data
 const TransactionsData = [
     { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com", name: "حسین پرورش", number: "09176437156", date: ["1404-05-05", "18:20:16"] },
@@ -224,7 +230,7 @@ const OrderSummaryData = [
 ]
 
 export {
-    url, toggleList, categoryList, menuList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
+    url, toggleList, categoryList, menuList, productSortList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
     StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData, TopProductsListData, RecentUsersData,
     OrderStatusData, OrderSummaryData
 }
