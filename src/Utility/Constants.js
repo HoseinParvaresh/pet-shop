@@ -23,6 +23,15 @@ const productSortList = [
     { id: 3, title: "گران ترین", dataId: "most-expensive", first: false },
     { id: 4, title: "پرفروش ترین", dataId: "best-seller", first: false },
 ]
+// about page
+const AboutExamplesOfOurWork = [
+    { id: 1, petName: "خپلی", service: "اصلاح", image: "a1.jpg" },
+    { id: 2, petName: "غلام", service: "شستشو", image: "a2.jpg" },
+    { id: 3, petName: "محمد سُمبل", service: "واکسن", image: "a3.png" },
+    { id: 4, petName: "محمود", service: "پانسیون", image: "a5.png" },
+    { id: 5, petName: "خالد کشمیری", service: "پانسیون", image: "cat-res.jpg" },
+    { id: 6, petName: "گرگعلی", service: "شستشو", image: "a6.jpg" },
+]
 //chart data
 const TransactionsData = [
     { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com", name: "حسین پرورش", number: "09176437156", date: ["1404-05-05", "18:20:16"] },
@@ -232,5 +241,5 @@ const OrderSummaryData = [
 export {
     url, toggleList, categoryList, menuList, productSortList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
     StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData, TopProductsListData, RecentUsersData,
-    OrderStatusData, OrderSummaryData
+    OrderStatusData, OrderSummaryData, AboutExamplesOfOurWork
 }

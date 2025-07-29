@@ -17,13 +17,13 @@ export default function Header() {
       <div className="hidden lg:flex items-center justify-between max-w-[1536px] mx-auto">
         <Logo />
         <DesktopNavbar />
-        <HeaderButtons isLoggedIn={authContext.isLoggedIn} />
+        <HeaderButtons isLoggedIn={authContext.isLoggedIn} role={authContext.userInfos ? authContext.userInfos.role : false} />
       </div>
       {/* Mobile Navbar */}
       <div className="flex items-center justify-between lg:hidden">
         <MobileNavbar />
         <Logo />
-        <HeaderButtons />
+        <HeaderButtons isLoggedIn={authContext.isLoggedIn} role={authContext.userInfos ? authContext.userInfos.role : false} />
       </div>
     </div>
   );

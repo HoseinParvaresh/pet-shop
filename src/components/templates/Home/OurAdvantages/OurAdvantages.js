@@ -7,7 +7,9 @@ export default function OurAdvantages() {
             <div data-aos="fade-left" className="flex flex-col gap-5">
                 <p className="head-title"> مـزیـت هـای مـا </p>
                 <p className="title"> چرا فروشگاه پیلیسوک؟! </p>
-                <p className="title-desc">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز می باشد.</p>
+                <p className="title-desc">در پیلیسوک، ما فقط محصولات نمی‌فروشیم؛ ما عاشق حیواناتیم و دغدغه‌مون رفاه، سلامت و خوشحالی دوست کوچولوی شماست.
+                از غذا و اسباب‌بازی گرفته تا خدمات تخصصی مثل پانسیون، اصلاح و شست‌وشو ، همه چیز رو یک‌جا و با کیفیت بالا برای شما فراهم کردیم.
+                </p>
                 {/* check box */}
                 <div className="grid grid-cols-1 4xs:grid-cols-2 gap-7">
                     <OurAdvantagesCheckBox title={"نیروهای متخصص"}/>

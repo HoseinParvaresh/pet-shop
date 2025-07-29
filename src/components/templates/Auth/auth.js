@@ -10,7 +10,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { isValidEmail, isValidPassword } from '@/Utility/UtilityFunction';
 import Alert from '@/Utility/Alert';
 import apiRequests from '@/Services/Axios/Configs/Configs';
-import { useRouter } from 'next/router';
 
 export function AuthForm({ className, ...props }) {
 
@@ -20,8 +19,7 @@ export function AuthForm({ className, ...props }) {
     const [code, setCode] = useState("")
     const [stepRegister, setStepRegister] = useState(['', 'hidden'])
 
-    const router = useRouter()
-    const authContext = useContext(AuthContext)
+    const authContext = useContext(AuthContext)    
 
     async function login() {
 
