@@ -1,7 +1,7 @@
 import { MdOutlinePets } from "react-icons/md";
 import Alert from "@/Utility/Alert";
 import { isValidEmail } from "@/Utility/UtilityFunction";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 export default function JoinNewsletter() {
 

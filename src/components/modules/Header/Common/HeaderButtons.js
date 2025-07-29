@@ -2,8 +2,6 @@ import Link from "next/link";
 import * as motion from "motion/react-client"
 export default function HeaderButtons({ isLoggedIn, role }) {
 
-  console.log(role);
-
   return (
     <div className="flex items-center justify-between gap-4">
       {/* search button */}

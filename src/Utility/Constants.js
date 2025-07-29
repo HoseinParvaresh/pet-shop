@@ -32,6 +32,18 @@ const AboutExamplesOfOurWork = [
     { id: 5, petName: "خالد کشمیری", service: "پانسیون", image: "cat-res.jpg" },
     { id: 6, petName: "گرگعلی", service: "شستشو", image: "a6.jpg" },
 ]
+// main page
+const OurServicesCards = [
+    { id: 1, title: "آموزش حیوانات", src: "/images/service-1.jpg", icon: "service-1-bg", link: "/about", desc: "رفتار خوب، با آموزش درست شروع می‌شه! در پیلیسوک، مربیان حرفه‌ای با روش‌های مهربون و اصولی به پت شما آموزش می‌دن تا زندگی کنار هم راحت‌تر و شادتر باشه." },
+    { id: 2, title: "سلامت حیوانات", src: "/images/service-2.jpg", icon: "paw-header", link: "/about", desc: "سلامتی پت‌ها برای ما اولویت شماره یکه! خدمات دامپزشکی پیلیسوک با حضور پزشکان مجرب، شامل واکسیناسیون، معاینه، چکاپ و مشاوره تخصصی هست." },
+    { id: 3, title: "نگهداری حیوانات", src: "/images/service-3.jpg", icon: "service-3-bg", link: "/about", desc: "نگران تنها موندن پت عزیزتون نباشید! ما در پیلیسوک با محیطی امن، تمیز و شاد، از حیوانات خانگی شما مثل یکی از اعضای خانواده مراقبت می‌کنیم." }
+]
+const customerCommentsItems = [
+    { id: 1, userProfileSrc: "/images/c-1.jpg", petProfileSrc: "/images/p-1.jpg", name: "حسین پرورش", petName: "جسیکا", rate: 4, desc: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است." },
+    { id: 2, userProfileSrc: "/images/c-1.jpg", petProfileSrc: "/images/p-1.jpg", name: "حسین پرورش", petName: "جسیکا", rate: 4, desc: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است." },
+    { id: 3, userProfileSrc: "/images/c-1.jpg", petProfileSrc: "/images/p-1.jpg", name: "حسین پرورش", petName: "جسیکا", rate: 4, desc: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است." },
+    { id: 4, userProfileSrc: "/images/c-1.jpg", petProfileSrc: "/images/p-1.jpg", name: "حسین پرورش", petName: "جسیکا", rate: 4, desc: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است." },
+]
 //chart data
 const TransactionsData = [
     { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com", name: "حسین پرورش", number: "09176437156", date: ["1404-05-05", "18:20:16"] },
@@ -241,5 +253,5 @@ const OrderSummaryData = [
 export {
     url, toggleList, categoryList, menuList, productSortList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
     StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData, TopProductsListData, RecentUsersData,
-    OrderStatusData, OrderSummaryData, AboutExamplesOfOurWork
+    OrderStatusData, OrderSummaryData, AboutExamplesOfOurWork, OurServicesCards, customerCommentsItems
 }
