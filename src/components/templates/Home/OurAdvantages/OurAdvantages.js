@@ -1,5 +1,4 @@
 import OurAdvantagesCheckBox from "./OurAdvantagesCheckBox";
-
 export default function OurAdvantages() {
     return (
         <div className="container flex flex-col lg:flex-row gap-5 items-center mt-90 2xs:mt-80 md:mt-30">

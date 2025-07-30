@@ -1,13 +1,16 @@
 import CustomerComment from "./CustomerComment";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SectionHeader from "../common/SectionHeader";
 import "swiper/css";
 import { customerCommentsItems } from "@/Utility/Constants";
 export default function CustomerComments() {
 
     return (
         <div className="container mt-10 2xs:mt-20">
-            <SectionHeader title="نظـرات مشتـریان" subTitle="نظـرات برخـی از مشتـریان ما" desc=" لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه می باشد." />
+            <div data-aos="fade-down" className="flex-center flex-col text-center gap-3">
+                <p className="head-title">نظـرات مشتـریان</p>
+                <p className="title max-w-110">نظـرات برخـی از مشتـریان ما</p>
+                <p className="title-desc">تجربه‌ی مشتریان واقعی، بهترین نشان‌دهنده کیفیت خدمات ماست. ببینید پت‌دوستان درباره پیلیسوک چه می‌گویند!</p>
+            </div>
             {/* bottom => comments */}
             <div data-aos="fade-up" className="flex gap-15">
                 <Swiper
