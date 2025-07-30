@@ -40,6 +40,7 @@ Pilisook creates a safe and reliable space for pet lovers to confidently provide
   <img src="https://img.shields.io/badge/Tailwind%20CSS-222222?style=for-the-badge&logo=Tailwind+CSS&logoColor=06B6D4" alt="tailwind logo" />
   <img src="https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=Framer&logoColor=FFFFFF" alt="framer logo" />
   <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcn%2Fui&logoColor=FFFFFF" alt="shadcn logo" />
+  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=FFFFFF" alt="eslint logo" />
   <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=FFFFFF" alt="axios logo" />
   <img src="https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=Leaflet&logoColor=FFFFFF" alt="leaflet logo" />
   <img src="https://img.shields.io/badge/Swiper-6332F6?style=for-the-badge&logo=Swiper&logoColor=FFFFFF" alt="swiper logo" />
