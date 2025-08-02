@@ -8,7 +8,7 @@ import OrderStatus from "@/components/templates/AdminDashboard/OrderStatus/Order
 import DataTables from "@/components/templates/AdminDashboard/DataTables/DataTables";
 import { Toaster } from "react-hot-toast";
 import { AppSidebar } from "@/components/templates/AdminDashboard/Sidebar/app-sidebar"
-import { SidebarProvider, SidebarTrigger } from "@/components/shadcn/sidebar"
+import { SidebarProvider } from "@/components/shadcn/sidebar"
 import DashboardHeader from "@/components/templates/UserDashboard/DashboardHeader/DashboardHeader";
 
 export default function AdminDashboard() {

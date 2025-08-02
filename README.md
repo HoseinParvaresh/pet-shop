@@ -67,7 +67,7 @@ Pilisook creates a safe and reliable space for pet lovers to confidently provide
 ## 👥 Authors
 
 - [Hosein Parvaresh](https://github.com/HoseinParvaresh) (Front-end Developer)
-- [Abolfazl Kameli](https://github.com/AbolfazlKameli) (Back-end Developer)
+- [Abolfazl Kameli](https://github.com/AbolfazlKameli/PetShop) (Back-end Developer)
 
 <br clear="both">
   
@@ -99,6 +99,23 @@ $ npm run dev
 # The server will initialize in the <http://localhost:3000>
 ```
 ###
+<br clear="both">
+
+## 📃 Site pages
+
+- [user dashboard](https://pet-shop-five-sable.vercel.app/user-dashboard)
+- [admin dashboard](https://pet-shop-five-sable.vercel.app/admin-dashboard) 
+- [store](https://pet-shop-five-sable.vercel.app/store)
+- [store](https://pet-shop-five-sable.vercel.app/store)
+- [reservation](https://pet-shop-five-sable.vercel.app/reservation)
+- [reservation](https://pet-shop-five-sable.vercel.app/reservation)
+- [about](https://pet-shop-five-sable.vercel.app/about)
+- [contact](https://pet-shop-five-sable.vercel.app/contact)
+- [auth](https://pet-shop-five-sable.vercel.app/auth)
+
+Click on any of the links to view that page of the website.
+
+<br clear="both">
 
 <h2 align="left">📁 Folder Structure </h2>
 

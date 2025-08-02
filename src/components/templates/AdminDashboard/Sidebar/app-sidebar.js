@@ -22,7 +22,7 @@ import { useSidebar } from "@/components/shadcn/sidebar"
 const data = {
   user: {
     name: "مدیر سیستم",
-    email: "admin@example.com",
+    email: "hoseinp753@gmail.com",
     avatar: "/avatars/admin.jpg",
   },
   teams: [
@@ -60,7 +60,7 @@ const data = {
         },
         {
           title: "افزودن محصول جدید",
-          url: "#",
+          url: "/admin-dashboard/add-product",
         },
         {
           title: "دسته بندی محصولات",
