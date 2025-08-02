@@ -40,7 +40,7 @@ export default function HeaderButtons({ isLoggedIn, role }) {
             </motion.div>
           ) :
             (
-              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                 <Link href={"/auth"} className="flex-center gap-2 btn btn-primary btn-xs py-1.5 px-2.5 2xs:px-2">
                   <span className="text-xs 2xs:text-sm">ورود | ثبت نام</span>
                   <svg className="size-7.5 cursor-pointer text-white hidden 2xs:block">
