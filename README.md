@@ -1,5 +1,7 @@
 <h1 align="center">PetShop Site (Pilisook)</h1>
 
+[![en](https://img.shields.io/badge/language-farsi-blue.svg)](https://github.com/HoseinParvaresh/pet-shop/blob/main/README.fa.md)
+
 ###
 
 <p align="left">Pilisook is an online platform for buying, selling, and accessing specialized services related to pets. 🐾
