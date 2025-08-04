@@ -5,7 +5,7 @@ import { FaBox } from "react-icons/fa6";
 
 export default function TopFooter() {
     return (
-        <div className="flex justify-between items-center bg-primary bg__footer w-full rounded-lg">
+        <div className="flex justify-between items-center bg-primary bg__footer w-full rounded-b-lg">
             <div className="container flex flex-wrap gap-5 md:gap-8 items-center justify-center sm:justify-around py-5 md:py-7">
                 <div className="footer__box">
                     <LuPackageCheck className="text-dark-primary size-6 md:size-8" />

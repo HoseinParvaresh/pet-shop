@@ -4,6 +4,46 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 export default function LastArticles() {
+
+    const LastArticlesItem = [
+        {
+            id: 1,
+            title: "بیماری‌های شایع حیوانات خانگی",
+            image: "/images/a-1.jpg",
+            date: "1404-03-14",
+            author: "طراح سایت",
+            commentNumber: 10,
+            desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک."
+        },
+        {
+            id: 2,
+            title: "نکات مهم در تغذیه سگ‌ها",
+            image: "/images/a-2.jpg",
+            date: "1404-04-01",
+            author: "مدیر محتوا",
+            commentNumber: 7,
+            desc: "در این مقاله به بررسی غذاهای مناسب و ممنوعه برای سگ‌ها می‌پردازیم تا سلامت آن‌ها تضمین شود."
+        },
+        {
+            id: 3,
+            title: "چگونه گربه‌ای سالم و شاد داشته باشیم؟",
+            image: "/images/a-3.jpg",
+            date: "1404-12-10",
+            author: "کارشناس دامپزشکی",
+            commentNumber: 5,
+            desc: "با رعایت چند نکته ساده می‌توانید از نظر جسمی و روانی از گربه‌تان مراقبت کنید."
+        },
+        {
+            id: 4,
+            title: "آشنایی با رفتارهای غیرعادی حیوانات خانگی",
+            image: "/images/a-4.jpg",
+            date: "1404-8-18",
+            author: "تیم پیلیسوک",
+            commentNumber: 12,
+            desc: "رفتارهای غیرعادی ممکن است نشانه بیماری یا استرس در حیوانات باشد؛ در این مقاله آن‌ها را بررسی می‌کنیم."
+        }
+    ];
+
     return (
         <div className="bg-secondary mt-10">
             <div className="container py-10">
@@ -34,25 +74,13 @@ export default function LastArticles() {
                             },
                         }}
                     >
-                        <SwiperSlide>
-                            <LastArticle />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LastArticle />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LastArticle />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LastArticle />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LastArticle />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LastArticle />
-                        </SwiperSlide>
-
+                        {
+                            LastArticlesItem.map((item) => (
+                                <SwiperSlide key={item.id}>
+                                    <LastArticle {...item} />
+                                </SwiperSlide>
+                            ))
+                        }
                     </Swiper>
                 </div>
             </div>

@@ -11,7 +11,7 @@ export default function About() {
             <PageHead title="درباره ما" image="cat-4.png" />
             <div className="container">
                 {/* Description / image */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 mb-5">
+                <div className="grid grid-cols-1 lg:grid-cols-2 mb-5 text-justify">
                     {/* Description */}
                     <div>
                         <p className="text-2xl/8 md:text-4xl/12 font-danaBold text-primary">درباره پیلیسوک</p>

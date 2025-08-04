@@ -248,7 +248,7 @@ export function AuthForm({ className, ...props }) {
                     {/* image */}
                     <div className="bg-black/10 relative hidden md:block">
                         <img
-                            src="/placeholder.svg"
+                            src="/images/login-cat.png"
                             alt="Image"
                             className="absolute inset-0 h-full w-full object-cover"
                         />

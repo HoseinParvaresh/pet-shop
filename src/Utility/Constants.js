@@ -39,10 +39,9 @@ const OurServicesCards = [
     { id: 3, title: "نگهداری حیوانات", src: "/images/service-3.jpg", icon: "service-3-bg", link: "/about", desc: "نگران تنها موندن پت عزیزتون نباشید! ما در پیلیسوک با محیطی امن، تمیز و شاد، از حیوانات خانگی شما مثل یکی از اعضای خانواده مراقبت می‌کنیم." }
 ]
 const customerCommentsItems = [
-    { id: 1, userProfileSrc: "/images/c-1.jpg", petProfileSrc: "/images/p-1.jpg", name: "حسین پرورش", petName: "جسیکا", rate: 4, desc: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است." },
-    { id: 2, userProfileSrc: "/images/c-1.jpg", petProfileSrc: "/images/p-1.jpg", name: "حسین پرورش", petName: "جسیکا", rate: 4, desc: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است." },
-    { id: 3, userProfileSrc: "/images/c-1.jpg", petProfileSrc: "/images/p-1.jpg", name: "حسین پرورش", petName: "جسیکا", rate: 4, desc: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است." },
-    { id: 4, userProfileSrc: "/images/c-1.jpg", petProfileSrc: "/images/p-1.jpg", name: "حسین پرورش", petName: "جسیکا", rate: 4, desc: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است." },
+    { id: 1, userProfileSrc: "/images/c-1.jpg", petProfileSrc: "/images/c-p-1.jpg", name: "حسین پرورش", petName: "جسیکا", rate: 4, desc: "واقعا خوشحالم که با پیلیسوک آشنا شدم. همیشه سفارش‌هام به موقع و با بسته‌بندی عالی می‌رسه. پت‌م عاشق غذای جدیدش شده!" },
+    { id: 2, userProfileSrc: "/images/c-2.jpg", petProfileSrc: "/images/c-p-2.jpg", name: "رسول احمدزاده", petName: "برکلی", rate: 5, desc: "یه بار مجبور شدم گربه‌م رو چند روز بسپرم پانسیون پیلیسوک، انقدر رسیدگی خوب بود که اصلاً دلش نمی‌خواست برگرده خونه! واقعاً ممنونم." },
+    { id: 3, userProfileSrc: "/images/c-3.jpg", petProfileSrc: "/images/c-p-3.jpg", name: "علی ابراهیمی", petName: "چارلی", rate: 3, desc: "از خدمات آرایش و اصلاح سگم خیلی راضی‌ام. تیمشون خیلی صبور و مهربونن. اولین‌باره که بعد از اصلاح، سگم استرس نداره." },
 ]
 //chart data
 const TransactionsData = [

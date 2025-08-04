@@ -18,7 +18,7 @@ export default function CustomerComment({ userProfileSrc, petProfileSrc, name, p
                     <p className="text-primary mt-1 text-sm md:text-[15px] line-clamp-1"> نام پت : {petName} </p>
                 </div>
                 {/* desc */}
-                <p className="text-dark-secondary text-xs/5 md:text-sm/7 line-clamp-4">” {desc} “</p>
+                <p className="text-dark-secondary text-xs/5 md:text-sm/7 line-clamp-3">” {desc} “</p>
                 {/* rate */}
                 <div className="*:size-3 md:*:size-4 flex">
                     {Array(rate).fill(undefined).map((item,index) => (
