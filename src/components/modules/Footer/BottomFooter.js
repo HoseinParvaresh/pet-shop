@@ -55,16 +55,16 @@ export default function BottomFooter() {
                                 <Link href={"/"}>صفحه اصلی</Link>
                             </li>
                             <li>
-                                <Link href={"/"}>فروشگاه</Link>
+                                <Link href={"/store"}>فروشگاه</Link>
                             </li>
                             <li>
-                                <Link href={"/"}>وبلاگ</Link>
+                                <Link href={"/article"}>وبلاگ</Link>
                             </li>
                             <li>
-                                <Link href={"/"}>درباره ما</Link>
+                                <Link href={"/about"}>درباره ما</Link>
                             </li>
                             <li>
-                                <Link href={"/"}>تماس با ما</Link>
+                                <Link href={"/contact"}>تماس با ما</Link>
                             </li>
                         </ul>
                         {/* left links */}
