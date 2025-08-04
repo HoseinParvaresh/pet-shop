@@ -55,7 +55,7 @@ export default function TrustUs() {
                             <p className="title text-white max-w-full md:max-w-[427px]">دلایـلی کـه میـتوانیـد به مجموعه ما اعتـماد کنیـد</p>
                             <p className="title-desc text-white max-w-full md:max-w-[450px] mt-3 md:mt-5 line-clamp-2 md:line-clamp-3"> ما در پیلیسوک با تیمی حرفه‌ای، محیطی امن و خدماتی باکیفیت، همیشه در کنار شما و پت دوست‌داشتنی‌تان هستیم.<p>اعتماد شما، افتخار ماست</p></p>
                             {/* button */}
-                            <Link href={'/'} className='btn btn-primary--light mt-5'>
+                            <Link href={'/about'} className='btn btn-primary--light mt-5'>
                                 <span>درباره پیلیسوک</span>
                                 <MdOutlinePets className="size-4" />
                             </Link>
