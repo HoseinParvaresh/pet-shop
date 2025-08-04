@@ -7,7 +7,7 @@ export default function ProductSort() {
         e.target.classList.add('sort-btn--active')
     }  
     return (
-        <div className="hidden md:flex items-center gap-x-6 px-5 mb-8 h-16 bg-secondary shadow-normal dark:shadow-none rounded-xl">
+        <div className="hidden md:flex items-center gap-x-6 px-5 mb-8 h-16 bg-secondary shadow-normal border border-black/5 rounded-xl">
             {/* title */}
             <div className="flex items-center shrink-0 gap-x-2">
                 <svg className="w-7 h-7">

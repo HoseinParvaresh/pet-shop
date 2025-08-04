@@ -4,7 +4,7 @@ export default function ToggleBox(Props) {
   return (
     <div className='flex space-y-6 flex-col items-center w-full'>
       <SidebarTitle title="فیلتر محصولات" />
-      <div className="bg-secondary rounded-xl p-5 text-dark-primary w-full space-y-10">
+      <div className="bg-secondary rounded-xl p-5 text-dark-primary w-full space-y-10 border border-black/5">
         {
           Props.items.map((item) => (
             <div key={item.id} className="flex items-center justify-between">

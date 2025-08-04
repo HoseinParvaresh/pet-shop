@@ -2,18 +2,18 @@
 import LastArticle from "./LastArticle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
+import { motion } from "framer-motion";
 export default function LastArticles() {
 
     const LastArticlesItem = [
         {
             id: 1,
-            title: "بیماری‌های شایع حیوانات خانگی",
+            title: "آشنایی با زبان بدن گربه‌ها",
             image: "/images/a-1.jpg",
             date: "1404-03-14",
             author: "طراح سایت",
             commentNumber: 10,
-            desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک."
+            desc: "زبان بدن گربه‌ها اطلاعات زیادی در مورد احساسات آن‌ها می‌دهد. در این مطلب آن را بررسی می‌کنیم."
         },
         {
             id: 2,
@@ -77,7 +77,12 @@ export default function LastArticles() {
                         {
                             LastArticlesItem.map((item) => (
                                 <SwiperSlide key={item.id}>
-                                    <LastArticle {...item} />
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: item.id * 0.2 }}>
+                                        <LastArticle {...item} />
+                                    </motion.div >
                                 </SwiperSlide>
                             ))
                         }
