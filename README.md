@@ -6,8 +6,6 @@
 
 The goal of this website is to reduce the challenges of pet care and provide easy access to high-quality products and services. On Pilisook, users can easily purchase the products they need or book specialized services such as boarding, grooming, and veterinary care for their pets. 🐕‍🦺🐈
 
-Besides product sales, the platform offers service reservations and a built-in messaging system 💬 that enables users to communicate directly for details and coordination.
-
 Pilisook creates a safe and reliable space for pet lovers to confidently provide the best care for their companions..<br><br>
 <a href="https://pet-shop-five-sable.vercel.app/">Link to view the website</a></p>
 
@@ -17,16 +15,16 @@ Pilisook creates a safe and reliable space for pet lovers to confidently provide
 
 - 🛒 Online pet store with categorized products.
 - 📦 Detailed product pages with images and descriptions
-- 📅 Appointment booking for grooming, vet, and boarding services
+- 📅 Appointment booking services
 - 👤 User dashboard to manage orders and appointments
 - 🛠️ Admin panel for managing products, orders, users, and content
-- 📚 Blog section with pet care articles and tips
-- 🔐 Secure authentication with protected user/admin routes
-- 📍 Store location displayed via interactive map
+- 📚 Blog section with articles
+- 🔐 authentication for users and admin
+- 📍 Store location displayed via map
 - 📱 Fully responsive design for all screen sizes
-- 🔔 Real-time notifications and user-friendly alerts
+- 🔔 notifications and alerts
 - 🎁 Display of special offers and promotions
-- 📈 Analytics dashboard with visual charts (admin only)
+- 📈 Analytics dashboard with charts (admin only)
 - 📨 Email notifications for key user activities
 
 <br clear="both">
@@ -106,9 +104,8 @@ $ npm run dev
 - [user dashboard](https://pet-shop-five-sable.vercel.app/user-dashboard)
 - [admin dashboard](https://pet-shop-five-sable.vercel.app/admin-dashboard) 
 - [store](https://pet-shop-five-sable.vercel.app/store)
-- [store](https://pet-shop-five-sable.vercel.app/store)
 - [reservation](https://pet-shop-five-sable.vercel.app/reservation)
-- [reservation](https://pet-shop-five-sable.vercel.app/reservation)
+- [product](https://pet-shop-five-sable.vercel.app/product/2)
 - [about](https://pet-shop-five-sable.vercel.app/about)
 - [contact](https://pet-shop-five-sable.vercel.app/contact)
 - [auth](https://pet-shop-five-sable.vercel.app/auth)
