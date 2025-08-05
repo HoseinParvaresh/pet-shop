@@ -33,7 +33,7 @@ export default function ReservationForm() {
     }
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 mb-30 gap-5 bg-gray-100 p-5 rounded-xl relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mb-30 gap-5 bg-gray-100 p-5 rounded-xl relative z-10">
             <span className="bg__reservation"></span>
             <form className='px-3 space-y-7 md:space-y-8'>
                 <p className="font-MorabbaBold text-2xl">درخواست نوبت دهی</p>
@@ -115,7 +115,7 @@ export default function ReservationForm() {
                 {/* button */}
                 <button className="btn btn-primary w-full" onClick={appointmentReservation}> ارسال </button>
             </form>
-            <div className="rounded-lg overflow-hidden">
+            <div className="rounded-lg overflow-hidden hidden lg:block">
                 <img className="h-full" src="/images/cat4.jpg" alt="cat4" />
             </div>
         </div>

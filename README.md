@@ -8,7 +8,7 @@
 
 The goal of this website is to reduce the challenges of pet care and provide easy access to high-quality products and services. On Pilisook, users can easily purchase the products they need or book specialized services such as boarding, grooming, and veterinary care for their pets. 🐕‍🦺🐈
 
-Pilisook creates a safe and reliable space for pet lovers to confidently provide the best care for their companions..<br><br>
+Pilisook creates a safe and reliable space for pet lovers to confidently provide the best care for their companions.<br><br>
 <a href="https://pet-shop-five-sable.vercel.app/">Link to view the website</a></p>
 
 <br clear="both">
@@ -38,7 +38,6 @@ Pilisook creates a safe and reliable space for pet lovers to confidently provide
 <div align="left">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=FFFFFF" alt="next logo" />
   <img src="https://img.shields.io/badge/Tailwind%20CSS-222222?style=for-the-badge&logo=Tailwind+CSS&logoColor=06B6D4" alt="tailwind logo" />
-  <img src="https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=Framer&logoColor=FFFFFF" alt="framer logo" />
   <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcn%2Fui&logoColor=FFFFFF" alt="shadcn logo" />
   <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=FFFFFF" alt="eslint logo" />
   <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=FFFFFF" alt="axios logo" />
@@ -50,6 +49,7 @@ Pilisook creates a safe and reliable space for pet lovers to confidently provide
   <summary>See more</summary>
 
   ###
+  * [motion](https://motion.dev/)
   * [recharts](https://recharts.org/en-US)
   * [animate.css](https://animate.style/)
   * [aos](https://michalsnik.github.io/aos/)
@@ -179,7 +179,7 @@ Click on any of the links to view that page of the website.
 
 ###
 
-<p align="left">This project is licensed under the MIT License. For more details, please refer to the <a href="https://github.com/maurodesouza/profile-readme-generator/blob/main/LICENSE.md">LICENSE</a> file.<br><br>Made with ❤️ by Hosein Parvaresh</p>
+<p align="left">This project is licensed under the MIT License. For more details, please refer to the <a href="https://github.com/maurodesouza/profile-readme-generator/blob/main/LICENSE.md">LICENSE</a> file.</p>
 
 ###
 <a href="#top">Back to top</a>

@@ -6,7 +6,7 @@
 
 هدف این وب‌سایت کاهش چالش‌های نگهداری از حیوانات و فراهم کردن دسترسی آسان به محصولات و خدمات باکیفیت است. در پیلیسوک، کاربران می‌توانند به‌راحتی محصولات مورد نیاز خود را خریداری کرده یا خدمات تخصصی مانند پانسیون، آرایش و دامپزشکی را برای حیوانات خود رزرو کنند. 🐕‍🦺🐈
 
-پیلیسوک فضایی ایمن و قابل‌اعتماد برای دوست‌داران حیوانات ایجاد کرده تا با اطمینان، بهترین مراقبت را برای همراهان خود فراهم کنند..<br><br>
+پیلیسوک فضایی ایمن و قابل‌اعتماد برای دوست‌داران حیوانات ایجاد کرده تا با اطمینان، بهترین مراقبت را برای همراهان خود فراهم کنند.<br><br>
 <a href="https://pet-shop-five-sable.vercel.app/">لینک نمایش وبسایت</a></p>
 
 <br clear="both">
@@ -35,7 +35,6 @@
 <div align="right">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=FFFFFF" alt="next logo" />
   <img src="https://img.shields.io/badge/Tailwind%20CSS-222222?style=for-the-badge&logo=Tailwind+CSS&logoColor=06B6D4" alt="tailwind logo" />
-  <img src="https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=Framer&logoColor=FFFFFF" alt="framer logo" />
   <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcn%2Fui&logoColor=FFFFFF" alt="shadcn logo" />
   <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=FFFFFF" alt="eslint logo" />
   <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=FFFFFF" alt="axios logo" />
@@ -47,6 +46,7 @@
   <summary align="right">موارد بیشتر</summary>
 
   ###
+  * [motion](https://motion.dev/)
   * [recharts](https://recharts.org/en-US)
   * [animate.css](https://animate.style/)
   * [aos](https://michalsnik.github.io/aos/)
@@ -170,9 +170,6 @@ $ npm run dev
   - `build`: Compiles and optimizes the app for production (outputs to `.next/`;
   - `start`: Runs the production build (must run `build` first).;
   - `lint`: Checks code for linting issues using ESLint.;
-
-###
-<br>Made with ❤️ by Hosein Parvaresh</p>
 
 ###
 <a href="#top">Back to top</a>
