@@ -43,6 +43,44 @@ const customerCommentsItems = [
     { id: 2, userProfileSrc: "/images/c-2.jpg", petProfileSrc: "/images/c-p-2.jpg", name: "رسول احمدزاده", petName: "برکلی", rate: 5, desc: "یه بار مجبور شدم گربه‌م رو چند روز بسپرم پانسیون پیلیسوک، انقدر رسیدگی خوب بود که اصلاً دلش نمی‌خواست برگرده خونه! واقعاً ممنونم." },
     { id: 3, userProfileSrc: "/images/c-3.jpg", petProfileSrc: "/images/c-p-3.jpg", name: "علی ابراهیمی", petName: "چارلی", rate: 3, desc: "از خدمات آرایش و اصلاح سگم خیلی راضی‌ام. تیمشون خیلی صبور و مهربونن. اولین‌باره که بعد از اصلاح، سگم استرس نداره." },
 ]
+const LastArticlesItem = [
+    {
+        id: 1,
+        title: "آشنایی با زبان بدن گربه‌ها",
+        image: "/images/a-3.jpg",
+        date: "1404-03-14",
+        author: "طراح سایت",
+        commentNumber: 10,
+        desc: "زبان بدن گربه‌ها اطلاعات زیادی در مورد احساسات آن‌ها می‌دهد. در این مطلب آن را بررسی می‌کنیم."
+    },
+    {
+        id: 2,
+        title: "نکات مهم در تغذیه سگ‌ها",
+        image: "/images/a-2.jpg",
+        date: "1404-04-01",
+        author: "مدیر محتوا",
+        commentNumber: 7,
+        desc: "در این مقاله به بررسی غذاهای مناسب و ممنوعه برای سگ‌ها می‌پردازیم تا سلامت آن‌ها تضمین شود."
+    },
+    {
+        id: 3,
+        title: "چگونه گربه‌ای سالم و شاد داشته باشیم؟",
+        image: "/images/a3.png",
+        date: "1404-12-10",
+        author: "کارشناس دامپزشکی",
+        commentNumber: 5,
+        desc: "با رعایت چند نکته ساده می‌توانید از نظر جسمی و روانی از گربه‌تان مراقبت کنید."
+    },
+    {
+        id: 4,
+        title: "آشنایی با رفتارهای غیرعادی حیوانات خانگی",
+        image: "/images/a-4.jpg",
+        date: "1404-8-18",
+        author: "تیم پیلیسوک",
+        commentNumber: 12,
+        desc: "رفتارهای غیرعادی ممکن است نشانه بیماری یا استرس در حیوانات باشد؛ در این مقاله آن‌ها را بررسی می‌کنیم."
+    }
+];
 //chart data
 const TransactionsData = [
     { id: "m5gr84i9", amount: 135000, status: "پرداخت شده", email: "ken99@example.com", name: "حسین پرورش", number: "09176437156", date: ["1404-05-05", "18:20:16"] },
@@ -252,5 +290,5 @@ const OrderSummaryData = [
 export {
     url, toggleList, categoryList, menuList, productSortList, VisitorsSectionData, TransactionsData, StatisticsCardsSalaryData,
     StatisticsCardsCustomerData, StatisticsCardsVisitorData, StoreMetricsData, TopProductsListData, RecentUsersData,
-    OrderStatusData, OrderSummaryData, AboutExamplesOfOurWork, OurServicesCards, customerCommentsItems
+    OrderStatusData, OrderSummaryData, AboutExamplesOfOurWork, OurServicesCards, customerCommentsItems, LastArticlesItem
 }

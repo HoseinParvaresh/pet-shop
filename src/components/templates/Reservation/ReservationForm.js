@@ -3,7 +3,7 @@ import DatePicker from "react-multi-date-picker"
 import persian from "react-date-object/calendars/persian"
 import persian_fa from "react-date-object/locales/persian_fa"
 import "react-multi-date-picker/styles/layouts/mobile.css"
-
+import { Input } from "@/components/shadcn/input";
 export default function ReservationForm() {
 
     const weekDays = ["ش", "ی", "د", "س", "چ", "پ", "ج"]
@@ -40,14 +40,26 @@ export default function ReservationForm() {
                 {/* first name and last name / number / National code */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
                     {/* first name and last name */}
-                    <div>
+                    {/* <div>
                         <label className="label">نام و نام خانوادگی</label>
                         <input name="fullName" type="text" value={fullName} onChange={e => setFullName(e.target.value)} placeholder="" className="text_input" required="" />
+                    </div> */}
+                    <div>
+                        <label className="label"> نام و نام خانوادگی  </label>
+                        <Input
+                            value={fullName}
+                            onChange={(e) => setFullName(e.target.value)}
+                            className="h-13 text-right text-xs xs:text-sm bg-white"
+                        />
                     </div>
                     {/* number */}
                     <div>
                         <label className="label"> شماره تلفن </label>
-                        <input name="number" type="text" value={number} onChange={e => setNumber(e.target.value)} placeholder="" className="text_input" required="" />
+                        <Input
+                            value={number}
+                            onChange={(e) => setNumber(e.target.value)}
+                            className="h-13 text-right text-xs xs:text-sm bg-white"
+                        />
                     </div>
                     {/* National code */}
                     <div>

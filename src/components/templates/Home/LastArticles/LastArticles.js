@@ -3,46 +3,8 @@ import LastArticle from "./LastArticle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { motion } from "framer-motion";
+import { LastArticlesItem } from "@/Utility/Constants";
 export default function LastArticles() {
-
-    const LastArticlesItem = [
-        {
-            id: 1,
-            title: "آشنایی با زبان بدن گربه‌ها",
-            image: "/images/a-1.jpg",
-            date: "1404-03-14",
-            author: "طراح سایت",
-            commentNumber: 10,
-            desc: "زبان بدن گربه‌ها اطلاعات زیادی در مورد احساسات آن‌ها می‌دهد. در این مطلب آن را بررسی می‌کنیم."
-        },
-        {
-            id: 2,
-            title: "نکات مهم در تغذیه سگ‌ها",
-            image: "/images/a-2.jpg",
-            date: "1404-04-01",
-            author: "مدیر محتوا",
-            commentNumber: 7,
-            desc: "در این مقاله به بررسی غذاهای مناسب و ممنوعه برای سگ‌ها می‌پردازیم تا سلامت آن‌ها تضمین شود."
-        },
-        {
-            id: 3,
-            title: "چگونه گربه‌ای سالم و شاد داشته باشیم؟",
-            image: "/images/a-3.jpg",
-            date: "1404-12-10",
-            author: "کارشناس دامپزشکی",
-            commentNumber: 5,
-            desc: "با رعایت چند نکته ساده می‌توانید از نظر جسمی و روانی از گربه‌تان مراقبت کنید."
-        },
-        {
-            id: 4,
-            title: "آشنایی با رفتارهای غیرعادی حیوانات خانگی",
-            image: "/images/a-4.jpg",
-            date: "1404-8-18",
-            author: "تیم پیلیسوک",
-            commentNumber: 12,
-            desc: "رفتارهای غیرعادی ممکن است نشانه بیماری یا استرس در حیوانات باشد؛ در این مقاله آن‌ها را بررسی می‌کنیم."
-        }
-    ];
 
     return (
         <div className="bg-secondary mt-10">
@@ -77,12 +39,7 @@ export default function LastArticles() {
                         {
                             LastArticlesItem.map((item) => (
                                 <SwiperSlide key={item.id}>
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: item.id * 0.2 }}>
-                                        <LastArticle {...item} />
-                                    </motion.div >
+                                    <LastArticle {...item} />
                                 </SwiperSlide>
                             ))
                         }
