@@ -14,7 +14,7 @@ export default function Contact() {
         <>
             <div>
                 <Head>
-                    <title>Contact</title>
+                    <title>تماس با ما - پیلیسوک</title>
                 </Head>
             </div>
             <div className="mb-20">

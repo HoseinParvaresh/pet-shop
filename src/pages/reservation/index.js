@@ -8,7 +8,7 @@ export default function Reservation() {
         <>
             <div>
                 <Head>
-                    <title>Reservation</title>
+                    <title>رزرو نوبت - پیلیسوک</title>
                 </Head>
             </div>
             <PageHead title="رزرو نوبت" image="cat-2.png" />

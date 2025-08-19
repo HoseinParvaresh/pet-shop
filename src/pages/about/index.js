@@ -10,7 +10,7 @@ export default function About() {
         <>
             <div>
                 <Head>
-                    <title>About</title>
+                    <title>درباره ما - پیلیسوک</title>
                 </Head>
             </div>
             <div className="mb-20">

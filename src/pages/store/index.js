@@ -8,7 +8,7 @@ export default function Store() {
         <>
             <div>
                 <Head>
-                    <title>Store</title>
+                    <title>فروشگاه - پیلیسوک</title>
                 </Head>
             </div>
             <div className="container mt-10">

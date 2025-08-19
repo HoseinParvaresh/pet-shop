@@ -10,37 +10,45 @@ import { Toaster } from "react-hot-toast";
 import { AppSidebar } from "@/components/templates/AdminDashboard/Sidebar/app-sidebar"
 import { SidebarProvider } from "@/components/shadcn/sidebar"
 import DashboardHeader from "@/components/templates/UserDashboard/DashboardHeader/DashboardHeader";
+import Head from 'next/head'
 
 export default function AdminDashboard() {
 
     return (
-        <div className="bg-black/5 font-dana">
-            <Toaster />
-            {/* side bar */}
-            <SidebarProvider className="w-full overflow-hidden">
-                {/* sidebar */}
-                <AppSidebar side="right" />
-                <section>
-                    <DashboardHeader admin={true}/>
-                    {/* content */}
-                    <section className="flex flex-col gap-6 p-6">
-                        <StatisticsCards />
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-6">
-                            <StoreMetricsChart />
-                            <TopProductsList />
-                        </div>
-                        <DataTables />
-                        <div className="flex flex-col md:flex-row gap-6">
-                            <VisitorsSection />
-                            <TopCategories />
-                        </div>
-                        <div className="flex flex-col lg:flex-row gap-6">
-                            <RecentUsers />
-                            <OrderStatus />
-                        </div>
+        <>
+            <div>
+                <Head>
+                    <title>داشبورد ادمین</title>
+                </Head>
+            </div>
+            <div className="bg-black/5 font-dana">
+                <Toaster />
+                {/* side bar */}
+                <SidebarProvider className="w-full overflow-hidden">
+                    {/* sidebar */}
+                    <AppSidebar side="right" />
+                    <section>
+                        <DashboardHeader admin={true} />
+                        {/* content */}
+                        <section className="flex flex-col gap-6 p-6">
+                            <StatisticsCards />
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-6">
+                                <StoreMetricsChart />
+                                <TopProductsList />
+                            </div>
+                            <DataTables />
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <VisitorsSection />
+                                <TopCategories />
+                            </div>
+                            <div className="flex flex-col lg:flex-row gap-6">
+                                <RecentUsers />
+                                <OrderStatus />
+                            </div>
+                        </section>
                     </section>
-                </section>
-            </SidebarProvider>
-        </div>
+                </SidebarProvider>
+            </div>
+        </>
     );
 }

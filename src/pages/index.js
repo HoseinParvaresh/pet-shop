@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <div>
         <Head>
-          <title>Home</title>
+          <title>پیلیسوک</title>
         </Head>
       </div>
       <ParallaxProvider>
