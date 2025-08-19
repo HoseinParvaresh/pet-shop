@@ -3,8 +3,11 @@ import { MdOutlinePets } from "react-icons/md";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { animate, motion, useMotionValue, useTransform, useScroll } from "motion/react"
 import { useEffect, useState } from "react"
+import { useInView } from "react-intersection-observer";
 
 export default function TrustUs() {
+
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
     const customerCount = useMotionValue(0)
     const yearCount = useMotionValue(0)
@@ -30,17 +33,13 @@ export default function TrustUs() {
         }
     }
     useEffect(() => {
-        let flag = true
-        window.addEventListener("scroll", () => {
-            if (window.scrollY >= 1530 && flag) {
-                flag = false
-                countUp(customerCount, 50)
-                countUp(yearCount, 3)
-                countUp(teamCount, 5)
-                countUp(animalCount, 70)
-            }
-        })
-    }, [])
+        if (inView) {
+            countUp(customerCount, 50)
+            countUp(yearCount, 3)
+            countUp(teamCount, 5)
+            countUp(animalCount, 70)
+        }
+    }, [inView]);
 
     return (
         <ParallaxBanner layers={[
@@ -49,7 +48,8 @@ export default function TrustUs() {
                 speed: -15,
                 children: (
 
-                    <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 absolute inset-0 items-center justify-center">
+                    <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 absolute inset-0 items-center justify-center" ref={ref}>
+                        
                         {/* right */}
                         <div className="self-end md:self-auto">
                             <p className="title text-white max-w-full md:max-w-[427px]">دلایـلی کـه میـتوانیـد به مجموعه ما اعتـماد کنیـد</p>

@@ -1,14 +1,12 @@
 import { ParallaxBanner } from 'react-scroll-parallax';
 import { Typewriter } from 'react-simple-typewriter'
 import TopImageCard from './TopImageCard';
-import { motion } from 'framer-motion';
-
 export default function TopImage() {
 
     const topImageItems = [
         { id: 1, title: "خانه حیوانات", desc: "فروش انواع خانه و باکس نگهداری حیوانات با بالاترین کیفیت", image: "/images/pet-home.png" },
         { id: 2, title: "سلامت حیوانات", desc: "فروش انواع لوازم و ادوات سلامت و رشد و ایمنی حیوانات", image: "/images/pet-h.png" },
-        { id: 3, title: "مراقبت حیوانات", desc: "فروش انواع وسایل آرایش و آراستن و مراقبتی حیوانات", image: "/images/pet-s.png" },
+        { id: 3, title: "مراقبت حیوانات", desc: "فروش انواع وسایل آرایش و آراستن و مراقبتی از حیوانات با بهترین کیفیت", image: "/images/pet-s.png" },
     ]
 
     return (
@@ -37,16 +35,10 @@ export default function TopImage() {
                 </div>
                 {/* cards */}
             </ParallaxBanner>
-            <div className='flex flex-col md:flex-row absolute w-full md:w-auto items-center gap-4 md:gap-7 top-full md:top-[87%] px-5'>
+            <div className='flex items-center justify-center flex-col md:flex-row gap-3 2xl:gap-6 w-full md:absolute md:top-[87%] '>
                 {
                     topImageItems.map((item) => (
-                        <motion.div
-                            key={item.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: item.id * 0.3 }}>
-                            <TopImageCard key={item.id} title={item.title} desc={item.desc} src={item.image} />
-                        </motion.div >
+                        <TopImageCard key={item.id} {...item} />
                     ))
                 }
             </div>
