@@ -8,11 +8,17 @@ import JoinNewsletter from "@/components/templates/Home/JoinNewsletter/JoinNewsl
 import IntroducingProducts from "@/components/templates/Home/IntroducingProducts/IntroducingProducts";
 import { Toaster } from "react-hot-toast";
 import { ParallaxProvider } from 'react-scroll-parallax';
+import Head from 'next/head'
 
 export default function Home() {
 
   return (
     <>
+      <div>
+        <Head>
+          <title>Home</title>
+        </Head>
+      </div>
       <ParallaxProvider>
         <Toaster />
         <TopImage />

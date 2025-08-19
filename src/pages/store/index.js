@@ -1,16 +1,23 @@
 import SectionName from "@/components/templates/Store/SectionName/SectionName";
 import Sidebar from "@/components/templates/Store/Sidebar/Sidebar";
 import Content from "@/components/templates/Store/Content/Content";
-
+import Head from 'next/head'
 export default function Store() {
 
     return (
-        <div className="container mt-10">
-            <SectionName/>
-            <section className="grid grid-cols-12 gap-y-5 md:gap-x-7">
-                <Sidebar/>
-                <Content/>
-            </section>
-        </div>
+        <>
+            <div>
+                <Head>
+                    <title>Store</title>
+                </Head>
+            </div>
+            <div className="container mt-10">
+                <SectionName />
+                <section className="grid grid-cols-12 gap-y-5 md:gap-x-7">
+                    <Sidebar />
+                    <Content />
+                </section>
+            </div>
+        </>
     );
 }

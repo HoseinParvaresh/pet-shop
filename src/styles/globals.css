@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 @layer base {
   @font-face {
     font-family: "Dana";
@@ -13,11 +11,6 @@
     font-family: "Dana Bold";
     font-display: swap;
     src: url("/fonts/DanaFaNum-Bold.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Morabba";
-    font-display: swap;
-    src: url("/fonts/Morabba-Regular.woff2") format("woff2");
   }
   @font-face {
     font-family: "Morabba Bold";
@@ -45,7 +38,6 @@
 
   --font-dana: "Dana";
   --font-danaBold: "Dana Bold";
-  --font-Morabba: "Morabba";
   --font-MorabbaBold: "Morabba Bold";
   --font-MorabbaHeavy: "Morabba Heavy";
 
@@ -222,7 +214,7 @@
     @apply font-danaBold text-3xl md:text-4xl xl:text-5xl;
   }
   .trust-us__box--title {
-    @apply font-Morabba text-base md:text-xl xl:text-2xl;
+    @apply  text-base md:text-xl xl:text-2xl;
   }
 
   /* ------ { ... Store Page Component ... } ------ */
