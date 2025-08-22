@@ -26,7 +26,7 @@ const productSortList = [
 // about page
 const AboutExamplesOfOurWork = [
     { id: 1, petName: "خپلی", service: "اصلاح", image: "a1.jpg" },
-    { id: 2, petName: "غلام", service: "شستشو", image: "a2.jpg" },
+    { id: 2, petName: "خسرو", service: "شستشو", image: "a2.jpg" },
     { id: 3, petName: "محمد سُمبل", service: "واکسن", image: "a3.png" },
     { id: 4, petName: "محمود", service: "پانسیون", image: "a5.png" },
     { id: 5, petName: "خالد کشمیری", service: "پانسیون", image: "cat-res.jpg" },
