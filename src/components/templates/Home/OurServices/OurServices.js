@@ -4,19 +4,23 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { OurServicesCards } from "@/Utility/Constants";
+import { useInView } from "react-intersection-observer";
+import SectionHeader from "../common/SectionHeader";
 export default function OurServices() {
+
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
     <>
-      <div className="mt-10 2xs:mt-20 relative bg-secondary py-15 pr-0 pl-4 2xs:px-10 lg:px-27.5 flex-center flex-col text-center gap-3">
+      <div className="mt-10 2xs:mt-15 relative bg-secondary py-10 pr-0 pl-4 2xs:px-10 lg:px-27.5 flex-center flex-col text-center gap-3">
         {/* top => head title / title / desc */}
-        <div data-aos="fade-down" className="flex-center flex-col text-center gap-3">
-          <p className="head-title">خدمات ما</p>
-          <p className="title max-w-110">خدماتـی که مارا متمایـز میـکنـد</p>
-          <p className="title-desc">در پیلیسوک، خدمات ما فقط رفع نیاز نیست ترکیبی از تخصص، عشق و توجه واقعی به حیوانات خانگی‌ست. همین تفاوت ما را متمایز می‌کند.</p>
-        </div>
+        <SectionHeader
+          subTitle={"خدمات ما"}
+          Title={"خدماتـی که مارا متمایـز میـکنـد"}
+          desc={"در پیلیسوک، خدمات ما فقط رفع نیاز نیست ترکیبی از تخصص، عشق و توجه واقعی به حیوانات خانگی‌ست. همین تفاوت ما را متمایز می‌کند."}
+        />
         {/* ous service card */}
-        <div className="container px-0">
+        <div ref={ref} className="container px-0 h-[496px] md:h-[508px] xl:h-[516px]">
           <Swiper
             style={{
               "--swiper-pagination-color": "#F69946",
@@ -28,6 +32,7 @@ export default function OurServices() {
             slidesPerView={1}
             className="!py-10 !px-5"
             spaceBetween={35}
+
             breakpoints={{
               640: {
                 slidesPerView: 2
@@ -37,10 +42,10 @@ export default function OurServices() {
               },
             }}
           >
-            {
+            {inView &&
               OurServicesCards.map((card) => (
                 <SwiperSlide key={card.id}>
-                  <OurServicesCard title={card.title} src={card.src} icon={card.icon} link={card.link} desc={card.desc} />
+                  <OurServicesCard {...card} />
                 </SwiperSlide>
               ))
             }

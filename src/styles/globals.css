@@ -201,10 +201,10 @@
     @apply font-MorabbaBold text-2xl/10 2xs:text-4xl/14 text-dark-primary max-w-[427px];
   }
   .title-desc {
-    @apply text-dark-secondary max-w-[620px] text-sm/6 2xs:text-base/8 line-clamp-3;
+    @apply text-dark-secondary max-w-[620px] text-sm/6 2xs:text-base/8 line-clamp-2 md:line-clamp-3;
   }
   .head-title {
-    @apply font-danaBold px-3 py-1 bg-white text-primary rounded-lg  w-max shadow-md;
+    @apply font-danaBold px-3 py-1 bg-white text-primary rounded-lg w-max shadow-md text-sm md:text-base;
   }
   /* box */
   .trust-us__box {
@@ -214,7 +214,7 @@
     @apply font-danaBold text-3xl md:text-4xl xl:text-5xl;
   }
   .trust-us__box--title {
-    @apply  text-base md:text-xl xl:text-2xl;
+    @apply  text-lg md:text-xl xl:text-2xl;
   }
 
   /* ------ { ... Store Page Component ... } ------ */

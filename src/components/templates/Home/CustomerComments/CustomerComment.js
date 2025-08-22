@@ -1,6 +1,6 @@
 import { BiSolidQuoteAltRight } from "react-icons/bi";
 
-export default function CustomerComment({ userProfileSrc, petProfileSrc, name, petName, rate, desc }) {
+export default function CustomerComment({ id, userProfileSrc, petProfileSrc, name, petName, rate, desc }) {
 
     return (
         <div className="flex gap-4 md:gap-7 select-none">
@@ -21,10 +21,10 @@ export default function CustomerComment({ userProfileSrc, petProfileSrc, name, p
                 <p className="text-dark-secondary text-xs/5 md:text-sm/7 line-clamp-3">” {desc} “</p>
                 {/* rate */}
                 <div className="*:size-3 md:*:size-4 flex">
-                    {Array(rate).fill(undefined).map((item,index) => (
+                    {Array(rate).fill(undefined).map((item, index) => (
                         <svg key={index} className="text-yellow-500"><use href="#star-fill"></use></svg>
                     ))}
-                    {Array(5 - rate).fill(undefined).map((item,index) => (
+                    {Array(5 - rate).fill(undefined).map((item, index) => (
                         <svg key={index} className="text-gray-400"><use href="#star-fill"></use></svg>
                     ))}
 

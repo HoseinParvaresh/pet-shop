@@ -2,15 +2,16 @@ import CustomerComment from "./CustomerComment";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { customerCommentsItems } from "@/Utility/Constants";
+import SectionHeader from "../common/SectionHeader";
 export default function CustomerComments() {
 
     return (
         <div className="container mt-10 2xs:mt-20">
-            <div data-aos="fade-down" className="flex-center flex-col text-center gap-3">
-                <p className="head-title">نظـرات مشتـریان</p>
-                <p className="title max-w-110">نظـرات برخـی از مشتـریان ما</p>
-                <p className="title-desc">تجربه‌ی مشتریان واقعی، بهترین نشان‌دهنده کیفیت خدمات ماست. ببینید پت‌دوستان درباره پیلیسوک چه می‌گویند!</p>
-            </div>
+            <SectionHeader
+                subTitle={"نظـرات مشتـریان"}
+                Title={"نظـرات برخـی از مشتـریان ما"}
+                desc={"تجربه‌ی مشتریان واقعی، بهترین نشان‌دهنده کیفیت خدمات ماست. ببینید پت‌دوستان درباره پیلیسوک چه می‌گویند!"}
+            />
             {/* bottom => comments */}
             <div data-aos="fade-up" className="flex gap-15">
                 <Swiper
@@ -25,13 +26,7 @@ export default function CustomerComments() {
                     {
                         customerCommentsItems.map((comment) => (
                             <SwiperSlide key={comment.id}>
-                                <CustomerComment
-                                    userProfileSrc={comment.userProfileSrc}
-                                    petProfileSrc={comment.petProfileSrc}
-                                    name={comment.name}
-                                    petName={comment.petName}
-                                    rate={comment.rate}
-                                    desc={comment.desc} />
+                                <CustomerComment {...comment} />
                             </SwiperSlide>
                         ))
                     }

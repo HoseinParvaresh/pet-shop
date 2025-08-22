@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { MdOutlinePets } from "react-icons/md";
-export default function OurServicesCard({title,src,icon,desc,link}) {
+import { motion } from 'framer-motion';
+
+export default function OurServicesCard({ id , title, src, icon, link, desc }) {
     return (
-        <div data-aos="fade-up" className="rounded-xl w-full shadow-xl bg-white group relative">
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: id * 0.4 }}
+            className="rounded-xl w-full shadow-xl bg-white group relative">
             {/* image */}
             <img className=" rounded-t-xl h-63 w-full object-cover" src={src} alt={title} />
             {/* title */}
@@ -14,10 +20,10 @@ export default function OurServicesCard({title,src,icon,desc,link}) {
             <div className="py-5 px-7 mt-5 md:mt-8 xl:mt-10">
                 <p className="text-[15px] text-dark-primary text-right leading-7 line-clamp-2">{desc}</p>
                 <div className="flex items-center gap-2 font-danaBold text-dark-primary mt-6">
-                    <MdOutlinePets className="text-primary size-5 -rotate-45 group-hover:rotate-45 transition-transform duration-500"/>
+                    <MdOutlinePets className="text-primary size-5 -rotate-45 group-hover:rotate-45 transition-transform duration-500" />
                     <Link href={link}>بیشتر بدانید</Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }

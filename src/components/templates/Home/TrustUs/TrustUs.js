@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { MdOutlinePets } from "react-icons/md";
 import { ParallaxBanner } from "react-scroll-parallax";
-import { animate, motion, useMotionValue, useTransform, useScroll } from "motion/react"
-import { useEffect, useState } from "react"
+import { animate, motion, useMotionValue, useTransform } from "motion/react"
+import { useEffect } from "react"
 import { useInView } from "react-intersection-observer";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function TrustUs() {
 
@@ -49,16 +50,29 @@ export default function TrustUs() {
                 children: (
 
                     <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 absolute inset-0 items-center justify-center" ref={ref}>
-                        
+
                         {/* right */}
                         <div className="self-end md:self-auto">
-                            <p className="title text-white max-w-full md:max-w-[427px]">دلایـلی کـه میـتوانیـد به مجموعه ما اعتـماد کنیـد</p>
+                            <p ref={ref} className="title text-white max-w-full md:max-w-[427px] h-[112px] line-clamp-2">
+                                {inView &&
+                                    <Typewriter
+                                        words={['دلایـلی کـه میـتوانیـد به مجموعه ما اعتـماد کنیـد']}
+                                        typeSpeed={80}
+                                        cursor={true}
+                                    />
+                                }
+                            </p>
                             <p className="title-desc text-white max-w-full md:max-w-[450px] mt-3 md:mt-5 line-clamp-2 md:line-clamp-3"> ما در پیلیسوک با تیمی حرفه‌ای، محیطی امن و خدماتی باکیفیت، همیشه در کنار شما و پت دوست‌داشتنی‌تان هستیم.<p>اعتماد شما، افتخار ماست</p></p>
                             {/* button */}
-                            <Link href={'/about'} className='btn btn-primary--light mt-5'>
-                                <span>درباره پیلیسوک</span>
-                                <MdOutlinePets className="size-4" />
-                            </Link>
+                            {
+                                inView &&
+                                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className="max-w-max">
+                                    <Link href={'/about'} className="btn btn-primary--light mt-5 animate__animated animate__bounceIn animate__delay-1s">
+                                        <span>درباره پیلیسوک</span>
+                                        <MdOutlinePets className="size-4" />
+                                    </Link>
+                                </motion.div>
+                            }
                         </div>
 
                         {/* left => count card */}

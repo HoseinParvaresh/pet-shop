@@ -2,19 +2,23 @@
 import { MdOutlinePets } from "react-icons/md";
 import { convertDate } from "@/Utility/UtilityFunction";
 import Alert from "@/Utility/Alert";
-
-export default function LastArticle({id,title,author,date,commentNumber,desc,image}) {
+import { motion } from "framer-motion";
+export default function LastArticle({ id, title, author, date, commentNumber, desc, image }) {
 
     function clickHandler() {
-        Alert("info","این بخش در حال توسعه است و به‌زودی در دسترس قرار می‌گیره")
+        Alert("info", "این بخش در حال توسعه است و به‌زودی در دسترس قرار می‌گیره")
     }
 
     return (
-        <div className="w-full md:max-w-78 bg-white group rounded-lg overflow-hidden hover:shadow-xl transition-all duration-400">
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: id * 0.3 }}
+            className="w-full md:max-w-78 bg-white group rounded-lg overflow-hidden hover:shadow-xl transition-all duration-400">
             {/* top => image */}
             <div className="relative h-50">
                 <img className=" object-cover w-full h-full" src={image} alt={`post-${id}`} />
-                <p className="absolute bg-primary py-1.5 px-3 rounded-l-[10px] top-46 md:top-47 text-white font-danaBold text-sm">{convertDate(date,true)}</p>
+                <p className="absolute bg-primary py-1.5 px-3 rounded-l-[10px] top-46 md:top-47 text-white font-danaBold text-sm">{convertDate(date, true)}</p>
             </div>
             {/* bottom =>  author / comment number / title / desc / button */}
             <div className="px-4 py-5 flex flex-col gap-2 mt-3">
@@ -34,6 +38,6 @@ export default function LastArticle({id,title,author,date,commentNumber,desc,ima
                     <p onClick={clickHandler}> ادامه مطلب </p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }

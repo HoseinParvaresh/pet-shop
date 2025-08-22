@@ -7,7 +7,7 @@ import { FaYoutube } from "react-icons/fa";
 export default function ContactInfo() {
     return (
         <div>
-            <p className="text-2xl/8 md:text-4xl/12 font-danaBold text-primary">ما همیشه برای شما و حیوانات خانگی شما در دسترس هستیم</p>
+            <p className="text-2xl/8 md:text-4xl/13 font-MorabbaBold text-primary">ما همیشه برای شما و حیوانات خانگی شما در دسترس هستیم</p>
             <p className="text-sm/6 text-dark-secondary my-5">اگر سوالی دارید، نیاز به مشاوره در خرید محصولات دارید یا هر پیشنهادی برای بهتر شدن خدمات ما در ذهن‌تان هست، با کمال میل منتظر شنیدن صدای شما هستیم. تیم پشتیبانی پیلیسوک با عشق به حیوانات و احترام به شما، پاسخ‌گوی سوالات و نیازهای شما خواهد بود.</p>
             {/* address / number / email */}
             <div className="space-y-5 text-dark-primary">
