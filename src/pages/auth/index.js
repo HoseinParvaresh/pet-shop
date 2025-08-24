@@ -1,6 +1,7 @@
 import { AuthForm } from "@/components/templates/Auth/auth"
 import { Toaster } from 'react-hot-toast';
 import Head from 'next/head'
+
 export default function Auth() {
     return (
         <>

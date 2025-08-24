@@ -20,7 +20,7 @@ export function AuthForm({ className, ...props }) {
     const [password, setPassword] = useState("")
     const [code, setCode] = useState("")
     const [stepRegister, setStepRegister] = useState(false)
-    const [timer, setTimer] = useState(5)
+    const [timer, setTimer] = useState(60)
 
     const authContext = useContext(AuthContext)
 
