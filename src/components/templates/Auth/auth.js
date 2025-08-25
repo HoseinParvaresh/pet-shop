@@ -46,7 +46,7 @@ export function AuthForm({ className, ...props }) {
             const res = await apiRequests.post('/users/login/', data);
 
             if (res.status === 200) {
-                Alert("successful", "با موفقیت وارد شدید");
+                Alert("success", "با موفقیت وارد شدید");
                 authContext.login(res.data.user, res.data.access)
                 setTimeout(() => {
                     window.location.replace("/")
@@ -88,7 +88,7 @@ export function AuthForm({ className, ...props }) {
             const res = await apiRequests.post('/users/register/', data);
 
             if (res.status === 201) {
-                Alert("successful", "کد تأیید به ایمیل شما ارسال شد");
+                Alert("success", "کد تأیید به ایمیل شما ارسال شد");
                 setStepRegister(!stepRegister)
                 setTimer(timer)
             }
@@ -137,7 +137,7 @@ export function AuthForm({ className, ...props }) {
                 const res = await apiRequests.post('/users/resend-verification-email/', { email });
 
                 if (res.status === 202) {
-                    Alert("successful", "کد تأیید دوباره به ایمیل شما ارسال شد");
+                    Alert("success", "کد تأیید دوباره به ایمیل شما ارسال شد");
 
                     return true;
                 }
@@ -152,22 +152,18 @@ export function AuthForm({ className, ...props }) {
             }
         }
     }
-    function forgotPassword() {
+    async function forgotPassword() {
         Alert("info", "این قابلیت هنوز اضافه نشده و در آپدیت های بعدی میاد")
     }
 
-
-    function hadnler() {
-        setStepRegister(!stepRegister)
-        setTimer(timer);
-    }
 
     return (
         <div className={cn("flex flex-col gap-6", className)} {...props}>
             <Card className="overflow-hidden p-0">
                 <CardContent className="grid p-0 md:grid-cols-2">
-                    {/* step 1 => enter info */}
+                    
                     <AnimatePresence mode="wait">
+                        {/* step 1 => enter info */}
                         {!stepRegister &&
                             <motion.div
                                 key="step1"
@@ -212,7 +208,7 @@ export function AuthForm({ className, ...props }) {
                                                 onChange={e => setPassword(e.target.value)}
                                                 className={"dir-ltr"} />
                                         </div>
-                                        <div onClick={hadnler} className="w-full btn btn-primary btn-sm py-2 rounded-md">
+                                        <div onClick={signup} className="w-full btn btn-primary btn-sm py-2 rounded-md">
                                             ادامه
                                         </div>
                                         <div className="after:border-black/20 relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">

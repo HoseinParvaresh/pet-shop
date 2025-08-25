@@ -13,7 +13,7 @@ export default function SectionHeader({subTitle,Title,desc,right}) {
                 }
             </div>
             <p data-aos="fade-down" className="title max-w-110">{Title}</p>
-            <p data-aos="fade-down" className="title-desc">
+            <p data-aos="fade-down" className={`title-desc ${right ? 'text-right' : 'text-center'}`}>
                 {desc}
             </p>
         </div>
