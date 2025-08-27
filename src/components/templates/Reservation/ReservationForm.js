@@ -48,7 +48,7 @@ export default function ReservationForm() {
 					{/* number */}
 					<div>
 						<label htmlFor="phone" className="label"> شماره تلفن </label>
-						<input name="phone" type="text" value={number} onChange={e => setNumber(e.target.value)} placeholder="" className="text_input shadow-xs" required="" />
+						<input name="phone" type="text" value={number} onChange={e => setNumber(e.target.value)} placeholder="" className="text_input" required="" />
 
 					</div>
 					{/* National code */}
@@ -94,7 +94,7 @@ export default function ReservationForm() {
 					{/* date picker */}
 					<div>
 						<label className="label"> تاریخ </label>
-						<div className="dir-rtl w-full h-13 placeholder:text-slate-500 text-gray-900 bg-white text-sm py-3.5 pr-3.5 pl-13 rounded outline-none">
+						<div className="dir-rtl w-full h-13 placeholder:text-slate-500 text-gray-900 bg-white text-sm py-3.5 pr-3.5 pl-13 rounded outline-none shadow-sm">
 							<DatePicker calendar={persian} locale={persian_fa} weekDays={weekDays} className="rmdp-mobile" calendarPosition="bottom-right" inputClass="outline-none" placeholder="کی ببینیمت؟" value={date} onChange={(e) => setDate({ day: e.day, month: e.month.number, year: e.year })} />
 						</div>
 					</div>
