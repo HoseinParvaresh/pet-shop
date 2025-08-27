@@ -251,6 +251,7 @@ export function AuthForm({ className, ...props }) {
 			<div className="text-black/60 *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
 				با کلیک روی ادامه، شما با <a href="#">شرایط خدمات</a> و <a href="#">سیاست حفظ حریم خصوصی</a> ما موافقت می‌کنید.
 			</div>
+            <img src="/images/auth-bg.png" alt="auth-bg" className="w-80 absolute left-0 top-30 hidden xl:block" />
 		</div>
 	);
 }
