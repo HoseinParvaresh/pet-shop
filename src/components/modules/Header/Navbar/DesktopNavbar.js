@@ -33,6 +33,7 @@ export default function DesktopNavbar() {
                         key={item.id}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.8 }}
+                        transition={{ type: "spring", stiffness: 300 }}
                         className="cursor-pointer hover:text-primary transition-colors"
                         onMouseEnter={mouseEnterHandler}
                     >
