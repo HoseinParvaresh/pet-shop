@@ -3,8 +3,6 @@ import DatePicker from "react-multi-date-picker";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import "react-multi-date-picker/styles/layouts/mobile.css";
-import { Input } from "@/components/shadcn/input";
-import { Label } from '@/components/shadcn/label';
 
 export default function ReservationForm() {
 	const weekDays = ["ش", "ی", "د", "س", "چ", "پ", "ج"];
@@ -42,9 +40,9 @@ export default function ReservationForm() {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
 					{/* first name and last name */}
 					<div>
-                        <label className="label">نام و نام خانوادگی</label>
-                        <input name="fullName" type="text" value={fullName} onChange={e => setFullName(e.target.value)} placeholder="" className="text_input" required="" />
-                    </div>
+						<label className="label">نام و نام خانوادگی</label>
+						<input name="fullName" type="text" value={fullName} onChange={e => setFullName(e.target.value)} placeholder="" className="text_input" required="" />
+					</div>
 					{/* number */}
 					<div>
 						<label htmlFor="phone" className="label"> شماره تلفن </label>
